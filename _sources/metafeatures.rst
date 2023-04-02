@@ -2,7 +2,7 @@
 Metafeatures
 ========================
 | Here you can find list of the exiting metafeatures and usage examples.
-| you can fine the full api reference :ref:`link_dont_work <./elemeta.nlp.extractors.rst>`
+| you can fine the full api reference :ref:`link_dont_work <.https://elemeta.superwise.ai/elemeta.nlp.extractors.high_level.html>`_
 
 UniqueWordRatio
 ---------------
