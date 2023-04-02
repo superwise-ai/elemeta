@@ -317,15 +317,64 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-avg-token-length-module">elemeta.nlp.extractors.low_level.avg_token_length module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-regex-token-matches-count-module">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-tokens-count-module">elemeta.nlp.extractors.low_level.tokens_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-unique-token-count-module">elemeta.nlp.extractors.low_level.unique_token_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-unique-token-ratio-module">elemeta.nlp.extractors.low_level.unique_token_ratio module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_metadata_extractor">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractMetadataExtractor.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.avg_token_length">elemeta.nlp.extractors.low_level.avg_token_length module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength"><code class="docutils literal notranslate"><span class="pre">AvgTokenLength</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract"><code class="docutils literal notranslate"><span class="pre">AvgTokenLength.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount"><code class="docutils literal notranslate"><span class="pre">HintedProfanityTokensCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract"><code class="docutils literal notranslate"><span class="pre">HintedProfanityTokensCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage"><code class="docutils literal notranslate"><span class="pre">MustAppearTokensPercentage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract"><code class="docutils literal notranslate"><span class="pre">MustAppearTokensPercentage.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.regex_token_matches_count">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount.extract()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount.validator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.unique_token_count">elemeta.nlp.extractors.low_level.unique_token_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount"><code class="docutils literal notranslate"><span class="pre">UniqueTokenCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract"><code class="docutils literal notranslate"><span class="pre">UniqueTokenCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.unique_token_ratio">elemeta.nlp.extractors.low_level.unique_token_ratio module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio"><code class="docutils literal notranslate"><span class="pre">UniqueTokensRatio</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract"><code class="docutils literal notranslate"><span class="pre">UniqueTokensRatio.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level">Module contents</a></li>
 </ul>
             </nav>
         </div>
@@ -342,32 +391,346 @@ document.write(`
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module">
-<h2>elemeta.nlp.extractors.low_level.abstract_metadata_extractor module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.abstract_metadata_extractor">
+<span id="elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module"></span><h2>elemeta.nlp.extractors.low_level.abstract_metadata_extractor module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.abstract_metadata_extractor" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.abstract_metadata_extractor.</span></span><span class="sig-name descname"><span class="pre">AbstractMetadataExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Representation of a MetadataExtractor
+This class holds a function to be run to extract the metadata value and the name</p>
+<blockquote>
+<div><p>of the metadata</p>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>This function will extract the metric from the text :param text: :type text: str</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>This function will extract the metric from the text
+:param text:
+:type text: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the metadata extracted from text</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-avg-token-length-module">
-<h2>elemeta.nlp.extractors.low_level.avg_token_length module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-avg-token-length-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.avg_token_length">
+<span id="elemeta-nlp-extractors-low-level-avg-token-length-module"></span><h2>elemeta.nlp.extractors.low_level.avg_token_length module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.avg_token_length" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.avg_token_length.</span></span><span class="sig-name descname"><span class="pre">AvgTokenLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens_to_exclude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that return the average token length</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract" title="elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>return the number of average token length in the text</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>return the number of average token length in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of average tokens length in the text</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module">
-<h2>elemeta.nlp.extractors.low_level.hinted_profanity_token_count module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count">
+<span id="elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module"></span><h2>elemeta.nlp.extractors.low_level.hinted_profanity_token_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.hinted_profanity_token_count.</span></span><span class="sig-name descname"><span class="pre">HintedProfanityTokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that count the number profanity words</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract" title="elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>return the number of profanity words in the text</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>return the number of profanity words in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of profanity words in the text</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module">
-<h2>elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage">
+<span id="elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module"></span><h2>elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.</span></span><span class="sig-name descname"><span class="pre">MustAppearTokensPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">must_appear</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that return the ration between
+the number of appearances of tokens from</p>
+<p>given tokens list in the text to all the tokens</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract" title="elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>gives the percentage of the tokens in must_appear set that appeared in the text</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>gives the percentage of the tokens in must_appear set that appeared in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to check appearance on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the ratio between the number of must-appear tokens to all words</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-regex-token-matches-count-module">
-<h2>elemeta.nlp.extractors.low_level.regex_token_matches_count module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-regex-token-matches-count-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.regex_token_matches_count">
+<span id="elemeta-nlp-extractors-low-level-regex-token-matches-count-module"></span><h2>elemeta.nlp.extractors.low_level.regex_token_matches_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.regex_token_matches_count" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.regex_token_matches_count.</span></span><span class="sig-name descname"><span class="pre">TokenRegexMatchesCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that return number of tokens
+that match the given regex</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>return the number of matches of the given regex in the text</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator" title="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validator</span></code></a>(token)</p></td>
+<td><p>regex check validator checks if the token abides by the regex</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>return the number of matches of the given regex in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of the given text in the text</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator">
+<span class="sig-name descname"><span class="pre">validator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator" title="Permalink to this definition">#</a></dt>
+<dd><p>regex check validator
+checks if the token abides by the regex</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – the token check if abides by the regex</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the token abides and false otherwise</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-tokens-count-module">
-<h2>elemeta.nlp.extractors.low_level.tokens_count module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-tokens-count-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.tokens_count">
+<span id="elemeta-nlp-extractors-low-level-tokens-count-module"></span><h2>elemeta.nlp.extractors.low_level.tokens_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.tokens_count" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.tokens_count.TokensCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.tokens_count.</span></span><span class="sig-name descname"><span class="pre">TokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that return the number of sentences
+in the text</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract" title="elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>counts the number tokens in the text</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>counts the number tokens in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to check appearance on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of appearance of a must-appear word list</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-unique-token-count-module">
-<h2>elemeta.nlp.extractors.low_level.unique_token_count module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-unique-token-count-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.unique_token_count">
+<span id="elemeta-nlp-extractors-low-level-unique-token-count-module"></span><h2>elemeta.nlp.extractors.low_level.unique_token_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.unique_token_count" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_count.</span></span><span class="sig-name descname"><span class="pre">UniqueTokenCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<dl class="simple">
+<dt>Implementation of AbstractMetadataExtractor class that return the number of unique tokens</dt><dd><p>in the text</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract" title="elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>counts the number tokens in the text</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>counts the number tokens in the text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to check appearance on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the number of appearance of a must-appear word list</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-unique-token-ratio-module">
-<h2>elemeta.nlp.extractors.low_level.unique_token_ratio module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-unique-token-ratio-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.unique_token_ratio">
+<span id="elemeta-nlp-extractors-low-level-unique-token-ratio-module"></span><h2>elemeta.nlp.extractors.low_level.unique_token_ratio module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.unique_token_ratio" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_ratio.</span></span><span class="sig-name descname"><span class="pre">UniqueTokensRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exceptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a></p>
+<p>Implementation of AbstractMetadataExtractor class that return the ratio between the
+number of unique tokens to all tokens</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract" title="elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<td><p>Unique words in text function</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>Unique words in text function</p>
+<p>returns the ratio between set(tokens)/len(tokens)
+filters on tokens that are defined as relevant</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text we want to find unique words ratio on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>sentiment</strong> – the ratio between len(set(tokens that appear once ))/len(set(tokens))</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -420,15 +783,64 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-avg-token-length-module">elemeta.nlp.extractors.low_level.avg_token_length module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-regex-token-matches-count-module">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-tokens-count-module">elemeta.nlp.extractors.low_level.tokens_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-unique-token-count-module">elemeta.nlp.extractors.low_level.unique_token_count module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-unique-token-ratio-module">elemeta.nlp.extractors.low_level.unique_token_ratio module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_metadata_extractor">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractMetadataExtractor.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.avg_token_length">elemeta.nlp.extractors.low_level.avg_token_length module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength"><code class="docutils literal notranslate"><span class="pre">AvgTokenLength</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract"><code class="docutils literal notranslate"><span class="pre">AvgTokenLength.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount"><code class="docutils literal notranslate"><span class="pre">HintedProfanityTokensCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount.extract"><code class="docutils literal notranslate"><span class="pre">HintedProfanityTokensCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage"><code class="docutils literal notranslate"><span class="pre">MustAppearTokensPercentage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage.extract"><code class="docutils literal notranslate"><span class="pre">MustAppearTokensPercentage.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.regex_token_matches_count">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount.extract()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator"><code class="docutils literal notranslate"><span class="pre">TokenRegexMatchesCount.validator()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.unique_token_count">elemeta.nlp.extractors.low_level.unique_token_count module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount"><code class="docutils literal notranslate"><span class="pre">UniqueTokenCount</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount.extract"><code class="docutils literal notranslate"><span class="pre">UniqueTokenCount.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.unique_token_ratio">elemeta.nlp.extractors.low_level.unique_token_ratio module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio"><code class="docutils literal notranslate"><span class="pre">UniqueTokensRatio</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio.extract"><code class="docutils literal notranslate"><span class="pre">UniqueTokensRatio.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level">Module contents</a></li>
 </ul>
   </nav></div>
 

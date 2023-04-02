@@ -318,8 +318,24 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-metadata-extractor-runner-module">elemeta.nlp.metadata_extractor_runner module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.metadata_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.add_metadata_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_punctuations"><code class="docutils literal notranslate"><span class="pre">english_punctuations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_stopwords"><code class="docutils literal notranslate"><span class="pre">english_stopwords</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extended_punctuations"><code class="docutils literal notranslate"><span class="pre">extended_punctuations</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -341,55 +357,59 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html">elemeta.nlp.extractors.high_level package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-acronym-count-module">elemeta.nlp.extractors.high_level.acronym_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-avg-word-length-module">elemeta.nlp.extractors.high_level.avg_word_length module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-capital-letters-ratio-module">elemeta.nlp.extractors.high_level.capital_letters_ratio module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-date-count-module">elemeta.nlp.extractors.high_level.date_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-detect-langauge-langdetect-module">elemeta.nlp.extractors.high_level.detect_langauge_langdetect module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-email-count-module">elemeta.nlp.extractors.high_level.email_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-emoji-count-module">elemeta.nlp.extractors.high_level.emoji_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-hashtag-count-module">elemeta.nlp.extractors.high_level.hashtag_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-hinted-profanity-sentence-count-module">elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-hinted-profanity-words-count-module">elemeta.nlp.extractors.high_level.hinted_profanity_words_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-link-count-module">elemeta.nlp.extractors.high_level.link_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-mention-count-module">elemeta.nlp.extractors.high_level.mention_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-must-appear-words-percentage-module">elemeta.nlp.extractors.high_level.must_appear_words_percentage module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-number-count-module">elemeta.nlp.extractors.high_level.number_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-out-of-vocabulary-count-module">elemeta.nlp.extractors.high_level.out_of_vocabulary_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-punctuation-count-module">elemeta.nlp.extractors.high_level.punctuation_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-regex-match-count-module">elemeta.nlp.extractors.high_level.regex_match_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-sentence-avg-length-module">elemeta.nlp.extractors.high_level.sentence_avg_length module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-sentence-count-module">elemeta.nlp.extractors.high_level.sentence_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-sentiment-polarity-module">elemeta.nlp.extractors.high_level.sentiment_polarity module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-sentiment-subjectivity-module">elemeta.nlp.extractors.high_level.sentiment_subjectivity module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-special-chars-count-module">elemeta.nlp.extractors.high_level.special_chars_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-stop-words-count-module">elemeta.nlp.extractors.high_level.stop_words_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-syllable-count-module">elemeta.nlp.extractors.high_level.syllable_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-text-complexity-module">elemeta.nlp.extractors.high_level.text_complexity module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-text-length-module">elemeta.nlp.extractors.high_level.text_length module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-unique-word-count-module">elemeta.nlp.extractors.high_level.unique_word_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-unique-word-ratio-module">elemeta.nlp.extractors.high_level.unique_word_ratio module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-word-count-module">elemeta.nlp.extractors.high_level.word_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#elemeta-nlp-extractors-high-level-word-regex-matches-count-module">elemeta.nlp.extractors.high_level.word_regex_matches_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-contents">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.acronym_count">elemeta.nlp.extractors.high_level.acronym_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.avg_word_length">elemeta.nlp.extractors.high_level.avg_word_length module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.capital_letters_ratio">elemeta.nlp.extractors.high_level.capital_letters_ratio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.date_count">elemeta.nlp.extractors.high_level.date_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">elemeta.nlp.extractors.high_level.detect_langauge_langdetect module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.email_count">elemeta.nlp.extractors.high_level.email_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.emoji_count">elemeta.nlp.extractors.high_level.emoji_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hashtag_count">elemeta.nlp.extractors.high_level.hashtag_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count">elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hinted_profanity_words_count">elemeta.nlp.extractors.high_level.hinted_profanity_words_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.link_count">elemeta.nlp.extractors.high_level.link_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.mention_count">elemeta.nlp.extractors.high_level.mention_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.must_appear_words_percentage">elemeta.nlp.extractors.high_level.must_appear_words_percentage module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.number_count">elemeta.nlp.extractors.high_level.number_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.out_of_vocabulary_count">elemeta.nlp.extractors.high_level.out_of_vocabulary_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.punctuation_count">elemeta.nlp.extractors.high_level.punctuation_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.regex_match_count">elemeta.nlp.extractors.high_level.regex_match_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentence_avg_length">elemeta.nlp.extractors.high_level.sentence_avg_length module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentence_count">elemeta.nlp.extractors.high_level.sentence_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentiment_polarity">elemeta.nlp.extractors.high_level.sentiment_polarity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentiment_subjectivity">elemeta.nlp.extractors.high_level.sentiment_subjectivity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.special_chars_count">elemeta.nlp.extractors.high_level.special_chars_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.stop_words_count">elemeta.nlp.extractors.high_level.stop_words_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.syllable_count">elemeta.nlp.extractors.high_level.syllable_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.text_complexity">elemeta.nlp.extractors.high_level.text_complexity module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.text_length">elemeta.nlp.extractors.high_level.text_length module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.unique_word_count">elemeta.nlp.extractors.high_level.unique_word_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.unique_word_ratio">elemeta.nlp.extractors.high_level.unique_word_ratio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.word_count">elemeta.nlp.extractors.high_level.word_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.word_regex_matches_count">elemeta.nlp.extractors.high_level.word_regex_matches_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html">elemeta.nlp.extractors.low_level package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-abstract-metadata-extractor-module">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-avg-token-length-module">elemeta.nlp.extractors.low_level.avg_token_length module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-hinted-profanity-token-count-module">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-must-appear-tokens-parentage-module">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-regex-token-matches-count-module">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-tokens-count-module">elemeta.nlp.extractors.low_level.tokens_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-unique-token-count-module">elemeta.nlp.extractors.low_level.unique_token_count module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta-nlp-extractors-low-level-unique-token-ratio-module">elemeta.nlp.extractors.low_level.unique_token_ratio module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-contents">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_metadata_extractor">elemeta.nlp.extractors.low_level.abstract_metadata_extractor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.avg_token_length">elemeta.nlp.extractors.low_level.avg_token_length module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.regex_token_matches_count">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.unique_token_count">elemeta.nlp.extractors.low_level.unique_token_count module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.unique_token_ratio">elemeta.nlp.extractors.low_level.unique_token_ratio module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.html#module-elemeta.nlp.extractors">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.html#elemeta.nlp.extractors.avg_check_basic"><code class="docutils literal notranslate"><span class="pre">avg_check_basic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.html#elemeta.nlp.extractors.length_check_basic"><code class="docutils literal notranslate"><span class="pre">length_check_basic()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -398,11 +418,122 @@ document.write(`
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="elemeta-nlp-metadata-extractor-runner-module">
-<h2>elemeta.nlp.metadata_extractor_runner module<a class="headerlink" href="#elemeta-nlp-metadata-extractor-runner-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.metadata_extractor_runner">
+<span id="elemeta-nlp-metadata-extractor-runner-module"></span><h2>elemeta.nlp.metadata_extractor_runner module<a class="headerlink" href="#module-elemeta.nlp.metadata_extractor_runner" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.metadata_extractor_runner.</span></span><span class="sig-name descname"><span class="pre">MetadataExtractorsRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">AbstractMetadataExtractor</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class used to run multiple MetadataExtractors on a text</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors">
+<span class="sig-name descname"><span class="pre">metadata_extractors</span></span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors" title="Permalink to this definition">#</a></dt>
+<dd><p>a list of <a href="#id1"><span class="problematic" id="id2">`</span></a>MetadataExtractor`s to run,
+if not supplied will run with all metadata extractors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[List[<a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor">AbstractMetadataExtractor</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run" title="Permalink to this definition">#</a></dt>
+<dd><p>runs all the metadata extractors on the input text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe">
+<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>runs all the metadata extractors on the given text_column in the given dataframe</dt><dd><p>and return new dataframe with metadata values as columns</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(text)</p></td>
+<td><p>run metrics on list of text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id3" title="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_on_dataframe</span></code></a>(dataframe, text_column)</p></td>
+<td><p>return new dataframe with all metadata extractors values :param dataframe: dataframe with the text column :type dataframe: DataFrame :param text_column: the name of the text column in the given dataframe :type text_column: str</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>add_metadata_extractor</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor">
+<span class="sig-name descname"><span class="pre">add_metadata_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">AbstractMetadataExtractor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<dd><p>run metrics on list of text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to run all metrics on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>metadata_value_dict</strong> – returns a dictionary of extractor name and the metadata value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<dd><p>return new dataframe with all metadata extractors values
+:param dataframe: dataframe with the text column
+:type dataframe: DataFrame
+:param text_column: the name of the text column in the given dataframe
+:type text_column: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataframe</strong> – dataframe with the values of the metadata extractors as new columns</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.nlp" title="Permalink to this heading">#</a></h2>
+<p>requirements for the nlp pacakge</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="elemeta.nlp.english_punctuations">
+<span class="sig-prename descclassname"><span class="pre">elemeta.nlp.</span></span><span class="sig-name descname"><span class="pre">english_punctuations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'!',</span> <span class="pre">'&quot;',</span> <span class="pre">&quot;'&quot;,</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">',',</span> <span class="pre">'-',</span> <span class="pre">'.',</span> <span class="pre">'...',</span> <span class="pre">':',</span> <span class="pre">';',</span> <span class="pre">'?',</span> <span class="pre">'[',</span> <span class="pre">']',</span> <span class="pre">'_',</span> <span class="pre">'{',</span> <span class="pre">'}'}</span></em><a class="headerlink" href="#elemeta.nlp.english_punctuations" title="Permalink to this definition">#</a></dt>
+<dd><p>Set of all punctuations in english</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="elemeta.nlp.english_stopwords">
+<span class="sig-prename descclassname"><span class="pre">elemeta.nlp.</span></span><span class="sig-name descname"><span class="pre">english_stopwords</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'a',</span> <span class="pre">'about',</span> <span class="pre">'above',</span> <span class="pre">'after',</span> <span class="pre">'again',</span> <span class="pre">'against',</span> <span class="pre">'ain',</span> <span class="pre">'all',</span> <span class="pre">'am',</span> <span class="pre">'an',</span> <span class="pre">'and',</span> <span class="pre">'any',</span> <span class="pre">'are',</span> <span class="pre">'aren',</span> <span class="pre">&quot;aren't&quot;,</span> <span class="pre">'as',</span> <span class="pre">'at',</span> <span class="pre">'be',</span> <span class="pre">'because',</span> <span class="pre">'been',</span> <span class="pre">'before',</span> <span class="pre">'being',</span> <span class="pre">'below',</span> <span class="pre">'between',</span> <span class="pre">'both',</span> <span class="pre">'but',</span> <span class="pre">'by',</span> <span class="pre">'can',</span> <span class="pre">'couldn',</span> <span class="pre">&quot;couldn't&quot;,</span> <span class="pre">'d',</span> <span class="pre">'did',</span> <span class="pre">'didn',</span> <span class="pre">&quot;didn't&quot;,</span> <span class="pre">'do',</span> <span class="pre">'does',</span> <span class="pre">'doesn',</span> <span class="pre">&quot;doesn't&quot;,</span> <span class="pre">'doing',</span> <span class="pre">'don',</span> <span class="pre">&quot;don't&quot;,</span> <span class="pre">'down',</span> <span class="pre">'during',</span> <span class="pre">'each',</span> <span class="pre">'few',</span> <span class="pre">'for',</span> <span class="pre">'from',</span> <span class="pre">'further',</span> <span class="pre">'had',</span> <span class="pre">'hadn',</span> <span class="pre">&quot;hadn't&quot;,</span> <span class="pre">'has',</span> <span class="pre">'hasn',</span> <span class="pre">&quot;hasn't&quot;,</span> <span class="pre">'have',</span> <span class="pre">'haven',</span> <span class="pre">&quot;haven't&quot;,</span> <span class="pre">'having',</span> <span class="pre">'he',</span> <span class="pre">'her',</span> <span class="pre">'here',</span> <span class="pre">'hers',</span> <span class="pre">'herself',</span> <span class="pre">'him',</span> <span class="pre">'himself',</span> <span class="pre">'his',</span> <span class="pre">'how',</span> <span class="pre">'i',</span> <span class="pre">'if',</span> <span class="pre">'in',</span> <span class="pre">'into',</span> <span class="pre">'is',</span> <span class="pre">'isn',</span> <span class="pre">&quot;isn't&quot;,</span> <span class="pre">'it',</span> <span class="pre">&quot;it's&quot;,</span> <span class="pre">'its',</span> <span class="pre">'itself',</span> <span class="pre">'just',</span> <span class="pre">'ll',</span> <span class="pre">'m',</span> <span class="pre">'ma',</span> <span class="pre">'me',</span> <span class="pre">'mightn',</span> <span class="pre">&quot;mightn't&quot;,</span> <span class="pre">'more',</span> <span class="pre">'most',</span> <span class="pre">'mustn',</span> <span class="pre">&quot;mustn't&quot;,</span> <span class="pre">'my',</span> <span class="pre">'myself',</span> <span class="pre">'needn',</span> <span class="pre">&quot;needn't&quot;,</span> <span class="pre">'no',</span> <span class="pre">'nor',</span> <span class="pre">'not',</span> <span class="pre">'now',</span> <span class="pre">'o',</span> <span class="pre">'of',</span> <span class="pre">'off',</span> <span class="pre">'on',</span> <span class="pre">'once',</span> <span class="pre">'only',</span> <span class="pre">'or',</span> <span class="pre">'other',</span> <span class="pre">'our',</span> <span class="pre">'ours',</span> <span class="pre">'ourselves',</span> <span class="pre">'out',</span> <span class="pre">'over',</span> <span class="pre">'own',</span> <span class="pre">'re',</span> <span class="pre">'s',</span> <span class="pre">'same',</span> <span class="pre">'shan',</span> <span class="pre">&quot;shan't&quot;,</span> <span class="pre">'she',</span> <span class="pre">&quot;she's&quot;,</span> <span class="pre">'should',</span> <span class="pre">&quot;should've&quot;,</span> <span class="pre">'shouldn',</span> <span class="pre">&quot;shouldn't&quot;,</span> <span class="pre">'so',</span> <span class="pre">'some',</span> <span class="pre">'such',</span> <span class="pre">'t',</span> <span class="pre">'than',</span> <span class="pre">'that',</span> <span class="pre">&quot;that'll&quot;,</span> <span class="pre">'the',</span> <span class="pre">'their',</span> <span class="pre">'theirs',</span> <span class="pre">'them',</span> <span class="pre">'themselves',</span> <span class="pre">'then',</span> <span class="pre">'there',</span> <span class="pre">'these',</span> <span class="pre">'they',</span> <span class="pre">'this',</span> <span class="pre">'those',</span> <span class="pre">'through',</span> <span class="pre">'to',</span> <span class="pre">'too',</span> <span class="pre">'under',</span> <span class="pre">'until',</span> <span class="pre">'up',</span> <span class="pre">'ve',</span> <span class="pre">'very',</span> <span class="pre">'was',</span> <span class="pre">'wasn',</span> <span class="pre">&quot;wasn't&quot;,</span> <span class="pre">'we',</span> <span class="pre">'were',</span> <span class="pre">'weren',</span> <span class="pre">&quot;weren't&quot;,</span> <span class="pre">'what',</span> <span class="pre">'when',</span> <span class="pre">'where',</span> <span class="pre">'which',</span> <span class="pre">'while',</span> <span class="pre">'who',</span> <span class="pre">'whom',</span> <span class="pre">'why',</span> <span class="pre">'will',</span> <span class="pre">'with',</span> <span class="pre">'won',</span> <span class="pre">&quot;won't&quot;,</span> <span class="pre">'wouldn',</span> <span class="pre">&quot;wouldn't&quot;,</span> <span class="pre">'y',</span> <span class="pre">'you',</span> <span class="pre">&quot;you'd&quot;,</span> <span class="pre">&quot;you'll&quot;,</span> <span class="pre">&quot;you're&quot;,</span> <span class="pre">&quot;you've&quot;,</span> <span class="pre">'your',</span> <span class="pre">'yours',</span> <span class="pre">'yourself',</span> <span class="pre">'yourselves'}</span></em><a class="headerlink" href="#elemeta.nlp.english_stopwords" title="Permalink to this definition">#</a></dt>
+<dd><p>Punctuations from nltk</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="elemeta.nlp.extended_punctuations">
+<span class="sig-prename descclassname"><span class="pre">elemeta.nlp.</span></span><span class="sig-name descname"><span class="pre">extended_punctuations</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'!',</span> <span class="pre">'&quot;',</span> <span class="pre">'#',</span> <span class="pre">'$',</span> <span class="pre">'%',</span> <span class="pre">'&amp;',</span> <span class="pre">&quot;'&quot;,</span> <span class="pre">'(',</span> <span class="pre">')',</span> <span class="pre">'*',</span> <span class="pre">'+',</span> <span class="pre">',',</span> <span class="pre">'-',</span> <span class="pre">'.',</span> <span class="pre">'...',</span> <span class="pre">'/',</span> <span class="pre">':',</span> <span class="pre">';',</span> <span class="pre">'&lt;',</span> <span class="pre">'=',</span> <span class="pre">'&gt;',</span> <span class="pre">'?',</span> <span class="pre">'&#64;',</span> <span class="pre">'[',</span> <span class="pre">'\\',</span> <span class="pre">']',</span> <span class="pre">'^',</span> <span class="pre">'_',</span> <span class="pre">'`',</span> <span class="pre">'{',</span> <span class="pre">'|',</span> <span class="pre">'}',</span> <span class="pre">'~'}</span></em><a class="headerlink" href="#elemeta.nlp.extended_punctuations" title="Permalink to this definition">#</a></dt>
+<dd><p>Set of all special charters</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -456,8 +587,24 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-metadata-extractor-runner-module">elemeta.nlp.metadata_extractor_runner module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.metadata_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.add_metadata_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_punctuations"><code class="docutils literal notranslate"><span class="pre">english_punctuations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_stopwords"><code class="docutils literal notranslate"><span class="pre">english_stopwords</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extended_punctuations"><code class="docutils literal notranslate"><span class="pre">extended_punctuations</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
