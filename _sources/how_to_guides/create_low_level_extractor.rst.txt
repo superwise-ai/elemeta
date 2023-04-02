@@ -86,6 +86,10 @@ Lets test them:
     81.0
 
 
+For a full working example
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/low_level_api_extractors.ipynb>`_
+
+
 
 
 .. toctree::

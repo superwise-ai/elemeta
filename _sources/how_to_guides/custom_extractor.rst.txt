@@ -93,6 +93,8 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
      'is_palindrome_extractor': False}
 
 
+For a full working example
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/implementing_your_own_extractor.ipynb>`_
 
 
 

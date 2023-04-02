@@ -44,4 +44,4 @@ Walkthrough
         here we can see drift metrics calculated by superwise cross all the features
 
 For a full working example
-please use the following `Google Colab <http://colab.google.com>`_
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/superwise_monitoring_demo.ipynb>`_
