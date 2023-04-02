@@ -27,7 +27,7 @@ For a given regex return the number of words matching the regex
 
 Will return:
 2
-Because there are 2 words that match the regex: "he", "hee"
+because there are 2 words that match the regex: "he", "hee"
 
 
 NumberCount
@@ -39,7 +39,7 @@ Counts the number of numbers in the text
     NumberCount()("I am 17 years old and i will be 100 one day")
 
 Will return 2
-Because there are 2 numbers in the text: 17,100
+because there are 2 numbers in the text: 17,100
 
 OutOfVocabularyCount
 --------------------
@@ -50,7 +50,7 @@ For a given vocabulary (the default is English vocabulary taken from nltk) retur
     OutOfVocabularyCount().extract("Rick said Wubba Lubba dub-dub")
 
 Will return 3
-Because there are 3 OOV(Out of Vocabulary) words: Wabba Lubba dub-dub
+because there are 3 OOV(Out of Vocabulary) words: Wabba Lubba dub-dub
 
 MustAppearWordsPercentage
 -------------------------
@@ -61,7 +61,7 @@ For a given set of words, return the percentage of words that appeared in the te
     MustAppearWordsPercentage(must_appear={"I", "am"})("I am good now")
 
 Will return 1
-Because all the words in the set appeared in the text
+because all the words in the set appeared in the text
 
 SentenceCount
 -------------
@@ -72,7 +72,7 @@ Counts the number of sentences in the text
     SentenceCount()("Hello, my name is Inigo Montoya. You killed my father. Prepare to die.")
 
 Will return 3
-Because there are 3 sentences in the text:”Hello, my name is Inigo Montoya.”,”You killed my father.”,”Prepare to die.”
+because there are 3 sentences in the text:”Hello, my name is Inigo Montoya.”,”You killed my father.”,”Prepare to die.”
 
 SentenceAvgLength
 -----------------
@@ -123,7 +123,7 @@ Counts the number of stop words
     StopWordsCount()("Once I was afraid, I was petrified")
 
 Will return 5
-Because there are 4 stop words in the text: "Once",“I”,”was”,”I”,”was”
+because there are 4 stop words in the text: "Once",“I”,”was”,”I”,”was”
 
 PunctuationCount
 ----------------
@@ -134,7 +134,7 @@ Counts the number of punctuation marks in the text (the default list of punctuat
     PunctuationCount()("Once I was afraid, I was petrified!")
 
 Will return 2
-Because there are 2 punctuation marks: “,”,”!”
+because there are 2 punctuation marks: “,”,”!”
 
 SpecialCharsCount
 -----------------
@@ -145,7 +145,7 @@ Counts the number of special characters in the text (the default list of special
     SpecialCharsCount()("Once I was afraid, I was petrified!")
 
 Will return 1
-Because there is 1 special character
+because there is 1 special character
 
 CapitalLettersRatio
 -------------------
@@ -166,7 +166,7 @@ For a given regex return the number of matches it has in the text
     RegexMatchCount(regex="test")("This is a test text, will this test pass?")
 
 Will return 2
-Because the regex will match on the word “test” and it appears twice.
+because the regex will match on the word “test” and it appears twice.
 
 EmailCount
 ----------
