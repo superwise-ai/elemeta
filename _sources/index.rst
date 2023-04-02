@@ -3,7 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: elemeta_cover_image.png
+.. image:: ./images/elemeta_cover_image.png
+   :class: only-dark
+
+.. image:: ./images/elemeta_cover_image.png
+   :class: only-light
+
 
 ======================================================
 Elemeta: Metafeature Extraction for Unstructured Data
