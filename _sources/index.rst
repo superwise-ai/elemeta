@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: https://irevolution.net/wp-content/uploads/2021/07/canadian-marble-fox.png
+.. image:: elemeta_cover_image.png
 
 ======================================================
 Elemeta: Metafeature Extraction for Unstructured Data
