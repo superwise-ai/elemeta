@@ -21,8 +21,9 @@ Key usage of Elemeta includes:
 - Data and model monitoring - utilize structured ML monitoring techniques in addition to the typical latent embedding visualizations.
 - Feature extraction - engineer alternative features to be utilized in simpler models such as decision trees.
 
-
-
+.. raw:: html
+   
+   <iframe src="https://superwise-elemeta.hf.space" frameborder="0" width="850" height="450"></iframe>
 
 .. toctree::
    :maxdepth: 1
