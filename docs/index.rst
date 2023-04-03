@@ -22,6 +22,12 @@ Key usage of Elemeta includes:
 - Feature extraction - engineer alternative features to be utilized in simpler models such as decision trees.
 
 
+<iframe
+	src="https://superwise-elemeta.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+></iframe>
 
 
 .. toctree::
