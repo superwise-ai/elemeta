@@ -26,7 +26,7 @@ After you have a dataset with the text column, you can start using the library w
     reviews = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column='review')
     reviews.show()
 
-.. image:: https://s10.gifyu.com/images/ezgif.com-crop-1-1.gif
+.. image:: ./images/elemeta_reviews.gif
         :width: 600
         :alt: histogram of text_length feature
 
