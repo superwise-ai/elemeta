@@ -35,9 +35,16 @@ jobs:
       - name: Install semantic-release plugins
         run: npm install -g $(jq -r '.plugins[]' .releaserc.json | grep -o '@semantic-release/[a-zA-Z0-9-]*')
 
+      - name: Generate semantic-release token
+        id: semantic_release_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.SEMANTIC_RELEASE_APP_ID }}
+          private_key: ${{ secrets.SEMANTIC_RELEASE_PRIVATE_KEY }}
+
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.semantic_release_token.outputs.token }}
           PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
           PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: semantic-release
