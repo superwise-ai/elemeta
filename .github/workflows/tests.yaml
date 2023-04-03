@@ -1,0 +1,29 @@
+name: Testing
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "poetry"
+
+      - name: Install Dependencies
+        run: poetry install --with test
+
+      - name: coverage
+        run: poetry run pytest --cov=elemeta test --cov-fail-under=95 --ignore=test/nlp/performance

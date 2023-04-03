@@ -1,0 +1,10 @@
+.vscode/
+.idea/
+**/.venv/
+**/venv/
+**/__pycache__/
+dist/
+.pytest_cache/
+**/.DS_Store
+docs/_build/
+.python-version

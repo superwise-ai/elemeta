@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "elemeta"
+version = "1.0.0"
+description = "meta feature extractor."
+authors = ["Lior Durahly <lior.durahly@superwise.ai>", "Elad Shoham <elad.shoham@superwise.ai>"]
+readme = "README.md"
+packages = [{ include = "elemeta" }]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0.0"
+nltk = "^3.8"
+langdetect = "^1.0"
+vadersentiment = "^3.3"
+emoji = "^2.2"
+numpy = "^1.15"
+pandas = "^1.1"
+textstat = "^0.7"
+profanity-check = "^1.0"
+better-profanity = "^0.7"
+textblob = "^0.17"
+datefinder = "^0.7"
+
+[tool.poetry.group.test.dependencies]
+setuptools = "^67.6"
+pytest = "^7.2"
+pytest-cov = "^4.0"
+
+[tool.poetry.group.lint.dependencies]
+isort = "^5.10"
+black = "^22.10"
+flake8 = ">=5.0"
+mypy = "^0.991"
+pandas-stubs = "^1.2"
+types-emoji = "^2.1"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=4.0"
+numpydoc = "^1.5"
+sphinx-book-theme = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = ">=2.6.1"

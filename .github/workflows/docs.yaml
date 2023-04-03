@@ -1,0 +1,38 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          cache: "poetry"
+
+      - name: Install Dependencies
+        run: poetry install --with docs
+
+      - name: Generate docs
+        run: bash -ex scripts/docs.sh
+
+      - name: Publish docs 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/_build/html
