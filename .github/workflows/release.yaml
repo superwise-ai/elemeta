@@ -10,10 +10,18 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: Generate semantic-release token
+        id: semantic_release_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.SEMANTIC_RELEASE_APP_ID }}
+          private_key: ${{ secrets.SEMANTIC_RELEASE_PRIVATE_KEY }}
+
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ steps.semantic_release_token.outputs.token }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -34,13 +42,6 @@ jobs:
 
       - name: Install semantic-release plugins
         run: npm install -g $(jq -r '.plugins[]' .releaserc.json | grep -o '@semantic-release/[a-zA-Z0-9-]*')
-
-      - name: Generate semantic-release token
-        id: semantic_release_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.SEMANTIC_RELEASE_APP_ID }}
-          private_key: ${{ secrets.SEMANTIC_RELEASE_PRIVATE_KEY }}
 
       - name: Release
         env:
