@@ -1,9 +1,9 @@
 ========================
-Single extractor
+Single Extractor
 ========================
 For the following code examples, Elemeta assumes a single metafeature extractor.
 
-Sentiment polarity
+Sentiment Polarity
 ===================
 This extractor will automatically detect the sentiment of the text.
 
