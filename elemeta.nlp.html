@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>elemeta.nlp package &#8212; Elemeta  documentation</title>
   
@@ -37,9 +37,8 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'elemeta.nlp';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -47,7 +46,7 @@
     <link rel="next" title="elemeta.nlp.extractors package" href="elemeta.nlp.extractors.html" />
     <link rel="prev" title="elemeta.dataset package" href="elemeta.dataset.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -319,8 +318,24 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.metadata_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.add_metadata_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_punctuations"><code class="docutils literal notranslate"><span class="pre">english_punctuations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_stopwords"><code class="docutils literal notranslate"><span class="pre">english_stopwords</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extended_punctuations"><code class="docutils literal notranslate"><span class="pre">extended_punctuations</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -333,9 +348,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="elemeta-nlp-package">
-<h1>elemeta.nlp package<a class="headerlink" href="#elemeta-nlp-package" title="Permalink to this headline">#</a></h1>
+<h1>elemeta.nlp package<a class="headerlink" href="#elemeta-nlp-package" title="Permalink to this heading">#</a></h1>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">#</a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="elemeta.nlp.extractors.html">elemeta.nlp.extractors package</a><ul>
@@ -390,20 +405,24 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.html#module-elemeta.nlp.extractors">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.html#module-elemeta.nlp.extractors">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.html#elemeta.nlp.extractors.avg_check_basic"><code class="docutils literal notranslate"><span class="pre">avg_check_basic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="elemeta.nlp.extractors.html#elemeta.nlp.extractors.length_check_basic"><code class="docutils literal notranslate"><span class="pre">length_check_basic()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="module-elemeta.nlp.metadata_extractor_runner">
-<span id="elemeta-nlp-metadata-extractor-runner-module"></span><h2>elemeta.nlp.metadata_extractor_runner module<a class="headerlink" href="#module-elemeta.nlp.metadata_extractor_runner" title="Permalink to this headline">#</a></h2>
+<span id="elemeta-nlp-metadata-extractor-runner-module"></span><h2>elemeta.nlp.metadata_extractor_runner module<a class="headerlink" href="#module-elemeta.nlp.metadata_extractor_runner" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.metadata_extractor_runner.</span></span><span class="sig-name descname"><span class="pre">MetadataExtractorsRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.metadata_extractor_runner.</span></span><span class="sig-name descname"><span class="pre">MetadataExtractorsRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">AbstractMetadataExtractor</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>This class used to run multiple MetadataExtractors on a text</p>
 <dl class="py attribute">
@@ -412,7 +431,7 @@ document.write(`
 <dd><p>a list of <a href="#id1"><span class="problematic" id="id2">`</span></a>MetadataExtractor`s to run,
 if not supplied will run with all metadata extractors.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Optional[List[<a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor">AbstractMetadataExtractor</a>]]</p>
 </dd>
 </dl>
@@ -434,11 +453,7 @@ if not supplied will run with all metadata extractors.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table class="longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(text)</p></td>
 <td><p>run metrics on list of text</p></td>
@@ -449,10 +464,6 @@ if not supplied will run with all metadata extractors.</p>
 </tbody>
 </table>
 <table class="table">
-<colgroup>
-<col style="width: 72%" />
-<col style="width: 28%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>add_metadata_extractor</strong></p></td>
 <td></td>
@@ -461,7 +472,7 @@ if not supplied will run with all metadata extractors.</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor">
-<span class="sig-name descname"><span class="pre">add_metadata_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add_metadata_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata_extractor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor" title="elemeta.nlp.extractors.low_level.abstract_metadata_extractor.AbstractMetadataExtractor"><span class="pre">AbstractMetadataExtractor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -469,13 +480,13 @@ if not supplied will run with all metadata extractors.</p>
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
 <dd><p>run metrics on list of text</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to run all metrics on</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>metadata_value_dict</strong> – returns a dictionary of extractor name and the metadata value</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Dict[str, Any]</p>
 </dd>
 </dl>
@@ -483,17 +494,17 @@ if not supplied will run with all metadata extractors.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="id3">
-<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
 <dd><p>return new dataframe with all metadata extractors values
 :param dataframe: dataframe with the text column
 :type dataframe: DataFrame
 :param text_column: the name of the text column in the given dataframe
 :type text_column: str</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>dataframe</strong> – dataframe with the values of the metadata extractors as new columns</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>DataFrame</p>
 </dd>
 </dl>
@@ -503,7 +514,7 @@ if not supplied will run with all metadata extractors.</p>
 
 </section>
 <section id="module-elemeta.nlp">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.nlp" title="Permalink to this headline">#</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.nlp" title="Permalink to this heading">#</a></h2>
 <p>requirements for the nlp pacakge</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="elemeta.nlp.english_punctuations">
@@ -576,8 +587,24 @@ if not supplied will run with all metadata extractors.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.metadata_extractor_runner">elemeta.nlp.metadata_extractor_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.metadata_extractors"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.metadata_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.metadata_extractor_runner.MetadataExtractorsRunner.add_metadata_extractor"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.add_metadata_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetadataExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_punctuations"><code class="docutils literal notranslate"><span class="pre">english_punctuations</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.english_stopwords"><code class="docutils literal notranslate"><span class="pre">english_stopwords</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extended_punctuations"><code class="docutils literal notranslate"><span class="pre">extended_punctuations</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
