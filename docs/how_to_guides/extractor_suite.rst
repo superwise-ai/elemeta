@@ -1,5 +1,5 @@
 ========================
-Extractor suite
+Extractor Suite
 ========================
 To extract multiple metadata values at once use MetadataExtractorsRunner.
 Supply a list of metadata extractors you want to run,

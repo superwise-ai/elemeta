@@ -1,5 +1,5 @@
 ================
-How to guides
+How to Guides
 ================
 There are a variety of both out-of-the-box and custom metadata extractors found in the library.
 

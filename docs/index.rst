@@ -4,22 +4,22 @@
    contain the root `toctree` directive.
 
 .. image:: ./images/elemeta_cover_image_black.png
-   :class: only-dark
-
-.. image:: ./images/elemeta_cover_image_white.png
    :class: only-light
 
+.. image:: ./images/elemeta_cover_image_white.png
+   :class: only-dark
 
 ======================================================
 Elemeta: Metafeature Extraction for Unstructured Data
 ======================================================
 
-Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
-Key usage of Elemeta includes:
+| Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
+| Key usage of Elemeta includes:
 
 - Exploratory Data Analysis (EDA) - extract useful metadata information on unstructured data to analyze, investigate, and summarize the main characteristics and employ data visualization methods.
 - Data and model monitoring - utilize structured ML monitoring techniques in addition to the typical latent embedding visualizations.
 - Feature extraction - engineer alternative features to be utilized in simpler models such as decision trees.
+
 
 .. raw:: html
    
