@@ -12,7 +12,7 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 project = 'Elemeta'
-copyright = '2023, Lior Durahly'
+copyright = '2023, Elemeta'
 author = 'Lior Durahly'
 
 # -- General configuration ---------------------------------------------------
@@ -28,5 +28,6 @@ autodoc_preserve_defaults = True
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_favicon = './images/elemeta_favicon_blue.png'
 
 html_theme = 'sphinx_book_theme'
