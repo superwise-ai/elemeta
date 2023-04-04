@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "elemeta"
-version = "1.0.0"
+version = "1.0.1"
 description = "meta feature extractor."
 authors = ["Lior Durahly <lior.durahly@superwise.ai>", "Elad Shoham <elad.shoham@superwise.ai>"]
 readme = "README.md"

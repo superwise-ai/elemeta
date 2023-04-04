@@ -14,7 +14,7 @@
     [
       "@semantic-release/exec",
       {
-        "successCmd": "bash scripts/publish.sh ${nextRelease.version}"
+        "verifyReleaseCmd": "bash scripts/publish.sh ${nextRelease.version}"
       }
     ]
   ],
