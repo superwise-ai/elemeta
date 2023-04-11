@@ -5,7 +5,7 @@ from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
 
 class TextLength(AbstractMetadataExtractor):
     """
-    Gives the length of the text
+        Gives the number of characters in the text (including whitespace).
     """
 
     def extract(self, text: str) -> int:
