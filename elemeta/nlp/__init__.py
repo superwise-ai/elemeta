@@ -51,7 +51,6 @@ extended_punctuations = string_punctuations.union(english_punctuations)
 Set of all special charters
 """
 special_chars = {
-    "",
     "!",
     "@",
     "#",
@@ -77,5 +76,4 @@ special_chars = {
     "{",
     "}",
     ".",
-    "",
 }
