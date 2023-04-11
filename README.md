@@ -3,7 +3,7 @@
 [![](https://github.com/superwise-ai/elemeta/workflows/Release/badge.svg?branch=main)](https://github.com/superwise-ai/elemeta/actions/workflows/release.yaml)
 [![](https://img.shields.io/pypi/pyversions/elemeta)](https://pypi.org/project/elemeta/)
 [![](https://img.shields.io/github/license/superwise-ai/elemeta)](https://github.com/superwise-ai/elemeta/blob/main/LICENSE)
-[![](https://img.shields.io/badge/docs-quickstart-orange)](https://elemeta.superwise.ai/getting_started.html)
+[![](https://img.shields.io/badge/docs-quickstart-orange)](https://docs.elemeta.ai/getting_started.html)
 
 ![](./docs/images/elemeta_cover_image_black.png)
 Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
@@ -68,10 +68,10 @@ metadata_extractor_runner.run("This is a text about how good life is :)")
 
 ## Documentation
 
-- [Documentation homepage](https://elemeta.superwise.ai/index.html)
+- [Documentation homepage](https://docs.elemeta.ai/index.html)
 - [Quickstart notebook](https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_started.ipynb)
-- [Use cases](https://elemeta.superwise.ai/use_cases/index.html)
-- [API reference](https://elemeta.superwise.ai/apidocs.html)
+- [Use cases](https://docs.elemeta.ai/use_cases/index.html)
+- [API reference](https://docs.elemeta.ai/apidocs.html)
 
 This package aims to help enrich non-tabular data (i.e. text:nlp pictures: image processing and so on).
 Currently, we only support textual data, and we enrich it by extracting meta features (such as avg word length).
