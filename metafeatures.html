@@ -137,7 +137,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/create_low_level_extractor.html">Create Low Level Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/custom_extractor.html">Custom extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/custom_extractor.html">Custom Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -360,8 +360,8 @@ document.write(`
   <section id="metafeatures">
 <h1>Metafeatures<a class="headerlink" href="#metafeatures" title="Permalink to this heading">#</a></h1>
 <div class="line-block">
-<div class="line">Here you can find list of the exiting metafeatures and usage examples.</div>
-<div class="line">you can fine the full api reference <a class="reference external" href="https://elemeta.superwise.ai/elemeta.nlp.extractors.high_level.html">here</a></div>
+<div class="line">Here you can find explanations on all exiting metafeatures and usage examples.</div>
+<div class="line">You can see the full API reference <a class="reference external" href="https://elemeta.superwise.ai/elemeta.nlp.extractors.high_level.html">here</a></div>
 </div>
 <section id="uniquewordratio">
 <h2>UniqueWordRatio<a class="headerlink" href="#uniquewordratio" title="Permalink to this heading">#</a></h2>
@@ -369,64 +369,59 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">UniqueWordRatio</span><span class="p">(</span><span class="n">exceptions</span><span class="o">=</span><span class="n">exception</span><span class="p">)(</span><span class="s2">&quot;I love to move it move it&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return
-3/5
-because there are 5 distinct words in the text: I, love, to, move,it
-And 3 of them are unique: “I”, “love”, “to”</p>
+<p>Will return 3/5 because there are 5 distinct words in the text: I, love, to, move, it. And 3 of them are unique: “I”, “love”, “to”.</p>
 </section>
 <section id="wordregexmatchescount">
 <h2>WordRegexMatchesCount<a class="headerlink" href="#wordregexmatchescount" title="Permalink to this heading">#</a></h2>
-<p>For a given regex return the number of words matching the regex</p>
+<p>For a given regex return the number of words matching the regex.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WordRegexMatchesCount</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;h.+&quot;</span><span class="p">)(</span><span class="s2">&quot;he hee is&quot;</span><span class="p">,)</span>
 </pre></div>
 </div>
 <p>Will return:
 2
-because there are 2 words that match the regex: “he”, “hee”</p>
+because there are 2 words that match the regex: “he”, “hee”.</p>
 </section>
 <section id="numbercount">
 <h2>NumberCount<a class="headerlink" href="#numbercount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of numbers in the text</p>
+<p>Counts the number of numbers in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NumberCount</span><span class="p">()(</span><span class="s2">&quot;I am 17 years old and i will be 100 one day&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 2
-because there are 2 numbers in the text: 17,100</p>
+because there are 2 numbers in the text: 17,100.</p>
 </section>
 <section id="outofvocabularycount">
 <h2>OutOfVocabularyCount<a class="headerlink" href="#outofvocabularycount" title="Permalink to this heading">#</a></h2>
-<p>For a given vocabulary (the default is English vocabulary taken from nltk) return the number of words outside of the vocabulary</p>
+<p>For a given vocabulary (the default is English vocabulary taken from <a class="reference external" href="https://www.nltk.org/api/nltk.corpus.html">nltk.corpus</a>) return the number of words outside of the vocabulary.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">OutOfVocabularyCount</span><span class="p">()</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s2">&quot;Rick said Wubba Lubba dub-dub&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 3
-because there are 3 OOV(Out of Vocabulary) words: Wabba Lubba dub-dub</p>
+<p>Will return 3 because there are 3 OOV (Out of Vocabulary) words: Wabba Lubba dub-dub.</p>
 </section>
 <section id="mustappearwordspercentage">
 <h2>MustAppearWordsPercentage<a class="headerlink" href="#mustappearwordspercentage" title="Permalink to this heading">#</a></h2>
-<p>For a given set of words, return the percentage of words that appeared in the text:</p>
+<p>For a given set of words, return the percentage of words that appeared in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MustAppearWordsPercentage</span><span class="p">(</span><span class="n">must_appear</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;am&quot;</span><span class="p">})(</span><span class="s2">&quot;I am good now&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 1
-because all the words in the set appeared in the text</p>
+because all the words in the set appeared in the text.</p>
 </section>
 <section id="sentencecount">
 <h2>SentenceCount<a class="headerlink" href="#sentencecount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of sentences in the text</p>
+<p>Counts the number of sentences in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentenceCount</span><span class="p">()(</span><span class="s2">&quot;Hello, my name is Inigo Montoya. You killed my father. Prepare to die.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 3
-because there are 3 sentences in the text:”Hello, my name is Inigo Montoya.”,”You killed my father.”,”Prepare to die.”</p>
+<p>Will return 3 because there are 3 sentences in the text: “Hello, my name is Inigo Montoya.“, “You killed my father.“, “Prepare to die.“.</p>
 </section>
 <section id="sentenceavglength">
 <h2>SentenceAvgLength<a class="headerlink" href="#sentenceavglength" title="Permalink to this heading">#</a></h2>
-<p>Gives the average length of sentences in the text</p>
+<p>Gives the average length of sentences in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentenceAvgLength</span><span class="p">()(</span><span class="s2">&quot;Hello, my name is Inigo Montoya. You killed my father. Prepare to die.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 22.66668</p>
+<p>Will return 22.66668.</p>
 </section>
 <section id="wordcount">
 <h2>WordCount<a class="headerlink" href="#wordcount" title="Permalink to this heading">#</a></h2>
@@ -434,11 +429,11 @@ because there are 3 sentences in the text:”Hello, my name is Inigo Montoya.”
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WordCount</span><span class="p">()(</span><span class="s2">&quot;Hello, my name is Inigo Montoya. You killed my father. Prepare to die.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 13</p>
+<p>Will return 13.</p>
 </section>
 <section id="avgwordlength">
 <h2>AvgWordLength<a class="headerlink" href="#avgwordlength" title="Permalink to this heading">#</a></h2>
-<p>Gives the average length of the words in the text</p>
+<p>Gives the average length of the words in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">AvgWordLength</span><span class="p">()(</span><span class="s2">&quot;Hello, my name is Inigo Montoya. You killed my father. Prepare to die.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -446,50 +441,48 @@ because there are 3 sentences in the text:”Hello, my name is Inigo Montoya.”
 </section>
 <section id="textlength">
 <h2>TextLength<a class="headerlink" href="#textlength" title="Permalink to this heading">#</a></h2>
-<p>Gives the length of the text</p>
+<p>Gives the number of characters in the text (including whitespace).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TextLength</span><span class="p">()(</span><span class="s2">&quot;Hello, my name is Inigo Montoya. You killed my father. Prepare to die.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 70</p>
+<p>Will return 70.</p>
 </section>
 <section id="stopwordscount">
 <h2>StopWordsCount<a class="headerlink" href="#stopwordscount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of stop words</p>
+<p>Counts the number of stop words.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">StopWordsCount</span><span class="p">()(</span><span class="s2">&quot;Once I was afraid, I was petrified&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 5
-because there are 4 stop words in the text: “Once”,“I”,”was”,”I”,”was”</p>
+<p>Will return 5 because there are 4 stop words in the text: “Once”, “I”, “was”, “I”, “was”.</p>
 </section>
 <section id="punctuationcount">
 <h2>PunctuationCount<a class="headerlink" href="#punctuationcount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of punctuation marks in the text (the default list of punctuation marks can be found <a class="reference external" href="list">here</a>)</p>
+<p>Counts the number of punctuation marks in the text (the default list of punctuation marks can be found <a class="reference external" href="list">here</a>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PunctuationCount</span><span class="p">()(</span><span class="s2">&quot;Once I was afraid, I was petrified!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 2
-because there are 2 punctuation marks: “,”,”!”</p>
+<p>Will return 2 because there are 2 punctuation marks: “,”, “!”.</p>
 </section>
 <section id="specialcharscount">
 <h2>SpecialCharsCount<a class="headerlink" href="#specialcharscount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of special characters in the text (the default list of special characters can be found <a class="reference external" href="list">here</a>)</p>
+<p>Counts the number of special characters in the text (the default list of special characters can be found <a class="reference external" href="list">here</a>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SpecialCharsCount</span><span class="p">()(</span><span class="s2">&quot;Once I was afraid, I was petrified!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 1
-because there is 1 special character</p>
+because there is 1 special character.</p>
 </section>
 <section id="capitallettersratio">
 <h2>CapitalLettersRatio<a class="headerlink" href="#capitallettersratio" title="Permalink to this heading">#</a></h2>
-<p>Counts the ratio of capital letters to all letters</p>
+<p>Counts the ratio of capital letters to all letters.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">CapitalLettersRatio</span><span class="p">()(</span><span class="s2">&quot;HalF Ok&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 0.5</p>
+<p>Will return 0.5.</p>
 </section>
 <section id="regexmatchcount">
 <h2>RegexMatchCount<a class="headerlink" href="#regexmatchcount" title="Permalink to this heading">#</a></h2>
-<p>For a given regex return the number of matches it has in the text</p>
+<p>For a given regex return the number of matches it has in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">)(</span><span class="s2">&quot;This is a test text, will this test pass?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -498,7 +491,7 @@ because the regex will match on the word “test” and it appears twice.</p>
 </section>
 <section id="emailcount">
 <h2>EmailCount<a class="headerlink" href="#emailcount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of emails in the text</p>
+<p>Counts the number of emails in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EmailCount</span><span class="p">()(</span><span class="s2">&quot;lior.something@gmail.ac.il is ok but lior@superwise.il is better&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -506,7 +499,7 @@ because the regex will match on the word “test” and it appears twice.</p>
 </section>
 <section id="linkcount">
 <h2>LinkCount<a class="headerlink" href="#linkcount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of links in the text</p>
+<p>Counts the number of links in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">LinkCount</span><span class="p">()(</span><span class="s2">&quot;https://google.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -514,19 +507,19 @@ because the regex will match on the word “test” and it appears twice.</p>
 </section>
 <section id="hashtagcount">
 <h2>HashtagCount<a class="headerlink" href="#hashtagcount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of hashtags in the text</p>
+<p>Counts the number of hashtags in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HashtagCount</span><span class="p">()(</span><span class="s2">&quot;#me2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 1</p>
+<p>Will return 1.</p>
 </section>
 <section id="mentioncount">
 <h2>MentionCount<a class="headerlink" href="#mentioncount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of mentions (word in the format &#64;someones_name)</p>
+<p>Counts the number of mentions (word in the format &#64;someones_name).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">MentionCount</span><span class="p">()(</span><span class="s2">&quot;@elad&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 1</p>
+<p>Will return 1.</p>
 </section>
 <section id="syllablecount">
 <h2>SyllableCount<a class="headerlink" href="#syllablecount" title="Permalink to this heading">#</a></h2>
@@ -534,35 +527,35 @@ because the regex will match on the word “test” and it appears twice.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SyllableCount</span><span class="p">()(</span><span class="s2">&quot;hyperemotionality&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 8</p>
+<p>Will return 8.</p>
 </section>
 <section id="acronymcount">
 <h2>AcronymCount<a class="headerlink" href="#acronymcount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of acronyms in the text</p>
+<p>Counts the number of acronyms in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">AcronymCount</span><span class="p">()(</span><span class="s2">&quot;W.T.F that was LOL&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 2</p>
+<p>Will return 2.</p>
 </section>
 <section id="datecount">
 <h2>DateCount<a class="headerlink" href="#datecount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of dates in the text</p>
+<p>Counts the number of dates in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DateCount</span><span class="p">()(</span><span class="s2">&quot;Entries are due by January 4th, 2017 at 8:00pm, created 01/15/2005 by ACME Inc. and associates.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 2</p>
+<p>Will return 2.</p>
 </section>
 <section id="sentimentpolarity">
 <h2>SentimentPolarity<a class="headerlink" href="#sentimentpolarity" title="Permalink to this heading">#</a></h2>
-<p>Returns the Sentiment Polarity (read more about the difference between sentiment polarity and sentiment subjectivity <a class="reference external" href="https://www.tasq.ai/tasq-question/what-are-polarity-and-subjectivity-in-sentiment-analysis/">here</a>) value as a range between -1 to 1, where -1 means the text is a utterly negative sentiment and 1 is a utterly positive sentiment.</p>
+<p>Returns the Sentiment Polarity (read more about the difference between sentiment polarity and sentiment subjectivity <a class="reference external" href="https://www.tasq.ai/tasq-question/what-are-polarity-and-subjectivity-in-sentiment-analysis/">here</a>) value as a range between -1 to 1, where -1 means the text is an utterly negative sentiment and 1 is an utterly positive sentiment.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentimentPolarity</span><span class="p">()(</span><span class="s2">&quot;I love cake!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return around 0.669</p>
+<p>Will return around 0.669.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentimentPolarity</span><span class="p">()(</span><span class="s2">&quot;I HATE cake!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return around -0.693</p>
+<p>Will return around -0.693.</p>
 </section>
 <section id="sentimentsubjectivity">
 <h2>SentimentSubjectivity<a class="headerlink" href="#sentimentsubjectivity" title="Permalink to this heading">#</a></h2>
@@ -570,55 +563,55 @@ because the regex will match on the word “test” and it appears twice.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentimentSubjectivity</span><span class="p">()(</span><span class="s2">&quot;I hate cakes!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return around 0.9</p>
+<p>Will return around 0.9.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SentimentSubjectivity</span><span class="p">()(</span><span class="s2">&quot;They all failed the test&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return around 0.3</p>
+<p>Will return around 0.3.</p>
 </section>
 <section id="detectlangauge">
 <h2>DetectLangauge<a class="headerlink" href="#detectlangauge" title="Permalink to this heading">#</a></h2>
-<p>Returns the language of the text (uses <a class="reference external" href="https://github.com/Mimino666/langdetect">langdetect</a> library)</p>
+<p>Returns the language of the text (uses <a class="reference external" href="https://github.com/Mimino666/langdetect">langdetect</a> library).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DetectLangauge</span><span class="p">()(</span><span class="s2">&quot;I love cakes. its the best. almost like the rest&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return “en”</p>
+<p>Will return “en”.</p>
 </section>
 <section id="emojicount">
 <h2>EmojiCount<a class="headerlink" href="#emojicount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of emojis in the text</p>
+<p>Counts the number of emojis in the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">EmojiCount</span><span class="p">()(</span><span class="s2">&quot;🤔 🙈 me así, bla es se 😌 ds 💕👭👙&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 6</p>
+<p>Will return 6.</p>
 </section>
 <section id="hintedprofanitywordscount">
 <h2>HintedProfanityWordsCount<a class="headerlink" href="#hintedprofanitywordscount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of profanity words (uses better_profanity <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library)</p>
+<p>Counts the number of profanity words (uses better_profanity <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanityWordsCount</span><span class="p">()(</span><span class="s2">&quot;fuck this sh!t,I want to fucking leave the country&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 3</p>
+<p>Will return 3.</p>
 </section>
 <section id="hintedprofanitysentencecount">
 <h2>HintedProfanitySentenceCount<a class="headerlink" href="#hintedprofanitysentencecount" title="Permalink to this heading">#</a></h2>
-<p>Counts the number of sentences with profanity words in them (uses <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library)</p>
+<p>Counts the number of sentences with profanity words in them (uses <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanitySentenceCount</span><span class="p">()(</span><span class="s2">&quot;fuck this sh!t, I want to fucking leave the country. but I am fine&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 1</p>
+<p>Will return 1.</p>
 </section>
 <section id="textcomplexity">
 <h2>TextComplexity<a class="headerlink" href="#textcomplexity" title="Permalink to this heading">#</a></h2>
-<p>Return the <code class="docutils literal notranslate"><span class="pre">Flesch</span> <span class="pre">Reading</span> <span class="pre">Ease</span> <span class="pre">Score</span></code> of the text</p>
+<p>Return the <code class="docutils literal notranslate"><span class="pre">Flesch</span> <span class="pre">Reading</span> <span class="pre">Ease</span> <span class="pre">Score</span></code> of the text.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TextComplexity</span><span class="p">()(</span><span class="s2">&quot;This love cakes&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 119.19</p>
+<p>Will return 119.19.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TextComplexity</span><span class="p">()(</span><span class="s2">&quot;Production of biodiesel by enzymatic transesterifcation of non-edible Salvadora persica (Pilu) oil and crude coconut oil in a solvent-free system&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Will return 17.34</p>
+<p>Will return 17.34.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>

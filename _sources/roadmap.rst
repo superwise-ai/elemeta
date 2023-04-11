@@ -2,10 +2,10 @@
 Roadmap
 ========================
 
-#. Image extractors
-#. Text extractor expansion + Additional language coverage
-#. Performance optimization and report generation
-#. Audio extractors
+#. Image extractors.
+#. Text extractor expansion + additional language coverage.
+#. Performance optimization and report generation.
+#. Audio extractors.
 
 
 .. toctree::

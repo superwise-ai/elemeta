@@ -13,9 +13,11 @@ Get started with Elemeta by installing the Python library via pip
 
 .. code-block:: python
 
-    from elemeta.dataset.dataset import get_imdb_reviews
+    from elemeta.dataset.dataset import get_avengers_endgame_tweets
     # Load existing dataframe
-    reviews = get_imdb_reviews()
+    tweets = get_avengers_endgame_tweets()
+    tweets.head()
+
 
 After you have a dataset with the text column, you can start using the library with the following Python API:
 
@@ -23,8 +25,9 @@ After you have a dataset with the text column, you can start using the library w
 
     from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
     metadata_extractor_runner = MetadataExtractorsRunner()
-    reviews = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column='review')
-    reviews.show()
+    # Running on all the data should take around a minute
+    tweets = metadata_extractor_runner.run_on_dataframe(dataframe = tweets,text_column="text")
+    tweets.head()
 
 .. image:: ./images/elemeta_reviews.gif
         :width: 600
@@ -37,11 +40,12 @@ Elemeta can enrich standard dataframe objects:
 .. code-block:: python
 
     from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
-    Import pandas as pd
+    import pandas as pd
 
-    df = pd.dataframe({"text": ["Hi I just met you, and this is crazy","What does the fox say?","I love robots" })
+    df = pd.DataFrame({"text": ["Hi I just met you, and this is crazy","What does the fox say?","I love robots"] })
     metadata_extractor_runner = MetadataExtractorsRunner()
-    df_with_metadata = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column="text")
+    df_with_metadata = metadata_extractor_runner.run_on_dataframe(dataframe=df,text_column="text")
+    df_with_metadata.head()
 
 
 Strings

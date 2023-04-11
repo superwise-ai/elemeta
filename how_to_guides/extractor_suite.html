@@ -137,7 +137,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="create_low_level_extractor.html">Create Low Level Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="custom_extractor.html">Custom extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 has-children"><a class="reference internal" href="custom_extractor.html">Custom Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -321,11 +321,7 @@ document.write(`
                   
   <section id="extractor-suite">
 <h1>Extractor Suite<a class="headerlink" href="#extractor-suite" title="Permalink to this heading">#</a></h1>
-<p>To extract multiple metadata values at once use MetadataExtractorsRunner.
-Supply a list of metadata extractors you want to run,
-get a runner that can be applied to text, and get the list of metadata values.
-To run all the extractors on a text,
-use the runner function <code class="docutils literal notranslate"><span class="pre">run(text:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">float,</span> <span class="pre">int]]</span></code></p>
+<p>To extract multiple metadata values at once use MetadataExtractorsRunner. Supply a list of metadata extractors you want to run, apply a runner to the text, and get the list of metadata values. To run all the extractors on a text, use the runner function <code class="docutils literal notranslate"><span class="pre">run(text:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">float,</span> <span class="pre">int]]</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.metadata_extractor_runner</span> <span class="kn">import</span> <span class="n">MetadataExtractorsRunner</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metadata_extractor_runner</span> <span class="o">=</span> <span class="n">MetadataExtractorsRunner</span><span class="p">(</span><span class="n">metadata_extractors</span><span class="o">=</span><span class="p">[</span><span class="n">sp</span><span class="p">,</span><span class="n">ld</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metadata_extractor_runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;This is a text about how good life is :)&quot;</span><span class="p">)</span>
@@ -364,8 +360,7 @@ use the runner function <code class="docutils literal notranslate"><span class="
 <span class="go"> &#39;date_count&#39;: 0}</span>
 </pre></div>
 </div>
-<p>To add new MetadataExtractor to existing
-MetadataExtractorsRunner we can use <code class="docutils literal notranslate"><span class="pre">add_metadata_extractor(metadata_extractor:</span> <span class="pre">AbstractMetadataExtractor)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code>:</p>
+<p>To add a new MetadataExtractor to an existing MetadataExtractorsRunner we can use <code class="docutils literal notranslate"><span class="pre">add_metadata_extractor(metadata_extractor:</span> <span class="pre">AbstractMetadataExtractor)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.regex_match_count</span> <span class="kn">import</span> <span class="n">RegexMatchCount</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">number_of_good_in_text</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_good_in_text&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;good|Good&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metadata_extractor_runner</span><span class="o">.</span><span class="n">add_metadata_extractor</span><span class="p">(</span><span class="n">number_of_good_in_text</span><span class="p">)</span>
@@ -399,7 +394,7 @@ MetadataExtractorsRunner we can use <code class="docutils literal notranslate"><
 <span class="go"> &#39;number_of_good_in_text&#39;: 1}</span>
 </pre></div>
 </div>
-<p>To run the extractors on all the columns on dataframe, use run_on_dataframe(dataframe: DataFrame, text_column: str) -&gt; DataFrame this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metadata values as new columns.</p>
+<p>To run the extractors on all the dataframe columns, use <code class="docutils literal notranslate"><span class="pre">run_on_dataframe(dataframe:</span> <span class="pre">DataFrame,</span> <span class="pre">text_column:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">DataFrame</span></code> this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metadata values as new columns.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.dataset.dataset</span> <span class="kn">import</span> <span class="n">get_imdb_reviews</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">reviews</span> <span class="o">=</span> <span class="n">get_imdb_reviews</span><span class="p">()[:</span><span class="mi">200</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The original dataset had </span><span class="si">{}</span><span class="s2"> columns&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reviews</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
@@ -410,7 +405,7 @@ MetadataExtractorsRunner we can use <code class="docutils literal notranslate"><
 <span class="go">&gt;&gt;&gt;reviews</span>
 </pre></div>
 </div>
-<p>add image</p>
+<a class="reference internal image-reference" href="../_images/elemeta_reviews.gif"><img alt="histogram of text_length feature" src="../_images/elemeta_reviews.gif" style="width: 600px;" /></a>
 <div class="toctree-wrapper compound">
 </div>
 </section>

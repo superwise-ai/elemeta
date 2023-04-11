@@ -13,15 +13,14 @@ EDA
         :width: 600
         :alt: histogram of text_length feature
 
-Lets crete two create one RegexMatchCount for negative words and one for positive words:
-
+Let’s create two RegexMatchCount - one for negative words and one for positive words:
 .. code-block:: python
 
     from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
     number_of_negative_words = RegexMatchCount(name="number_of_negative_words",regex="hate|sad|terrible|bad")
     number_of_positive_words = RegexMatchCount(name="number_of_positive_words",regex="love|wonderful|amazing|happy|good")
 
-Now lets enrich the data:
+Now let's enrich the data:
 
 .. code-block:: python
 

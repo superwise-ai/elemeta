@@ -10,9 +10,9 @@ Monitoring
 
 Walkthrough
 ------------
-#. Sign in to your Superwise community account (or signup if you don’t have one)
-#. Build your first project and upload your first model (see the quickstart guide)
-#. Start sending ongoing predictions and inputs together with their Elemeta metafeatures
+#. Sign in to your `Superwise community account <https://portal.superwise.ai/account/sign-up>`_ (or signup if you don’t have one).
+#. Build your first project and upload your first model (see the `quickstart guide <https://docs.superwise.ai/docs/quickstart-v2>`_).
+#. Start sending ongoing predictions and inputs together with their Elemeta metafeatures.
 
     .. code-block:: python
 
@@ -34,14 +34,13 @@ Walkthrough
         :width: 600
         :alt: histogram of text_length feature
 
-        distribution of the values of text_length in the test data of the model
-
+        Distribution text_length values in the model’s test data
 
     .. figure:: ../images/drift_metric_in_superwise.png
         :width: 600
         :alt: 3 metrics graphs over time
 
-        here we can see drift metrics calculated by superwise cross all the features
+        Drift metrics calculated by Superwise across all features
 
 For a full working example
-please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/superwise_monitoring_demo.ipynb>`_
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/monitoring.ipynb>`_

@@ -44,7 +44,7 @@
     <link rel="icon" href="../_static/elemeta_favicon_blue.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Custom extractor" href="custom_extractor.html" />
+    <link rel="next" title="Custom Extractor" href="custom_extractor.html" />
     <link rel="prev" title="Extractor Suite" href="extractor_suite.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -137,7 +137,7 @@
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Create Low Level Extractor</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="custom_extractor.html">Custom extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 has-children"><a class="reference internal" href="custom_extractor.html">Custom Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -321,17 +321,17 @@ document.write(`
                   
   <section id="create-low-level-extractor">
 <h1>Create Low Level Extractor<a class="headerlink" href="#create-low-level-extractor" title="Permalink to this heading">#</a></h1>
-<p>Low-level API exporters are the exporters that do not work “out of the box.”
+<p>Low-level API extractor are the exporters that do not work “out of the box.”
 You must supply additional parameters (such as a tokenizer function).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.avg_token_length</span> <span class="kn">import</span> <span class="n">AvgTokenLength</span>
 </pre></div>
 </div>
-<p>Lets implement 2 tokenizers:</p>
+<p>Let’s implement 2 tokenizers:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_simple_word_tokinzer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_simple_line_tokinzer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now lets test them:</p>
+<p>Now let’s test them:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
 <span class="gp">... </span><span class="s2">Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s,</span>
 <span class="gp">... </span><span class="s2">when an unknown printer took a galley of type and scrambled it to make a type specimen book.&quot;&quot;&quot;</span>
@@ -388,7 +388,7 @@ You must supply additional parameters (such as a tokenizer function).</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atl_for_lines</span> <span class="o">=</span> <span class="n">AvgTokenLength</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">=</span><span class="n">my_simple_line_tokinzer</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Lets test them:</p>
+<p>Let’s test them:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">atl_for_words</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 <span class="go">5.0</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atl_for_lines</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -396,7 +396,7 @@ You must supply additional parameters (such as a tokenizer function).</p>
 </pre></div>
 </div>
 <p>For a full working example
-please use the following <a class="reference external" href="https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/low_level_api_extractors.ipynb">Google Colab</a></p>
+please use the following <a class="reference external" href="https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/create_low_level_extractor.ipynb">Google Colab</a></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -427,7 +427,7 @@ please use the following <a class="reference external" href="https://colab.resea
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Custom extractor</p>
+        <p class="prev-next-title">Custom Extractor</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
