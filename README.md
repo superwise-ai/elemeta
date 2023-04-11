@@ -1,4 +1,10 @@
 # Elemeta: Metafeature Extraction for Unstructured Data
+
+[![](https://github.com/superwise-ai/elemeta/workflows/Release/badge.svg?branch=main)](https://github.com/superwise-ai/elemeta/actions/workflows/release.yaml)
+[![](https://img.shields.io/pypi/pyversions/elemeta)](https://pypi.org/project/elemeta/)
+[![](https://img.shields.io/github/license/superwise-ai/elemeta)](https://github.com/superwise-ai/elemeta/blob/main/LICENSE)
+[![](https://img.shields.io/badge/docs-quickstart-orange)](https://elemeta.superwise.ai/getting_started.html)
+
 ![Alt Text](./docs/images/elemeta_cover_image_black.png)
 Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
 
