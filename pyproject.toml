@@ -5,9 +5,9 @@ description = "Metafeature Extraction for Unstructured Data"
 license = "MIT"
 authors = ["Lior Durahly <lior.durahly@superwise.ai>", "Elad Shoham <elad.shoham@superwise.ai>"]
 readme = "README.md"
-homepage = "https://elemeta.superwise.ai"
+homepage = "https://docs.elemeta.ai"
 repository = "https://github.com/superwise-ai/elemeta"
-documentation = "https://elemeta.superwise.ai"
+documentation = "https://docs.elemeta.ai"
 packages = [{ include = "elemeta" }]
 
 [tool.poetry.dependencies]

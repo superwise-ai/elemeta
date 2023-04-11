@@ -2,7 +2,7 @@
 Metafeatures
 ========================
 | Here you can find explanations on all exiting metafeatures and usage examples.
-| You can see the full API reference `here <https://elemeta.superwise.ai/elemeta.nlp.extractors.high_level.html>`_
+| You can see the full API reference `here <https://docs.elemeta.ai/elemeta.nlp.extractors.high_level.html>`_
 
 UniqueWordRatio
 ---------------
