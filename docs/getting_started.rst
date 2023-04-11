@@ -29,9 +29,6 @@ After you have a dataset with the text column, you can start using the library w
     tweets = metadata_extractor_runner.run_on_dataframe(dataframe = tweets,text_column="text")
     tweets.head()
 
-.. image:: ./images/elemeta_reviews.gif
-        :width: 600
-        :alt: histogram of text_length feature
 
 Pandas DataFrames
 ==================
@@ -58,7 +55,6 @@ Elemeta can enrich specific strings:
 
     metadata_extractor_runner = MetadataExtractorsRunner()
     metadata_extractor_runner.run("This is a text about how good life is :)")
-
 
 
 .. toctree::
