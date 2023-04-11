@@ -41,7 +41,7 @@ reviews = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_colu
 reviews.show()
 ```
 
-![Alt Text](./docs/images/elemeta_reviews.gif)
+![](./docs/images/elemeta_reviews.gif)
 
 ### Pandas DataFrames
 
