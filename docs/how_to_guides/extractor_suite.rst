@@ -1,11 +1,7 @@
 ========================
 Extractor Suite
 ========================
-To extract multiple metadata values at once use MetadataExtractorsRunner.
-Supply a list of metadata extractors you want to run,
-get a runner that can be applied to text, and get the list of metadata values.
-To run all the extractors on a text,
-use the runner function ``run(text: str) -> Dict[str, Union[str, float, int]]``
+To extract multiple metadata values at once use MetadataExtractorsRunner. Supply a list of metadata extractors you want to run, apply a runner to the text, and get the list of metadata values. To run all the extractors on a text, use the runner function ``run(text: str) -> Dict[str, Union[str, float, int]]``
 
 ::
 
@@ -48,8 +44,7 @@ If no metadata extractors are supplied, a default set of extractors will be sele
      'acronym_count': 0,
      'date_count': 0}
 
-To add new MetadataExtractor to existing
-MetadataExtractorsRunner we can use ``add_metadata_extractor(metadata_extractor: AbstractMetadataExtractor) -> None``:
+To add a new MetadataExtractor to an existing MetadataExtractorsRunner we can use ``add_metadata_extractor(metadata_extractor: AbstractMetadataExtractor) -> None``:
 
 ::
 
@@ -85,8 +80,7 @@ MetadataExtractorsRunner we can use ``add_metadata_extractor(metadata_extractor:
      'date_count': 0,
      'number_of_good_in_text': 1}
 
-
-To run the extractors on all the columns on dataframe, use run_on_dataframe(dataframe: DataFrame, text_column: str) -> DataFrame this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metadata values as new columns.
+To run the extractors on all the dataframe columns, use ``run_on_dataframe(dataframe: DataFrame, text_column: str) -> DataFrame`` this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metadata values as new columns.
 
 ::
 
@@ -99,8 +93,9 @@ To run the extractors on all the columns on dataframe, use run_on_dataframe(data
     The transformed dataset has 29 columns
     >>>reviews
 
-add image
-
+.. image:: ../images/elemeta_reviews.gif
+        :width: 600
+        :alt: histogram of text_length feature
 
 
 

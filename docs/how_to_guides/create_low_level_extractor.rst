@@ -1,21 +1,21 @@
 ===========================
 Create Low Level Extractor
 ===========================
-Low-level API exporters are the exporters that do not work "out of the box."
+Low-level API extractor are the exporters that do not work "out of the box."
 You must supply additional parameters (such as a tokenizer function).
 
 ::
 
     >>> from elemeta.nlp.extractors.low_level.avg_token_length import AvgTokenLength
 
-Lets implement 2 tokenizers:
+Let’s implement 2 tokenizers:
 
 ::
 
     >>> my_simple_word_tokinzer = lambda text: text.split(" ")
     >>> my_simple_line_tokinzer = lambda text: text.split("\n")
 
-Now lets test them:
+Now let’s test them:
 
 ::
 
@@ -76,7 +76,7 @@ We can supply those tokenizers to ``AvgTokenLength`` and create two AvgTokenLeng
     >>> atl_for_words = AvgTokenLength(tokenizer=my_simple_word_tokinzer)
     >>> atl_for_lines = AvgTokenLength(tokenizer=my_simple_line_tokinzer)
 
-Lets test them:
+Let’s test them:
 
 ::
 
@@ -87,7 +87,7 @@ Lets test them:
 
 
 For a full working example
-please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/low_level_api_extractors.ipynb>`_
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/create_low_level_extractor.ipynb>`_
 
 
 

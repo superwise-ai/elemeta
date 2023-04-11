@@ -1,14 +1,14 @@
 ========================
-Custom extractor
+Custom Extractor
 ========================
-It is possible to create your own ``MetadataExtractor`` to fit you needs,
-you can do this by implementing the abstract class ``AbstractMetadataExtractor``
+| It is possible to create your own ``MetadataExtractor`` to fit you needs.
+| You can do this by implementing the abstract class ``AbstractMetadataExtractor``
 
 ::
 
     >>> from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import AbstractMetadataExtractor
 
-Lets create IsPalindromeExtractor that will return if the given text is palindrome:
+Let’s create IsPalindromeExtractor that will return if the given text is palindrome:
 
 ::
 
@@ -18,7 +18,7 @@ Lets create IsPalindromeExtractor that will return if the given text is palindro
     ...         return normalized_text == normalized_text[::-1]
     >>> ipe = IsPlindromExtractor()
 
-Lets test it:
+Let’s test it:
 
 ::
 
@@ -94,7 +94,7 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
 
 
 For a full working example
-please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/implementing_your_own_extractor.ipynb>`_
+please use the following `Google Colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/custom_extractor.ipynb>`_
 
 
 
