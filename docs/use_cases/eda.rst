@@ -14,6 +14,7 @@ EDA
         :alt: histogram of text_length feature
 
 Let’s create two RegexMatchCount - one for negative words and one for positive words:
+
 .. code-block:: python
 
     from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
