@@ -330,13 +330,12 @@ document.write(`
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/eda_basic_tweets.png"><img alt="histogram of text_length feature" src="../_images/eda_basic_tweets.png" style="width: 600px;" /></a>
-<p>Let’s create two RegexMatchCount - one for negative words and one for positive words:
-.. code-block:: python</p>
-<blockquote>
-<div><p>from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
-number_of_negative_words = RegexMatchCount(name=”number_of_negative_words”,regex=”hate|sad|terrible|bad”)
-number_of_positive_words = RegexMatchCount(name=”number_of_positive_words”,regex=”love|wonderful|amazing|happy|good”)</p>
-</div></blockquote>
+<p>Let’s create two RegexMatchCount - one for negative words and one for positive words:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.regex_match_count</span> <span class="kn">import</span> <span class="n">RegexMatchCount</span>
+<span class="n">number_of_negative_words</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_negative_words&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;hate|sad|terrible|bad&quot;</span><span class="p">)</span>
+<span class="n">number_of_positive_words</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_positive_words&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;love|wonderful|amazing|happy|good&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Now let’s enrich the data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.metadata_extractor_runner</span> <span class="kn">import</span> <span class="n">MetadataExtractorsRunner</span>
 
