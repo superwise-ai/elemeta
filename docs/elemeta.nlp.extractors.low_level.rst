@@ -4,10 +4,10 @@ elemeta.nlp.extractors.low\_level package
 Submodules
 ----------
 
-elemeta.nlp.extractors.low\_level.abstract\_metadata\_extractor module
-----------------------------------------------------------------------
+elemeta.nlp.extractors.low\_level.abstract\_metafeature\_extractor module
+-------------------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.low_level.abstract_metadata_extractor
+.. automodule:: elemeta.nlp.extractors.low_level.abstract_metafeature_extractor
    :members:
    :undoc-members:
    :show-inheritance:

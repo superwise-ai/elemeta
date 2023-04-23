@@ -2,12 +2,12 @@ from typing import Callable, Optional
 
 import textstat  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class TextComplexity(AbstractMetadataExtractor):
+class TextComplexity(AbstractMetafeatureExtractor):
     """
     Return the Flesch Reading Ease Score of the text
     """

@@ -1,9 +1,9 @@
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class TextLength(AbstractMetadataExtractor):
+class TextLength(AbstractMetafeatureExtractor):
     """
     Gives the number of characters in the text (including whitespace).
     """

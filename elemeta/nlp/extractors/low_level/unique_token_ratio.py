@@ -1,12 +1,12 @@
 from typing import Callable, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class UniqueTokensRatio(AbstractMetadataExtractor):
-    """Implementation of AbstractMetadataExtractor class that return the ratio between the
+class UniqueTokensRatio(AbstractMetafeatureExtractor):
+    """Implementation of AbstractMetafeatureExtractor class that return the ratio between the
     number of unique tokens to all tokens"""
 
     def __init__(

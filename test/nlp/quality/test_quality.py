@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import pytest
 
-import elemeta.nlp.metadata_extractor_runner as met
+import elemeta.nlp.metafeature_extractors_runner as met
 from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectLangauge
 from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import \
     HintedProfanityWordsCount
@@ -36,7 +36,7 @@ def test_sentiment_polarity(name, file, expect):
         full_file_name = os.path.join(directory, filename)
         with open(full_file_name, "r") as f:
             data = f.read()
-        metrics = met.MetadataExtractorsRunner(metadata_extractors=[SentimentPolarity()])
+        metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=[SentimentPolarity()])
         enc = metrics.run(data)["sentiment_polarity"]
         results.append(round(enc, 0))
     res = round(sum(results) / len(results))
@@ -66,7 +66,7 @@ def test_sentiment_subjectivity(name, file, encode, expect):
         data = f.readlines()
 
     resulst = []
-    metrics = met.MetadataExtractorsRunner(metadata_extractors=[SentimentSubjectivity()])
+    metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=[SentimentSubjectivity()])
     for line in data:
         enc = metrics.run(line)["sentiment_subjectivity"]
         resulst.append(round(enc, 0))
@@ -107,7 +107,7 @@ def test_language_detection(name, file):
         "German": "de"
     }
 
-    metrics = met.MetadataExtractorsRunner(metadata_extractors=[DetectLangauge()])
+    metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=[DetectLangauge()])
     hits = []
     for line in df.iloc:
         res = metrics.run(line["Text"])["detect_langauge"]
@@ -131,7 +131,7 @@ def test_profanity_detection(name, file):
     with open(full_file_name, "r") as f:
         lines = f.readlines()
 
-    metrics = met.MetadataExtractorsRunner(metadata_extractors=[HintedProfanityWordsCount()])
+    metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=[HintedProfanityWordsCount()])
     hits = []
     for line in lines:
         res = metrics.run(line)["hinted_profanity_words_count"]
@@ -156,6 +156,6 @@ def test_difficulty(name, file, expected):
     with open(full_file_name, "r") as f:
         data = f.read()
 
-    metrics = met.MetadataExtractorsRunner(metadata_extractors=[TextComplexity()])
+    metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=[TextComplexity()])
     res = metrics.run(data)["text_complexity"]
     assert res == expected, f"classified as {res} and should be {expected}"

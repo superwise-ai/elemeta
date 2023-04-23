@@ -1,12 +1,12 @@
 import re
 from typing import Optional
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class RegexMatchCount(AbstractMetadataExtractor):
+class RegexMatchCount(AbstractMetafeatureExtractor):
     """
     For a given regex return the number of matches it has in the text
     """

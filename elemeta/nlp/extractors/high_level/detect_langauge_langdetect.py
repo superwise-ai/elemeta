@@ -2,12 +2,12 @@ from typing import Optional
 
 from langdetect import DetectorFactory, LangDetectException, detect  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class DetectLangauge(AbstractMetadataExtractor):
+class DetectLangauge(AbstractMetafeatureExtractor):
     """
     Returns the language of the text
     """

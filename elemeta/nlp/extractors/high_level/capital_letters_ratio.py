@@ -1,11 +1,11 @@
 from typing import Optional
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class CapitalLettersRatio(AbstractMetadataExtractor):
+class CapitalLettersRatio(AbstractMetafeatureExtractor):
     """
     Counts the ratio of capital letters to all letters
     """

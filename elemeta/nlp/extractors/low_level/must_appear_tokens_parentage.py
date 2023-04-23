@@ -1,12 +1,12 @@
 from typing import Callable, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class MustAppearTokensPercentage(AbstractMetadataExtractor):
-    """Implementation of AbstractMetadataExtractor class that return the ration between
+class MustAppearTokensPercentage(AbstractMetafeatureExtractor):
+    """Implementation of AbstractMetafeatureExtractor class that return the ration between
     the number of appearances of tokens from
 
     given tokens list in the text to all the tokens"""

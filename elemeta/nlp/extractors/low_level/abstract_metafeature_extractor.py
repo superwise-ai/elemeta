@@ -3,9 +3,9 @@ from abc import ABC, abstractmethod
 from typing import Any, Optional
 
 
-class AbstractMetadataExtractor(ABC):
+class AbstractMetafeatureExtractor(ABC):
     """
-    Representation of a MetadataExtractor
+    Representation of a MetafeatureExtractor
     This class holds a function to be run to extract the metadata value and the name
      of the metadata
     """
