@@ -346,16 +346,16 @@ document.write(`
 <li><p>Start sending ongoing predictions and inputs together with their Elemeta metafeatures.</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Production_data</span> <span class="c1"># the production data Dataframe</span>
-<span class="c1"># Extract metadata values using MetadataExtractorsRunner</span>
-<span class="n">metadata_extractors_runner</span> <span class="o">=</span> <span class="n">MetadataExtractorsRunner</span><span class="p">()</span>
-<span class="n">production_data_with_metadata</span> <span class="o">=</span> <span class="n">metadata_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">production_data</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="c1"># Extract metafeature values using MetafeatureExtractorsRunner</span>
+<span class="n">metafeature_extractors_runner</span> <span class="o">=</span> <span class="n">MetafeatureExtractorsRunner</span><span class="p">()</span>
+<span class="n">production_data_with_metafeatures</span> <span class="o">=</span> <span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">production_data</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
 
 
 <span class="c1">#send the data to superwise</span>
  <span class="n">transaction_id</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">transaction</span><span class="o">.</span><span class="n">log_records</span><span class="p">(</span>
        <span class="n">model_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
        <span class="n">version_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-       <span class="n">records</span><span class="o">=</span><span class="n">production_data_with_metadata</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">)</span>
+       <span class="n">records</span><span class="o">=</span><span class="n">production_data_with_metafeatures</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;records&quot;</span><span class="p">)</span>
    <span class="p">)</span>
 </pre></div>
 </div>

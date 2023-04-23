@@ -337,12 +337,12 @@ document.write(`
 </pre></div>
 </div>
 <p>Now let’s enrich the data:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.metadata_extractor_runner</span> <span class="kn">import</span> <span class="n">MetadataExtractorsRunner</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.metafeature_extractors_runner</span> <span class="kn">import</span> <span class="n">MetafeatureExtractorsRunner</span>
 
-<span class="n">metadata_extractors_runner</span> <span class="o">=</span> <span class="n">MetadataExtractorsRunner</span><span class="p">()</span>
-<span class="n">metadata_extractors_runner</span><span class="o">.</span><span class="n">add_metadata_extractor</span><span class="p">(</span><span class="n">number_of_negative_words</span><span class="p">)</span>
-<span class="n">metadata_extractors_runner</span><span class="o">.</span><span class="n">add_metadata_extractor</span><span class="p">(</span><span class="n">number_of_positive_words</span><span class="p">)</span>
-<span class="n">reviews_eda</span> <span class="o">=</span> <span class="n">metadata_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">reviews</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;review&#39;</span><span class="p">)</span>
+<span class="n">metafeature_extractors_runner</span> <span class="o">=</span> <span class="n">MetafeatureExtractorsRunner</span><span class="p">()</span>
+<span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">add_metafeature_extractor</span><span class="p">(</span><span class="n">number_of_negative_words</span><span class="p">)</span>
+<span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">add_metafeature_extractor</span><span class="p">(</span><span class="n">number_of_positive_words</span><span class="p">)</span>
+<span class="n">reviews_eda</span> <span class="o">=</span> <span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">reviews</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;review&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Let’s look at the distribution of labels (number of likes).</p>

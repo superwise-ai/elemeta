@@ -17,16 +17,16 @@ Walkthrough
     .. code-block:: python
 
         Production_data # the production data Dataframe
-        # Extract metadata values using MetadataExtractorsRunner
-        metadata_extractors_runner = MetadataExtractorsRunner()
-        production_data_with_metadata = metadata_extractors_runner.run_on_dataframe(dataframe=production_data,text_column='content')
+        # Extract metafeature values using MetafeatureExtractorsRunner
+        metafeature_extractors_runner = MetafeatureExtractorsRunner()
+        production_data_with_metafeatures = metafeature_extractors_runner.run_on_dataframe(dataframe=production_data,text_column='content')
 
 
         #send the data to superwise
          transaction_id = sw.transaction.log_records(
                model_id=1,
                version_id=1,
-               records=production_data_with_metadata.to_dict(orient="records")
+               records=production_data_with_metafeatures.to_dict(orient="records")
            )
 #. Visualize and observe your text input properties and statistical behavior and put policies in place to alert on any change.
 

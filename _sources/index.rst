@@ -13,10 +13,10 @@
 Elemeta: Metafeature Extraction for Unstructured Data
 ======================================================
 
-| Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
+| Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metafeature extraction from unstructured data like text and images.
 | Key usage of Elemeta includes:
 
-- Exploratory Data Analysis (EDA) - extract useful metadata information on unstructured data to analyze, investigate, and summarize the main characteristics and employ data visualization methods.
+- Exploratory Data Analysis (EDA) - extract useful metafeature on unstructured data to analyze, investigate, and summarize the main characteristics and employ data visualization methods.
 - Data and model monitoring - utilize structured ML monitoring techniques in addition to the typical latent embedding visualizations.
 - Feature extraction - engineer alternative features to be utilized in simpler models such as decision trees.
 
