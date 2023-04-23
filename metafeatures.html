@@ -360,6 +360,7 @@ document.write(`
   <section id="metafeatures">
 <h1>Metafeatures<a class="headerlink" href="#metafeatures" title="Permalink to this heading">#</a></h1>
 <div class="line-block">
+<div class="line">Within Elemeta, metafeatures are currently split into two groups of metrics, statistical metrics and contextual metrics. Statistical metrics calculate technical values such as word length, word count, etc., and contextual metrics extract information regarding the context of the text.</div>
 <div class="line">Here you can find explanations on all exiting metafeatures and usage examples.</div>
 <div class="line">You can see the full API reference <a class="reference external" href="https://docs.elemeta.ai/elemeta.nlp.extractors.high_level.html">here</a></div>
 </div>
@@ -384,7 +385,7 @@ because there are 2 words that match the regex: “he”, “hee”.</p>
 <section id="numbercount">
 <h2>NumberCount<a class="headerlink" href="#numbercount" title="Permalink to this heading">#</a></h2>
 <p>Counts the number of numbers in the text.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NumberCount</span><span class="p">()(</span><span class="s2">&quot;I am 17 years old and i will be 100 one day&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">NumberCount</span><span class="p">()(</span><span class="s2">&quot;I am 17 years old and I will be 100 one day&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 2
@@ -572,7 +573,7 @@ because the regex will match on the word “test” and it appears twice.</p>
 <section id="detectlangauge">
 <h2>DetectLangauge<a class="headerlink" href="#detectlangauge" title="Permalink to this heading">#</a></h2>
 <p>Returns the language of the text (uses <a class="reference external" href="https://github.com/Mimino666/langdetect">langdetect</a> library).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DetectLangauge</span><span class="p">()(</span><span class="s2">&quot;I love cakes. its the best. almost like the rest&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DetectLangauge</span><span class="p">()(</span><span class="s2">&quot;I love cakes. Its the best. Almost like the rest&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return “en”.</p>
@@ -588,7 +589,7 @@ because the regex will match on the word “test” and it appears twice.</p>
 <section id="hintedprofanitywordscount">
 <h2>HintedProfanityWordsCount<a class="headerlink" href="#hintedprofanitywordscount" title="Permalink to this heading">#</a></h2>
 <p>Counts the number of profanity words (uses better_profanity <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanityWordsCount</span><span class="p">()(</span><span class="s2">&quot;fuck this sh!t,I want to fucking leave the country&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanityWordsCount</span><span class="p">()(</span><span class="s2">&quot;Fuck this sh!t. I want to fucking leave the country&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 3.</p>
@@ -596,7 +597,7 @@ because the regex will match on the word “test” and it appears twice.</p>
 <section id="hintedprofanitysentencecount">
 <h2>HintedProfanitySentenceCount<a class="headerlink" href="#hintedprofanitysentencecount" title="Permalink to this heading">#</a></h2>
 <p>Counts the number of sentences with profanity words in them (uses <a class="reference external" href="https://github.com/snguyenthanh/better_profanity">better_profanity</a> library).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanitySentenceCount</span><span class="p">()(</span><span class="s2">&quot;fuck this sh!t, I want to fucking leave the country. but I am fine&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HintedProfanitySentenceCount</span><span class="p">()(</span><span class="s2">&quot;Fuck this sh!t. I want to fucking leave the country, but I am fine&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Will return 1.</p>
