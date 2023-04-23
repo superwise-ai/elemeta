@@ -1,6 +1,6 @@
 import pytest as pytest
 
-from elemeta.dataset.dataset import get_avengers_endgame_tweets, get_imdb_reviews
+from elemeta.dataset.dataset import get_avengers_endgame_tweets, get_imdb_reviews,get_tweets_likes
 import pytest
 
 
@@ -8,15 +8,21 @@ import pytest
     "name, pd_f, rows",
     [
         (
-            "avenger tweets pandas loading test. check size",
+            "avenger_endgame_tweets",
             get_avengers_endgame_tweets,
             15000,
         ),
         (
-            "imdb pandas loading test. check size",
+            "imdb_reviews",
             get_imdb_reviews,
             50000,
         ),
+        (
+            "get_tweets_likes",
+            get_tweets_likes,
+            52542,
+        )
+
 
     ],
 )
