@@ -6,7 +6,9 @@ Custom Extractor
 
 ::
 
-    >>> from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import AbstractMetadataExtractor
+    >>> from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import AbstractMetafeatureExtractor
+
+    Let’s create IsPalindromeExtractor that will return if the given text is palindrome:
 
 Let’s create IsPalindromeExtractor that will return if the given text is palindrome:
 
@@ -31,10 +33,10 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
 
 ::
 
-    >>> from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
-    >>> metadata_extractors_runner = MetadataExtractorsRunner()
-    >>> metadata_extractors_runner.add_metadata_extractor(ipe)
-    >>> metadata_extractors_runner.run("Never odd or even")
+    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> metafeature_extractors_runner = MetafeatureExtractorsRunner()
+    >>> metafeature_extractors_runner.add_metafeature_extractor(ipe)
+    >>> metafeature_extractors_runner.run("Never odd or even")
     {'detect_langauge': 'en',
      'emoji_count': 0,
      'text_complexity': 92.8,
@@ -63,7 +65,7 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
      'date_count': 0,
      'is_palindrome_extractor': True}
 
-    >>> metadata_extractors_runner.run("I love cats")
+    >>> metafeature_extractors_runner.run("I love cats")
     {'detect_langauge': 'ca',
      'emoji_count': 0,
      'text_complexity': 119.19,

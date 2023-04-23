@@ -43,8 +43,8 @@ from elemeta.nlp.extractors.high_level.word_count import WordCount
 from elemeta.nlp.extractors.high_level.word_regex_matches_count import (
     WordRegexMatchesCount,
 )
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 compute_intensive_metrics = [
@@ -82,13 +82,13 @@ metrics = [
 ]
 
 
-class MetadataExtractorsRunner:
+class MetafeatureExtractorsRunner:
     """
     This class used to run multiple MetadataExtractors on a text
 
     Attributes
     ----------
-    metadata_extractors : Optional[List[AbstractMetadataExtractor]]
+    metafeature_extractors : Optional[List[AbstractMetafeatureExtractor]]
         a list of `MetadataExtractor`s to run,
         if not supplied will run with all metadata extractors.
 
@@ -103,7 +103,7 @@ class MetadataExtractorsRunner:
 
     def __init__(
         self,
-        metadata_extractors: Optional[List[AbstractMetadataExtractor]] = None,
+        metafeature_extractors: Optional[List[AbstractMetafeatureExtractor]] = None,
     ):
         """Representation of a df, text column, and list of `AbstractMetadataExtractor` to run on
         This is a wrapper for a pandas df,
@@ -112,13 +112,13 @@ class MetadataExtractorsRunner:
 
         Parameters
         ----------
-        metadata_extractors : Optional[List[AbstractMetadataExtractor]]
+        metafeature_extractors : Optional[List[AbstractMetafeatureExtractor]]
             a list of `AbstractMetadataExtractor`s to run over. Runs on all of them independently.
             if not supplied will initialize a list of all metrics with the default configuration
 
         """
-        self.metadata_extractors: List[AbstractMetadataExtractor] = (
-            metadata_extractors or metrics.copy()
+        self.metafeature_extractors: List[AbstractMetafeatureExtractor] = (
+            metafeature_extractors or metrics.copy()
         )
 
     def run(self, text: str) -> Dict[str, Any]:
@@ -131,16 +131,16 @@ class MetadataExtractorsRunner:
 
         Returns
         -------
-        metadata_value_dict: Dict[str, Any]
-            returns a dictionary of extractor name and the metadata value
+        metafeature_value_dict: Dict[str, Any]
+            returns a dictionary of extractor name and the metafeature value
 
         """
         return {
-            metric.name: metric.extract(text) for metric in self.metadata_extractors
+            metric.name: metric.extract(text) for metric in self.metafeature_extractors
         }
 
     def run_on_dataframe(self, dataframe: DataFrame, text_column: str) -> DataFrame:
-        """return new dataframe with all metadata extractors values
+        """return new dataframe with all metafeature extractors values
         Parameters
         ----------
         dataframe: DataFrame
@@ -151,7 +151,7 @@ class MetadataExtractorsRunner:
         Returns
         -------
         dataframe: DataFrame
-            dataframe with the values of the metadata extractors as new columns
+            dataframe with the values of the metafeature extractors as new columns
         """
         dataframe_to_return = dataframe.copy()
         if text_column not in dataframe_to_return.columns:
@@ -160,21 +160,21 @@ class MetadataExtractorsRunner:
             )
 
         names = set()
-        for metric in self.metadata_extractors:
+        for metric in self.metafeature_extractors:
             assert (
                 metric.name not in names
             ), f"more than one metric have the name {metric.name}"
             names.add(metric.name)
 
         data_frame_text = dataframe_to_return[text_column]
-        for metric in self.metadata_extractors:
+        for metric in self.metafeature_extractors:
             dataframe_to_return.loc[:, metric.name] = data_frame_text.map(
                 metric.extract
             )
 
         return dataframe_to_return
 
-    def add_metadata_extractor(
-        self, metadata_extractor: AbstractMetadataExtractor
+    def add_metafeature_extractor(
+        self, metafeature_extractor: AbstractMetafeatureExtractor
     ) -> None:
-        self.metadata_extractors.append(metadata_extractor)
+        self.metafeature_extractors.append(metafeature_extractor)

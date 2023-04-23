@@ -23,10 +23,10 @@ After you have a dataset with the text column, you can start using the library w
 
 .. code-block:: python
 
-    from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
-    metadata_extractor_runner = MetadataExtractorsRunner()
+    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    metafeature_extractors_runner = MetafeatureExtractorsRunner()
     # Running on all the data should take around a minute
-    tweets = metadata_extractor_runner.run_on_dataframe(dataframe = tweets,text_column="text")
+    tweets = metafeature_extractors_runner.run_on_dataframe(dataframe = tweets,text_column="text")
     tweets.head()
 
 
@@ -36,13 +36,13 @@ Elemeta can enrich standard dataframe objects:
 
 .. code-block:: python
 
-    from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
+    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
     import pandas as pd
 
     df = pd.DataFrame({"text": ["Hi I just met you, and this is crazy","What does the fox say?","I love robots"] })
-    metadata_extractor_runner = MetadataExtractorsRunner()
-    df_with_metadata = metadata_extractor_runner.run_on_dataframe(dataframe=df,text_column="text")
-    df_with_metadata.head()
+    metafeature_extractors_runner = MetafeatureExtractorsRunner()
+    df_with_metafeatures = metafeature_extractors_runner.run_on_dataframe(dataframe=df,text_column="text")
+    df_with_metafeatures.head()
 
 
 Strings
@@ -51,10 +51,10 @@ Elemeta can enrich specific strings:
 
 .. code-block:: python
 
-    from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
+    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
-    metadata_extractor_runner = MetadataExtractorsRunner()
-    metadata_extractor_runner.run("This is a text about how good life is :)")
+    metafeature_extractors_runner = MetafeatureExtractorsRunner()
+    metafeature_extractors_runner.run("This is a text about how good life is :)")
 
 To quickly try Elemeta please use our `quickstart colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_start.ipynb>`_
 

@@ -4,7 +4,7 @@ from datetime import datetime
 import pandas
 import pytest
 
-import elemeta.nlp.metadata_extractor_runner as met
+import elemeta.nlp.metafeature_extractors_runner as met
 from elemeta.nlp.extractors.high_level.acronym_count import AcronymCount
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.capital_letters_ratio import CapitalLettersRatio
@@ -114,7 +114,7 @@ def test_single_metrics(name, file, text_col, metrics_list, time):
     for metric in metrics_list:
 
         start_time = datetime.now()
-        met.MetadataExtractorsRunner([metric]).run_on_dataframe(df, text_col)
+        met.MetafeatureExtractorsRunner([metric]).run_on_dataframe(df, text_col)
         end = datetime.now() - start_time
         print(name, end.seconds, metric.name)
         # assert end.seconds <= time, f"took to long {end.seconds}. expected {time} for metric {metric.name}"
@@ -157,7 +157,7 @@ def test_metrics(name, file, text_col, metrics_list, time):
     df = pandas.read_csv(file)
 
     start_time = datetime.now()
-    met.MetadataExtractorsRunner(metrics_list).run_on_dataframe(df, text_col)
+    met.MetafeatureExtractorsRunner(metrics_list).run_on_dataframe(df, text_col)
     end = datetime.now() - start_time
 
     assert end.seconds <= time, f"took to long {end.seconds}. expected {time}"
@@ -178,8 +178,8 @@ def test_metrics(name, file, text_col, metrics_list, time):
 
 def test_text_infra():
     text = "Hello, my name is Elad. What are we doing today?"
-    metrics = met.MetadataExtractorsRunner(
-        metadata_extractors=complex_metrics + simple_metrics,
+    metrics = met.MetafeatureExtractorsRunner(
+        metafeature_extractors=complex_metrics + simple_metrics,
     )
     start_time = datetime.now()
     metrics.run(text)

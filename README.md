@@ -6,11 +6,11 @@
 [![](https://img.shields.io/badge/docs-quickstart-orange)](https://docs.elemeta.ai/getting_started.html)
 
 ![](./docs/images/elemeta_cover_image_black.png)
-Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metadata extraction from unstructured data like text and images.
+Elemeta is an open-source library in Python for metafeature extraction. With it, you will be able to explore, monitor, and extract features from unstructured data through enriched tabular representations. It provides a straightforward Python API for metafeature extraction from unstructured data like text and images.
 
 Key usage of Elemeta includes:
 
-- Exploratory Data Analysis (EDA) - extract useful metadata information on unstructured data to analyze, investigate, and summarize the main characteristics and employ data visualization methods.
+- Exploratory Data Analysis (EDA) - extract useful metafeature on unstructured data to analyze, investigate, and summarize the main characteristics and employ data visualization methods.
 - Data and model monitoring - utilize structured ML monitoring techniques in addition to the typical latent embedding visualizations.
 - Feature extraction - engineer alternative features to be utilized in simpler models such as decision trees.
 
@@ -34,10 +34,10 @@ reviews = get_imdb_reviews()
 After you have a dataset with the text column, you can start using the library with the following Python API:
 
 ```python
-from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
+from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
-metadata_extractor_runner = MetadataExtractorsRunner()
-reviews = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column='review')
+metafeature_extractors_runner = MetafeatureExtractorsRunner()
+reviews = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews, text_column='review')
 reviews.show()
 ```
 
@@ -48,11 +48,12 @@ reviews.show()
 Elemeta can enrich standard dataframe objects:
 
 ```python
-from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner import pandas as pd
+from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+import pandas as pd
 
-df = pd.dataframe({"text": ["Hi I just met you, and this is crazy","What does the fox say?","I love robots" })
-metadata_extractor_runner = MetadataExtractorsRunner()
-df_with_metadata = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column="text")
+df = pd.dataframe({"text": ["Hi I just met you, and this is crazy", "What does the fox say?", "I love robots"})
+metafeature_extractors_runner = MetafeatureExtractorsRunner()
+df_with_metafeatures = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews, text_column="text")
 ```
 
 ### Strings
@@ -60,10 +61,10 @@ df_with_metadata = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,
 Elemeta can enrich specific strings:
 
 ```python
-from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
+from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
-metadata_extractor_runner = MetadataExtractorsRunner()
-metadata_extractor_runner.run("This is a text about how good life is :)")
+metafeature_extractors_runner = MetafeatureExtractorsRunner()
+metafeature_extractors_runner.run("This is a text about how good life is :)")
 ```
 
 ## Documentation

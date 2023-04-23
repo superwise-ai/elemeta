@@ -4,7 +4,7 @@ import numpy as np
 import pandas
 import pytest
 
-import elemeta.nlp.metadata_extractor_runner as met
+import elemeta.nlp.metafeature_extractors_runner as met
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.capital_letters_ratio import CapitalLettersRatio
 from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectLangauge
@@ -65,7 +65,7 @@ TEXT_COLUMN = "text"
 )
 def test_metrics_validity(name, file, text_col, metrics_list, exception):
     df = pandas.read_csv(file)
-    metrics = met.MetadataExtractorsRunner(metadata_extractors=metrics_list)
+    metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=metrics_list)
     try:
         new_df = metrics.run_on_dataframe(df, text_col)
         if exception:
@@ -77,7 +77,7 @@ def test_metrics_validity(name, file, text_col, metrics_list, exception):
 
 def test_metrics_output():
     df = pandas.read_csv(LARGE_TEXT_FILE)
-    metrics = met.MetadataExtractorsRunner(
+    metrics = met.MetafeatureExtractorsRunner(
         [
             DetectLangauge(),
             CapitalLettersRatio(),
@@ -93,8 +93,8 @@ def test_metrics_output():
 
 def test_text_infra():
     text = "Hello, my name is Elad. What are we doing today?"
-    metrics = met.MetadataExtractorsRunner(
-        metadata_extractors=[
+    metrics = met.MetafeatureExtractorsRunner(
+        metafeature_extractors=[
             EmojiCount(),
             NumberCount(),
             OutOfVocabularyCount(),
@@ -122,7 +122,7 @@ def test_custom_name():
     metric_name = "avg word length"
     metric = AvgWordLength(name=metric_name)
     df = pandas.read_csv(LARGE_TEXT_FILE)
-    metrics = met.MetadataExtractorsRunner([metric])
+    metrics = met.MetafeatureExtractorsRunner([metric])
     new_df = metrics.run_on_dataframe(df, TEXT_COLUMN)
     assert metric_name in new_df.columns, f"could not find name {metric_name} in the df"
     assert (
@@ -134,7 +134,7 @@ def test_default_name():
     default_metric_name = "avg_word_length"
     metric = AvgWordLength()
     df = pandas.read_csv(LARGE_TEXT_FILE)
-    metrics = met.MetadataExtractorsRunner([metric])
+    metrics = met.MetafeatureExtractorsRunner([metric])
     new_df = metrics.run_on_dataframe(df, TEXT_COLUMN)
     assert (
             default_metric_name in new_df.columns
@@ -147,7 +147,7 @@ def test_default_name():
 def test_non_passing_non_existing_metric_column_name():
     metric = AvgWordLength()
     df = pandas.read_csv(LARGE_TEXT_FILE)
-    metrics = met.MetadataExtractorsRunner([metric])
+    metrics = met.MetafeatureExtractorsRunner([metric])
     with pytest.raises(AssertionError,
                        match="The given text_column:'I dont exist' doesn't exist in the given dataframe"):
         metrics.run_on_dataframe(df, "I dont exist")

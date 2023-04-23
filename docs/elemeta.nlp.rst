@@ -12,10 +12,10 @@ Subpackages
 Submodules
 ----------
 
-elemeta.nlp.metadata\_extractor\_runner module
-----------------------------------------------
+elemeta.nlp.metafeature\_extractors\_runner module
+--------------------------------------------------
 
-.. automodule:: elemeta.nlp.metadata_extractor_runner
+.. automodule:: elemeta.nlp.metafeature_extractors_runner
    :members:
    :undoc-members:
    :show-inheritance:

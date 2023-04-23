@@ -2,12 +2,12 @@ from typing import Optional
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class SentimentPolarity(AbstractMetadataExtractor):
+class SentimentPolarity(AbstractMetafeatureExtractor):
     """
     Returns the Sentiment Polarity
     """

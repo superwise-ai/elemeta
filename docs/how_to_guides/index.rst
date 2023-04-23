@@ -1,7 +1,7 @@
 ================
 How to Guides
 ================
-There are a variety of both out-of-the-box and custom metadata extractors found in the library.
+There are a variety of both out-of-the-box and custom metafeature extractors found in the library.
 
 .. toctree::
    :maxdepth: 1

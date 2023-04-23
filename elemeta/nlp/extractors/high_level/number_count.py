@@ -3,12 +3,12 @@ from typing import Callable, List, Optional
 from nltk import word_tokenize  # type: ignore
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class NumberCount(AbstractMetadataExtractor):
+class NumberCount(AbstractMetafeatureExtractor):
     """
     Counts the number of numbers in the text
     """

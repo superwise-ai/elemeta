@@ -3,13 +3,15 @@ from typing import Callable, List, Optional
 from better_profanity import profanity  # type: ignore
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class HintedProfanityTokensCount(AbstractMetadataExtractor):
-    """Implementation of AbstractMetadataExtractor class that count the number profanity words"""
+class HintedProfanityTokensCount(AbstractMetafeatureExtractor):
+    """
+    Implementation of AbstractMetafeatureExtractor class that count the number profanity words
+    """
 
     def __init__(
         self, tokenizer: Callable[[str], List[str]], name: Optional[str] = None

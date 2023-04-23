@@ -1,22 +1,22 @@
 ========================
 Extractor Suite
 ========================
-To extract multiple metadata values at once use MetadataExtractorsRunner. Supply a list of metadata extractors you want to run, apply a runner to the text, and get the list of metadata values. To run all the extractors on a text, use the runner function ``run(text: str) -> Dict[str, Union[str, float, int]]``
+To extract multiple metafeature values at once use MetafeatureExtractorsRunner. Supply a list of metafeature extractors you want to run, apply a runner to the text, and get the list of metafeature values. To run all the extractors on a text, use the runner function ``run(text: str) -> Dict[str, Union[str, float, int]]``
 
 ::
 
-    >>> from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
-    >>> metadata_extractor_runner = MetadataExtractorsRunner(metadata_extractors=[sp,ld])
-    >>> metadata_extractor_runner.run("This is a text about how good life is :)")
+    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> metafeature_extractors_runner = MetafeatureExtractorsRunner(metafeature_extractors=[sp,ld])
+    >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'sentiment_polarity': 0.7096, 'detect_langauge': 'en'}
 
-If no metadata extractors are supplied, a default set of extractors will be selected.
+If no metafeature extractors are supplied, a default set of extractors will be selected.
 
 ::
 
-    >>> from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
-    >>> metadata_extractor_runner = MetadataExtractorsRunner()
-    >>> metadata_extractor_runner.run("This is a text about how good life is :)")
+    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> metafeature_extractors_runner = MetafeatureExtractorsRunner()
+    >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'detect_langauge': 'en',
      'emoji_count': 0,
      'text_complexity': 113.1,
@@ -44,14 +44,14 @@ If no metadata extractors are supplied, a default set of extractors will be sele
      'acronym_count': 0,
      'date_count': 0}
 
-To add a new MetadataExtractor to an existing MetadataExtractorsRunner we can use ``add_metadata_extractor(metadata_extractor: AbstractMetadataExtractor) -> None``:
+To add a new MetadataExtractor to an existing MetafeatureExtractorsRunner we can use ``add_metafeature_extractor(metafeature_extractor: AbstractMetadataExtractor) -> None``:
 
 ::
 
     >>> from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
     >>> number_of_good_in_text = RegexMatchCount(name="number_of_good_in_text",regex="good|Good")
-    >>> metadata_extractor_runner.add_metadata_extractor(number_of_good_in_text)
-    >>> metadata_extractor_runner.run("This is a text about how good life is :)")
+    >>> metafeature_extractors_runner.add_metafeature_extractor(number_of_good_in_text)
+    >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'detect_langauge': 'en',
      'emoji_count': 0,
      'text_complexity': 113.1,
@@ -80,7 +80,7 @@ To add a new MetadataExtractor to an existing MetadataExtractorsRunner we can us
      'date_count': 0,
      'number_of_good_in_text': 1}
 
-To run the extractors on all the dataframe columns, use ``run_on_dataframe(dataframe: DataFrame, text_column: str) -> DataFrame`` this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metadata values as new columns.
+To run the extractors on all the dataframe columns, use ``run_on_dataframe(dataframe: DataFrame, text_column: str) -> DataFrame`` this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metafeature values as new columns.
 
 ::
 
@@ -88,7 +88,7 @@ To run the extractors on all the dataframe columns, use ``run_on_dataframe(dataf
     >>> reviews = get_imdb_reviews()[:200]
     >>> print("The original dataset had {} columns".format(reviews.shape[1]))
     The original dataset had 2 columns
-    >>> reviews = metadata_extractor_runner.run_on_dataframe(dataframe=reviews,text_column='review')
+    >>> reviews = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews,text_column='review')
     >>> print("The transformed dataset has {} columns".format(reviews.shape[1]))
     The transformed dataset has 29 columns
     >>>reviews

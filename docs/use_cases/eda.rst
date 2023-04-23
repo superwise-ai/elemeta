@@ -25,12 +25,12 @@ Now let's enrich the data:
 
 .. code-block:: python
 
-    from elemeta.nlp.metadata_extractor_runner import MetadataExtractorsRunner
+    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
-    metadata_extractors_runner = MetadataExtractorsRunner()
-    metadata_extractors_runner.add_metadata_extractor(number_of_negative_words)
-    metadata_extractors_runner.add_metadata_extractor(number_of_positive_words)
-    reviews_eda = metadata_extractors_runner.run_on_dataframe(dataframe=reviews,text_column='review')
+    metafeature_extractors_runner = MetafeatureExtractorsRunner()
+    metafeature_extractors_runner.add_metafeature_extractor(number_of_negative_words)
+    metafeature_extractors_runner.add_metafeature_extractor(number_of_positive_words)
+    reviews_eda = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews,text_column='review')
 
 Let’s look at the distribution of labels (number of likes).
 

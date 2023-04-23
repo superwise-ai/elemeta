@@ -2,12 +2,12 @@ from typing import Optional
 
 from textblob import TextBlob  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metadata_extractor import (
-    AbstractMetadataExtractor,
+from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
+    AbstractMetafeatureExtractor,
 )
 
 
-class SentimentSubjectivity(AbstractMetadataExtractor):
+class SentimentSubjectivity(AbstractMetafeatureExtractor):
     """
     Returns the Sentiment Subjectivity
     """
