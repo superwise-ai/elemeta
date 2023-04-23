@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/superwise-ai/elemeta/compare/1.0.2...1.0.3) (2023-04-23)
+
+
+### Bug Fixes
+
+* **elemeta:** aline terminology for metafeature extractors ([3241614](https://github.com/superwise-ai/elemeta/commit/3241614289e831f037c41f7760ba7b4b3587f894))
+
 ## [1.0.2](https://github.com/superwise-ai/elemeta/compare/1.0.1...1.0.2) (2023-04-23)
 
 
