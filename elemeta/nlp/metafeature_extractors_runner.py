@@ -47,7 +47,7 @@ from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
     AbstractMetafeatureExtractor,
 )
 
-compute_intensive_metrics = [
+intensive_metrics = [
     SentimentPolarity(),
     SentimentSubjectivity(),
     HintedProfanityWordsCount(),
@@ -102,8 +102,10 @@ class MetafeatureExtractorsRunner:
     """
 
     def __init__(
-        self,
-        metafeature_extractors: Optional[List[AbstractMetafeatureExtractor]] = None,
+            self,
+            metafeature_extractors: Optional[List[AbstractMetafeatureExtractor]] = None,
+            compute_intensive: bool = False
+
     ):
         """Representation of a df, text column, and list of `AbstractMetadataExtractor` to run on
         This is a wrapper for a pandas df,
@@ -117,9 +119,13 @@ class MetafeatureExtractorsRunner:
             if not supplied will initialize a list of all metrics with the default configuration
 
         """
-        self.metafeature_extractors: List[AbstractMetafeatureExtractor] = (
-            metafeature_extractors or metrics.copy()
-        )
+        if metafeature_extractors is not None:
+            self.metadata_extractors = metafeature_extractors
+        elif compute_intensive:
+            self.metadata_extractors = metrics + intensive_metrics
+
+        else:
+            self.metadata_extractors = metrics.copy()
 
     def run(self, text: str) -> Dict[str, Any]:
         """run metrics on list of text
@@ -162,7 +168,7 @@ class MetafeatureExtractorsRunner:
         names = set()
         for metric in self.metafeature_extractors:
             assert (
-                metric.name not in names
+                    metric.name not in names
             ), f"more than one metric have the name {metric.name}"
             names.add(metric.name)
 
@@ -175,6 +181,6 @@ class MetafeatureExtractorsRunner:
         return dataframe_to_return
 
     def add_metafeature_extractor(
-        self, metafeature_extractor: AbstractMetafeatureExtractor
+            self, metafeature_extractor: AbstractMetafeatureExtractor
     ) -> None:
         self.metafeature_extractors.append(metafeature_extractor)
