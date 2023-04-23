@@ -56,6 +56,7 @@ Elemeta can enrich specific strings:
     metadata_extractor_runner = MetadataExtractorsRunner()
     metadata_extractor_runner.run("This is a text about how good life is :)")
 
+To quickly try Elemeta please use our `quickstart colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_start.ipynb>`_
 
 .. toctree::
    :maxdepth: 1

@@ -1,6 +1,7 @@
 ========================
 Metafeatures
 ========================
+| Within Elemeta, metafeatures are currently split into two groups of metrics, statistical metrics and contextual metrics. Statistical metrics calculate technical values such as word length, word count, etc., and contextual metrics extract information regarding the context of the text.
 | Here you can find explanations on all exiting metafeatures and usage examples.
 | You can see the full API reference `here <https://docs.elemeta.ai/elemeta.nlp.extractors.high_level.html>`_
 
@@ -33,7 +34,7 @@ Counts the number of numbers in the text.
 
 .. code-block:: python
 
-    NumberCount()("I am 17 years old and i will be 100 one day")
+    NumberCount()("I am 17 years old and I will be 100 one day")
 
 Will return 2
 because there are 2 numbers in the text: 17,100.
@@ -269,7 +270,7 @@ Returns the language of the text (uses `langdetect <https://github.com/Mimino666
 
 .. code-block:: python
 
-    DetectLangauge()("I love cakes. its the best. almost like the rest")
+    DetectLangauge()("I love cakes. Its the best. Almost like the rest")
 
 Will return “en”.
 
@@ -289,7 +290,7 @@ Counts the number of profanity words (uses better_profanity `better_profanity <h
 
 .. code-block:: python
 
-    HintedProfanityWordsCount()("fuck this sh!t,I want to fucking leave the country")
+    HintedProfanityWordsCount()("Fuck this sh!t. I want to fucking leave the country")
 
 Will return 3.
 
@@ -299,7 +300,7 @@ Counts the number of sentences with profanity words in them (uses `better_profan
 
 .. code-block:: python
 
-    HintedProfanitySentenceCount()("fuck this sh!t, I want to fucking leave the country. but I am fine")
+    HintedProfanitySentenceCount()("Fuck this sh!t. I want to fucking leave the country, but I am fine")
 
 Will return 1.
 

@@ -69,7 +69,7 @@ metadata_extractor_runner.run("This is a text about how good life is :)")
 ## Documentation
 
 - [Documentation homepage](https://docs.elemeta.ai/index.html)
-- [Quickstart notebook](https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_started.ipynb)
+- [Quickstart notebook](https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_start.ipynb)
 - [Use cases](https://docs.elemeta.ai/use_cases/index.html)
 - [API reference](https://docs.elemeta.ai/apidocs.html)
 
