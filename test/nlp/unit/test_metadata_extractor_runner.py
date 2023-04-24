@@ -9,8 +9,7 @@ from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
 
 TEST_ASSET_FOLDER = os.path.join(os.path.dirname(__file__), "../assets")
-SHORT_TEXT_FILE = f"{TEST_ASSET_FOLDER}/short_text.csv"
-LONG_TEXT_FILE = f"{TEST_ASSET_FOLDER}/long_text.csv"
+TEXT_FILE = f"{TEST_ASSET_FOLDER}/short_text.csv"
 TEXT_COLUMN = "text"
 
 
@@ -30,25 +29,14 @@ def test_add_metafeature():
     metrics.add_metafeature_extractor(metric_two)
 
     result = metrics.run("This is my add metafeature test")
-    a = 2
+    assert len(result) == 2, "Expecting to see two metafeatures"
 
-
-# def test_metrics_validity(name, file, text_col, metrics_list, exception):
-#     df = pandas.read_csv(file)
-#     metrics = met.MetafeatureExtractorsRunner(metafeature_extractors=metrics_list)
-#     try:
-#         new_df = metrics.run_on_dataframe(df, text_col)
-#         if exception:
-#             raise "Should have thrown an exception"
-#     except Exception as e:
-#         if not exception:
-#             raise e
 
 def test_default_metric_name():
     expected_default_metric_name = "avg_word_length"
     metric = AvgWordLength()
 
-    df = pandas.read_csv(LONG_TEXT_FILE)
+    df = pandas.read_csv(TEXT_FILE)
     metrics = met.MetafeatureExtractorsRunner([metric])
     new_df = metrics.run_on_dataframe(df, TEXT_COLUMN)
     assert (
@@ -59,7 +47,7 @@ def test_default_metric_name():
 def test_custom_metric_name():
     expected_metric_name = "avg word length"
     metric = AvgWordLength(name=expected_metric_name)
-    df = pandas.read_csv(LONG_TEXT_FILE)
+    df = pandas.read_csv(TEXT_FILE)
     metrics = met.MetafeatureExtractorsRunner([metric])
     new_df = metrics.run_on_dataframe(df, TEXT_COLUMN)
     assert expected_metric_name in new_df.columns, f"could not find name {expected_metric_name} in the df"
@@ -70,7 +58,7 @@ def test_custom_metric_name():
 
 def test_non_existing_column_name():
     metric = AvgWordLength()
-    df = pandas.read_csv(SHORT_TEXT_FILE)
+    df = pandas.read_csv(TEXT_FILE)
     metrics = met.MetafeatureExtractorsRunner([metric])
     with pytest.raises(AssertionError):
         metrics.run_on_dataframe(df, "I dont exist")

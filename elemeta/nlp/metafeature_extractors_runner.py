@@ -105,7 +105,6 @@ class MetafeatureExtractorsRunner:
             self,
             metafeature_extractors: Optional[List[AbstractMetafeatureExtractor]] = None,
             compute_intensive: bool = False
-
     ):
         """Representation of a df, text column, and list of `AbstractMetadataExtractor` to run on
         This is a wrapper for a pandas df,
@@ -120,12 +119,12 @@ class MetafeatureExtractorsRunner:
 
         """
         if metafeature_extractors is not None:
-            self.metadata_extractors = metafeature_extractors
+            self.metafeature_extractors = metafeature_extractors
         elif compute_intensive:
-            self.metadata_extractors = metrics + intensive_metrics
+            self.metafeature_extractors = metrics + intensive_metrics
 
         else:
-            self.metadata_extractors = metrics.copy()
+            self.metafeature_extractors = metrics.copy()
 
     def run(self, text: str) -> Dict[str, Any]:
         """run metrics on list of text
