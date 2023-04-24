@@ -6,6 +6,7 @@ from elemeta.nlp.extractors.high_level.acronym_count import AcronymCount
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.capital_letters_ratio import CapitalLettersRatio
 from elemeta.nlp.extractors.high_level.date_count import DateCount
+from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectLangauge
 from elemeta.nlp.extractors.high_level.email_count import EmailCount
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
 from elemeta.nlp.extractors.high_level.hashtag_count import HashtagCount
@@ -79,6 +80,7 @@ metrics = [
     SyllableCount(),
     AcronymCount(),
     DateCount(),
+    DetectLangauge()
 ]
 
 
