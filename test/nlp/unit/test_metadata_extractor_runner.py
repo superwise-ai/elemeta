@@ -7,19 +7,30 @@ import pytest
 import elemeta.nlp.metafeature_extractors_runner as met
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
+from elemeta.nlp.metafeature_extractors_runner import non_intensive_metrics, intensive_metrics
 
 TEST_ASSET_FOLDER = os.path.join(os.path.dirname(__file__), "../assets")
 TEXT_FILE = f"{TEST_ASSET_FOLDER}/short_text.csv"
 TEXT_COLUMN = "text"
 
 
-# test no excpetion, and shape
-# def test_valid_dataset_runner(name, file, text_col, metrics_list, exception):
-# should run single text with given metric, without, with compute intensive or without
+@pytest.mark.parametrize("compute_intensive_test", [(False), (True)])
+def test_valid_dataset_runner(compute_intensive_test):
+    metrics = met.MetafeatureExtractorsRunner(compute_intensive=compute_intensive_test)
+    df = pandas.read_csv(TEXT_FILE)
+    result = metrics.run_on_dataframe(df, TEXT_COLUMN)
+
+    assert len(result.columns) == len(non_intensive_metrics) + len(df.columns) + (
+        len(intensive_metrics) if compute_intensive_test else 0), "Did not receive the expected amount of metafeatures"
 
 
-# def test_valid_single_text_runner(name, file, text_col, metrics_list, exception):
-# should run single text with given metric, without, with compute intensive or without
+@pytest.mark.parametrize("compute_intensive_test", [(False), (True)])
+def test_valid_single_text_runner(compute_intensive_test):
+    metrics = met.MetafeatureExtractorsRunner(compute_intensive=compute_intensive_test)
+    result = metrics.run("Let's see how many features I get")
+    assert len(result) == len(non_intensive_metrics) + (
+        len(intensive_metrics) if compute_intensive_test else 0), "Did not receive the expected amount of metafeatures"
+
 
 def test_add_metafeature():
     metric_one = AvgWordLength()

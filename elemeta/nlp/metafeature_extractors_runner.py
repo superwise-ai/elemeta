@@ -53,7 +53,7 @@ intensive_metrics = [
     HintedProfanityWordsCount(),
     HintedProfanitySentenceCount(),
 ]
-metrics = [
+non_intensive_metrics = [
     EmojiCount(),
     TextComplexity(),
     UniqueWordRatio(),
@@ -121,10 +121,10 @@ class MetafeatureExtractorsRunner:
         if metafeature_extractors is not None:
             self.metafeature_extractors = metafeature_extractors
         elif compute_intensive:
-            self.metafeature_extractors = metrics + intensive_metrics
+            self.metafeature_extractors = non_intensive_metrics + intensive_metrics
 
         else:
-            self.metafeature_extractors = metrics.copy()
+            self.metafeature_extractors = non_intensive_metrics.copy()
 
     def run(self, text: str) -> Dict[str, Any]:
         """run metrics on list of text
