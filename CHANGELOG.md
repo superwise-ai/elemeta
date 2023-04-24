@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/superwise-ai/elemeta/compare/1.0.3...1.0.4) (2023-04-24)
+
+
+### Bug Fixes
+
+* **extractor_runner:** DetectLangauge extractor to the list of extractors ([67af4cb](https://github.com/superwise-ai/elemeta/commit/67af4cb6bb195f07f5ef3724186e59cc56b715d4))
+
 ## [1.0.3](https://github.com/superwise-ai/elemeta/compare/1.0.2...1.0.3) (2023-04-23)
 
 
