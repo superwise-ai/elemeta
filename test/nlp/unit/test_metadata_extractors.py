@@ -184,7 +184,7 @@ def test_regex(name, text, regex, expected):
         ),
     ],
 )
-def test__length_check_basic(name, text, tokenizer, condition, expected):
+def test_length_check_basic(name, text, tokenizer, condition, expected):
     function = length_check_basic(tokenizer=tokenizer, condition=condition)
     res = function(text)
     assert (
@@ -211,7 +211,7 @@ def test__length_check_basic(name, text, tokenizer, condition, expected):
         ),
     ],
 )
-def test__avg_check_basic(name, text, tokenizer, condition, expected):
+def test_avg_check_basic(name, text, tokenizer, condition, expected):
     function = avg_check_basic(tokenizer=tokenizer, condition=condition)
     res = function(text)
     assert (
