@@ -6,69 +6,68 @@ EDA
 
 .. code-block:: python
 
-    from elemeta.dataset.dataset import get_imdb_reviews
-    reviews = get_imdb_reviews()[:2000]
+    from elemeta.dataset.dataset import get_tweets_likes
+    tweets_eda = get_tweets_likes().sample(5000)
 
 .. image:: ../images/eda_basic_tweets.png
         :width: 600
-        :alt: histogram of text_length feature
+        :alt: the source data set
 
-Let’s create two RegexMatchCount - one for negative words and one for positive words:
-
-.. code-block:: python
-
-    from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
-    number_of_negative_words = RegexMatchCount(name="number_of_negative_words",regex="hate|sad|terrible|bad")
-    number_of_positive_words = RegexMatchCount(name="number_of_positive_words",regex="love|wonderful|amazing|happy|good")
-
-Now let's enrich the data:
+Let's start by enriching our tweets dataset
 
 .. code-block:: python
 
     from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
     metafeature_extractors_runner = MetafeatureExtractorsRunner()
-    metafeature_extractors_runner.add_metafeature_extractor(number_of_negative_words)
-    metafeature_extractors_runner.add_metafeature_extractor(number_of_positive_words)
-    reviews_eda = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews,text_column='review')
+    print("The original dataset had {} columns".format(tweets_eda.shape[1]))
 
-Let’s look at the distribution of labels (number of likes).
+    # The enrichment process
+    print("Processing...")
+    tweets_eda = metafeature_extractors_runner.run_on_dataframe(dataframe=tweets_eda,text_column='content')
+    print("The transformed dataset has {} columns".format(tweets_eda.shape[1]))
+
+Now let's enrich the data:
+
+Let's look at the distribution of labels (number of likes). We can clearly see a long right-tail distribution.
 
 .. code-block:: python
 
-    sns.set_theme(style="darkgrid")
-    sns.displot(
-        reviews_eda, x="text_complexity", col="sentiment",
-        binwidth=3, height=3, facet_kws=dict(margin_titles=True),
-    )
+    import seaborn as sns
+    import matplotlib.pyplot as plt
 
 
-.. image:: ../images/eda_text_complexity_histogram.png
+    sns.displot(tweets_eda, x="number_of_likes",kind="kde")
+
+
+.. image:: ../images/eda_number_of_links_distribution.png
         :width: 600
         :alt: histogram of text_length feature
-
-We can clearly see a long right-tail distribution.
 
 
 According to the below analysis, there is a clear correlation between tweet language and likes, since number_of_likes distribute differently between languages.
 
-.. code::block:: python
+.. code-block:: python
 
-    sns.displot(
-        reviews_eda, x="word_count", col="sentiment",
-        binwidth=3, height=3, facet_kws=dict(margin_titles=True),
-    )
+    plt.subplots(figsize=(10,7))
+    sns.boxplot(x="detect_langauge", y="number_of_likes", data=tweets_eda);
 
-.. image:: ../images/eda_word_count_histogram.png
+.. image:: ../images/eda_number_of_link_detect_langauge.png
         :width: 600
         :alt: histogram of word_count feature
 
 
 Apart from a few outliers, tweets with at least one emoji get more likes.
 
-.. image:: ../images/eda_jointplot.png
+.. code-block:: python
+
+    tweets_eda['has_emoji'] = tweets_eda['emoji_count'].apply(lambda x: 'False' if x <= 0 else 'True')
+    plt.subplots(figsize=(10,7))
+    sns.boxplot(x="has_emoji", y="number_of_likes", data=tweets_eda)
+
+.. image:: ../images/eda_number_of_link_has_emoji.png
         :width: 600
-        :alt: joint ploat on number_of_positive_words,number_of_negative_words and sentiment
+        :alt: joint plot on number_of_positive_words,number_of_negative_words and sentiment
 
 
 For a full working example

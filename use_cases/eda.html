@@ -325,40 +325,46 @@ document.write(`
 <div class="line">Here is a simple EDA example showing how generic information extraction can be valuable. This example illustrates how extracted metafeatures contain information that can be used to predict how many likes a tweet will receive.</div>
 <div class="line">Let’s start by enriching our tweets dataset again:</div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.dataset.dataset</span> <span class="kn">import</span> <span class="n">get_imdb_reviews</span>
-<span class="n">reviews</span> <span class="o">=</span> <span class="n">get_imdb_reviews</span><span class="p">()[:</span><span class="mi">2000</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.dataset.dataset</span> <span class="kn">import</span> <span class="n">get_tweets_likes</span>
+<span class="n">tweets_eda</span> <span class="o">=</span> <span class="n">get_tweets_likes</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/eda_basic_tweets.png"><img alt="histogram of text_length feature" src="../_images/eda_basic_tweets.png" style="width: 600px;" /></a>
-<p>Let’s create two RegexMatchCount - one for negative words and one for positive words:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.regex_match_count</span> <span class="kn">import</span> <span class="n">RegexMatchCount</span>
-<span class="n">number_of_negative_words</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_negative_words&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;hate|sad|terrible|bad&quot;</span><span class="p">)</span>
-<span class="n">number_of_positive_words</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_positive_words&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;love|wonderful|amazing|happy|good&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Now let’s enrich the data:</p>
+<a class="reference internal image-reference" href="../_images/eda_basic_tweets.png"><img alt="the source data set" src="../_images/eda_basic_tweets.png" style="width: 600px;" /></a>
+<p>Let’s start by enriching our tweets dataset</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">elemeta.nlp.metafeature_extractors_runner</span> <span class="kn">import</span> <span class="n">MetafeatureExtractorsRunner</span>
 
 <span class="n">metafeature_extractors_runner</span> <span class="o">=</span> <span class="n">MetafeatureExtractorsRunner</span><span class="p">()</span>
-<span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">add_metafeature_extractor</span><span class="p">(</span><span class="n">number_of_negative_words</span><span class="p">)</span>
-<span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">add_metafeature_extractor</span><span class="p">(</span><span class="n">number_of_positive_words</span><span class="p">)</span>
-<span class="n">reviews_eda</span> <span class="o">=</span> <span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">reviews</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;review&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The original dataset had </span><span class="si">{}</span><span class="s2"> columns&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tweets_eda</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1"># The enrichment process</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing...&quot;</span><span class="p">)</span>
+<span class="n">tweets_eda</span> <span class="o">=</span> <span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run_on_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">tweets_eda</span><span class="p">,</span><span class="n">text_column</span><span class="o">=</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The transformed dataset has </span><span class="si">{}</span><span class="s2"> columns&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tweets_eda</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 </div>
-<p>Let’s look at the distribution of labels (number of likes).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span>
-    <span class="n">reviews_eda</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;text_complexity&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;sentiment&quot;</span><span class="p">,</span>
-    <span class="n">binwidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">facet_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">margin_titles</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-<span class="p">)</span>
+<p>Now let’s enrich the data:</p>
+<p>Let’s look at the distribution of labels (number of likes). We can clearly see a long right-tail distribution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">tweets_eda</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;number_of_likes&quot;</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/eda_text_complexity_histogram.png"><img alt="histogram of text_length feature" src="../_images/eda_text_complexity_histogram.png" style="width: 600px;" /></a>
-<p>We can clearly see a long right-tail distribution.</p>
+<a class="reference internal image-reference" href="../_images/eda_number_of_links_distribution.png"><img alt="histogram of text_length feature" src="../_images/eda_number_of_links_distribution.png" style="width: 600px;" /></a>
 <p>According to the below analysis, there is a clear correlation between tweet language and likes, since number_of_likes distribute differently between languages.</p>
-<a class="reference internal image-reference" href="../_images/eda_word_count_histogram.png"><img alt="histogram of word_count feature" src="../_images/eda_word_count_histogram.png" style="width: 600px;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;detect_langauge&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;number_of_likes&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tweets_eda</span><span class="p">);</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/eda_number_of_link_detect_langauge.png"><img alt="histogram of word_count feature" src="../_images/eda_number_of_link_detect_langauge.png" style="width: 600px;" /></a>
 <p>Apart from a few outliers, tweets with at least one emoji get more likes.</p>
-<a class="reference internal image-reference" href="../_images/eda_jointplot.png"><img alt="joint ploat on number_of_positive_words,number_of_negative_words and sentiment" src="../_images/eda_jointplot.png" style="width: 600px;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tweets_eda</span><span class="p">[</span><span class="s1">&#39;has_emoji&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tweets_eda</span><span class="p">[</span><span class="s1">&#39;emoji_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;False&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;True&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;has_emoji&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;number_of_likes&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tweets_eda</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/eda_number_of_link_has_emoji.png"><img alt="joint plot on number_of_positive_words,number_of_negative_words and sentiment" src="../_images/eda_number_of_link_has_emoji.png" style="width: 600px;" /></a>
 <p>For a full working example
 please use the following <a class="reference external" href="https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/EDA.ipynb">Google Colab</a></p>
 </section>
