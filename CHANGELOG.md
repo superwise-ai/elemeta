@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/superwise-ai/elemeta/compare/1.0.4...1.0.5) (2023-04-25)
+
+
+### Bug Fixes
+
+* **extractor_runner:** adding compute_intensive flag to constructor and add imporve tests ([4e38299](https://github.com/superwise-ai/elemeta/commit/4e38299400f64e1842e3c5ba0b2b26b174bae047))
+
 ## [1.0.4](https://github.com/superwise-ai/elemeta/compare/1.0.3...1.0.4) (2023-04-24)
 
 
