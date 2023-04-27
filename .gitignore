@@ -8,3 +8,4 @@ dist/
 **/.DS_Store
 docs/_build/
 .python-version
+.coverage
