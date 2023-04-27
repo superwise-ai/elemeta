@@ -2,8 +2,15 @@ name: Testing
 
 on:
   push:
+    branches-ignore:
+      - master
+  pull_request:
     branches:
-      - "**"
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   coverage:
