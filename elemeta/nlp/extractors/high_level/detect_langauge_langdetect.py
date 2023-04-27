@@ -7,7 +7,7 @@ from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
 )
 
 
-class DetectLangauge(AbstractMetafeatureExtractor):
+class DetectLanguage(AbstractMetafeatureExtractor):
     """
     Returns the language of the text
     """
