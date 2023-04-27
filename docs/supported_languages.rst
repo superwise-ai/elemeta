@@ -37,7 +37,7 @@ Contextual metrics
 ==================================
 - SentimentPolarity
 - SentimentSubjectivity
-- DetectLangauge
+- DetectLanguage
 - EmojiCount
 - HintedProfanityWordsCount
 - HintedProfanitySentenceCount
