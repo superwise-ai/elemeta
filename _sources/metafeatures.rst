@@ -264,13 +264,13 @@ Will return around 0.9.
 
 Will return around 0.3.
 
-DetectLangauge
+DetectLanguage
 ---------------
 Returns the language of the text (uses `langdetect <https://github.com/Mimino666/langdetect>`_ library).
 
 .. code-block:: python
 
-    DetectLangauge()("I love cakes. Its the best. Almost like the rest")
+    DetectLanguage()("I love cakes. Its the best. Almost like the rest")
 
 Will return “en”.
 

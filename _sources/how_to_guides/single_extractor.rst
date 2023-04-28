@@ -28,8 +28,8 @@ This extractor will automatically detect the language of the text.
 
 ::
 
-    >>> from elemeta.nlp.extractors.high_level.detect_langauge_fastText import DetectLangauge
-    >>> ld = DetectLangauge()
+    >>> from elemeta.nlp.extractors.high_level.detect_langauge_fastText import DetectLanguage
+    >>> ld = DetectLanguage()
     >>> ld("This text is in English")
     en
     >>> ld("הטקסט הזה בעברית")

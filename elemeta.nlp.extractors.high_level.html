@@ -341,8 +341,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">elemeta.nlp.extractors.high_level.detect_langauge_langdetect module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge"><code class="docutils literal notranslate"><span class="pre">DetectLangauge</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract"><code class="docutils literal notranslate"><span class="pre">DetectLangauge.extract()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage"><code class="docutils literal notranslate"><span class="pre">DetectLanguage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract"><code class="docutils literal notranslate"><span class="pre">DetectLanguage.extract()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -620,8 +620,8 @@ returns the ratio of capital letters / length</p>
 <section id="module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">
 <span id="elemeta-nlp-extractors-high-level-detect-langauge-langdetect-module"></span><h2>elemeta.nlp.extractors.high_level.detect_langauge_langdetect module<a class="headerlink" href="#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.high_level.detect_langauge_langdetect.</span></span><span class="sig-name descname"><span class="pre">DetectLangauge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.high_level.detect_langauge_langdetect.</span></span><span class="sig-name descname"><span class="pre">DetectLanguage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
 <p>Returns the language of the text</p>
 <p class="rubric">Methods</p>
@@ -630,14 +630,14 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract" title="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>language detection function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>language detection function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1473,8 +1473,8 @@ of unique words (total number of values that only appear once in the dataset).</
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">elemeta.nlp.extractors.high_level.detect_langauge_langdetect module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge"><code class="docutils literal notranslate"><span class="pre">DetectLangauge</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLangauge.extract"><code class="docutils literal notranslate"><span class="pre">DetectLangauge.extract()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage"><code class="docutils literal notranslate"><span class="pre">DetectLanguage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract"><code class="docutils literal notranslate"><span class="pre">DetectLanguage.extract()</span></code></a></li>
 </ul>
 </li>
 </ul>

@@ -355,8 +355,8 @@ document.write(`
 <section id="detect-langauge">
 <h2>Detect Langauge<a class="headerlink" href="#detect-langauge" title="Permalink to this heading">#</a></h2>
 <p>This extractor will automatically detect the language of the text.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.detect_langauge_fastText</span> <span class="kn">import</span> <span class="n">DetectLangauge</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ld</span> <span class="o">=</span> <span class="n">DetectLangauge</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.detect_langauge_fastText</span> <span class="kn">import</span> <span class="n">DetectLanguage</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ld</span> <span class="o">=</span> <span class="n">DetectLanguage</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ld</span><span class="p">(</span><span class="s2">&quot;This text is in English&quot;</span><span class="p">)</span>
 <span class="go">en</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ld</span><span class="p">(</span><span class="s2">&quot;הטקסט הזה בעברית&quot;</span><span class="p">)</span>
