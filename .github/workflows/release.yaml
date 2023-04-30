@@ -41,7 +41,7 @@ jobs:
         run: npm -g install semantic-release
 
       - name: Install semantic-release plugins
-        run: npm install -g $(jq -r '.plugins[]' .releaserc.json | grep -o '@semantic-release/[a-zA-Z0-9-]*')
+        run: npm install -g $(jq -r '.plugins[]' .releaserc.json | grep -o '@semantic-release/[a-zA-Z0-9-]*') conventional-changelog-conventionalcommits
 
       - name: Release
         env:

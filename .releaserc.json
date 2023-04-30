@@ -1,8 +1,63 @@
 {
   "branches": ["main"],
   "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "breaking": true, "release": "major" },
+          { "revert": true, "release": "patch" },
+          { "type": "chore", "release": false },
+          { "type": "ci", "release": false },
+          { "type": "docs", "release": false },
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" },
+          { "type": "perf", "release": "patch" },
+          { "type": "refactor", "release": "patch" }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits",
+        "presetConfig": {
+          "types": [
+            {
+              "type": "feat",
+              "section": "<!-- 1. -->:rocket: New Features",
+              "hidden": false
+            },
+            {
+              "type": "fix",
+              "section": "<!-- 2. -->:bug: Bug Fixes",
+              "hidden": false
+            },
+            {
+              "type": "perf",
+              "section": "<!-- 3. -->:chart_with_upwards_trend: Performance Improvements",
+              "hidden": false
+            },
+            {
+              "type": "refactor",
+              "section": "<!-- 4. -->:tractor: Refactor",
+              "hidden": false
+            },
+            {
+              "type": "docs",
+              "section": "<!-- 5. -->:memo: Documentation",
+              "hidden": false
+            },
+            {
+              "type": "chore",
+              "section": "<!-- 6. -->:broom: Chore",
+              "hidden": false
+            }
+          ]
+        }
+      }
+    ],
     "@semantic-release/changelog",
     [
       "@semantic-release/git",
