@@ -27,10 +27,7 @@ jobs:
           python-version: "3.9"
           cache: "poetry"
 
-      - name: Install Dependencies
-        run: poetry install --only lint
-
-      - name: Lint
+      - name: Lint and format
         run: |
           bash -ex scripts/formatters.sh
           bash -ex scripts/linters.sh

@@ -27,8 +27,5 @@ jobs:
           python-version: "3.9"
           cache: "poetry"
 
-      - name: Install Dependencies
-        run: poetry install --with test
-
       - name: coverage
-        run: poetry run pytest --cov=elemeta test --cov-fail-under=95 --ignore=test/nlp/performance
+        run: bash -ex scripts/test.sh

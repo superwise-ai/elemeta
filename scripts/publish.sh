@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -ex
 set -e
 
 # Args

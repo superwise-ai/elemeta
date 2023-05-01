@@ -24,11 +24,10 @@ jobs:
           python-version: "3.9"
           cache: "poetry"
 
-      - name: Install Dependencies
-        run: poetry install --with docs
-
       - name: Generate docs
-        run: bash -ex scripts/docs.sh
+        run: |
+          bash -ex scripts/docs.sh
+          touch docs/_build/html/.nojekyll
 
       - name: Publish docs 🚀
         uses: JamesIves/github-pages-deploy-action@v4
