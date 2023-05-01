@@ -16,12 +16,13 @@ We're always open to contributions of any size! But before you start, read throu
 
 ## <a id="guidelines"></a>Guidelines:
 
-### Formatting
+### Formatting and linting
 
 We use isort and black formatters in Elemeta. To apply these formats automatically, please run the following command from the repo root
 
 ```sh
-scripts/formatters.sh
+./scripts/formatters.sh
+./scripts/linters.sh
 ```
 
 ### Documentation
@@ -29,7 +30,6 @@ scripts/formatters.sh
 Always make sure that you update the docs regardless if you applied code changes directly or if your contribution was direct to the package documentation! Please first run the documentation build step locally to ensure it looks good. To build the documentation run:
 
 ```sh
-poetry install --with docs
 ./scripts/docs.sh
 open docs/_build/html/index.html
 ```

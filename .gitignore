@@ -9,3 +9,4 @@ dist/
 docs/_build/
 .python-version
 .coverage
+.mypy_cache/
