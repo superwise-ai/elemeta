@@ -7,7 +7,7 @@ class AbstractMetafeatureExtractor(ABC):
     """
     Representation of a MetafeatureExtractor
     This class holds a function to be run to extract the metadata value and the name
-     of the metadata
+    of the metadata
     """
 
     def __init__(self, name: Optional[str] = None):
