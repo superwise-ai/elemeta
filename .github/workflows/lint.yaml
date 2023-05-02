@@ -1,12 +1,9 @@
 name: Lint
 
 on:
-  push:
-    branches-ignore:
-      - master
   pull_request:
     branches:
-      - master
+      - main
     types:
       - opened
       - synchronize
