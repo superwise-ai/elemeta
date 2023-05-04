@@ -15,16 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install poetry
-        run: pipx install poetry
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
-          cache: "poetry"
+          cache: "pip"
 
       - name: Lint and format
         run: |
-          bash -ex scripts/formatters.sh
-          bash -ex scripts/linters.sh
+          pip install pre-commit
+          pre-commit run --all-files --color always

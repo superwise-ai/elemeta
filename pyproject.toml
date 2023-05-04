@@ -29,21 +29,10 @@ setuptools = "^67.6"
 pytest = "^7.2"
 pytest-cov = "^4.0"
 
-[tool.poetry.group.lint.dependencies]
-isort = "^5.10"
-black = "^22.10"
-flake8 = ">=5.0"
-mypy = "^0.991"
-pandas-stubs = "^1.2"
-types-emoji = "^2.1"
-
 [tool.poetry.group.docs]
 optional = true
 
 [tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.lint]
 optional = true
 
 [tool.poetry.group.docs.dependencies]
