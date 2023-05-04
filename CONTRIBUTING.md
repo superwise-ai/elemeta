@@ -18,11 +18,16 @@ We're always open to contributions of any size! But before you start, read throu
 
 ### Formatting and linting
 
-We use isort and black formatters in Elemeta. To apply these formats automatically, please run the following command from the repo root
+We use isort and black formatters in Elemeta. To apply these formats automatically using [pre-commit](https://pre-commit.com/#install), please run the following command from the repo root:
 
 ```sh
-./scripts/formatters.sh
-./scripts/linters.sh
+pre-commit run --all-files
+```
+
+To make sure that formatting and linting rules are applied, you can install a Git hook that will run `pre-commit` on each commit:
+
+```sh
+pre-commit install
 ```
 
 ### Documentation
