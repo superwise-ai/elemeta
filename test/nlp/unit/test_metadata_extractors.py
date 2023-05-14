@@ -242,6 +242,7 @@ def test_number_count(name, text, expected):
     "name, text, existing, expected",
     [
         ("default vocabulary", "Rick said Wubba Lubba dub-dub", None, 3),
+        ("Many sentences", "Rick said Wubba Lubba dub-dub. Second sentence!!", None, 3),
         ("custom vocabulary", "I am ok now", set(["i", "am"]), 2)
     ],
 )

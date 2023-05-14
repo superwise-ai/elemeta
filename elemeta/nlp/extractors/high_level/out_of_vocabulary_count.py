@@ -1,6 +1,6 @@
 from typing import Callable, List, Optional, Set
 
-from nltk import word_tokenize  # type: ignore
+from nltk import RegexpTokenizer  # type: ignore
 from nltk.corpus import words  # type: ignore
 
 from elemeta.nlp.extractors.low_level.tokens_count import TokensCount
@@ -14,7 +14,9 @@ class OutOfVocabularyCount(TokensCount):
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = word_tokenize,
+        tokenizer: Callable[[str], List[str]] = RegexpTokenizer(
+            r"""\w(?<!\d)[\w'-]*"""
+        ).tokenize,
         vocabulary: Optional[Set[str]] = None,
         name: Optional[str] = None,
     ):
