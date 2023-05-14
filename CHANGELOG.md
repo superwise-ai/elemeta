@@ -1,3 +1,23 @@
+## [1.0.6](https://github.com/superwise-ai/elemeta/compare/1.0.5...1.0.6) (2023-05-14)
+
+
+### <!-- 6. -->:broom: Chore
+
+* **ci:** Fix CI triggers for PRs ([a93d429](https://github.com/superwise-ai/elemeta/commit/a93d4291981999bf9321b1f3f53ef177be13ba65))
+* **contributing:** Adding CONTRIBUTING guidelines ([9fcc582](https://github.com/superwise-ai/elemeta/commit/9fcc5823f4937bc3e1dc0a9ffe96dd98012386bc))
+* **contributing:** Update the commit format ([3191f9c](https://github.com/superwise-ai/elemeta/commit/3191f9c88cea9f81dcaf567138d791e448211424))
+* **elemeta:** Changed DetectLangauge to DetectLanguage in the docs and code ([31e09a0](https://github.com/superwise-ai/elemeta/commit/31e09a08ecc5fe7543d285cd3307f617ee9a156a))
+
+
+### <!-- 5. -->:memo: Documentation
+
+* **formatting:** Fix AbstractMetafeatureExtractor indentation ([0fbf0f1](https://github.com/superwise-ai/elemeta/commit/0fbf0f1461e00ae27712c0f8ed4dfb66996e92d7))
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **OutOfVocabularyCount:** change the tokenizer to ignore punctuation ([2b0fecb](https://github.com/superwise-ai/elemeta/commit/2b0fecb4e953f56ce07f5c384429e766bd9cc082))
+
 ## [1.0.5](https://github.com/superwise-ai/elemeta/compare/1.0.4...1.0.5) (2023-04-25)
 
 
