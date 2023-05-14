@@ -29,4 +29,3 @@ import pytest
 def test_datasets(name, pd_f, rows):
     df = pd_f()
     assert len(df) == rows, f"dataset {name} did not load well"
-

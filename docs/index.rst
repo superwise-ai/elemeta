@@ -22,7 +22,7 @@ Elemeta: Metafeature Extraction for Unstructured Data
 
 
 .. raw:: html
-   
+
    <iframe src="https://superwise-elemeta.hf.space" frameborder="0" width="850" height="450"></iframe>
 
 To quickly try Elemeta please use our `quickstart colab <https://colab.research.google.com/github/superwise-ai/elemeta/blob/main/docs/notebooks/quick_start.ipynb>`_ or go to our `getting started section <https://docs.elemeta.ai/getting_started.html>`_

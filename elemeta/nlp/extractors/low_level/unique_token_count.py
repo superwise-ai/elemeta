@@ -58,9 +58,7 @@ class UniqueTokenCount(AbstractMetafeatureExtractor):
                 filter(lambda x: x not in self.exclude_tokens_list, tokens)  # type: ignore
             )
         elif self.include_tokens_list:
-            corpus = list(
-                filter(lambda x: x in self.include_tokens_list, tokens)  # type: ignore
-            )
+            corpus = list(filter(lambda x: x in self.include_tokens_list, tokens))  # type: ignore
         else:
             corpus = tokens
 

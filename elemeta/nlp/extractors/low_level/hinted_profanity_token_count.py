@@ -13,9 +13,7 @@ class HintedProfanityTokensCount(AbstractMetafeatureExtractor):
     Implementation of AbstractMetafeatureExtractor class that count the number profanity words
     """
 
-    def __init__(
-        self, tokenizer: Callable[[str], List[str]], name: Optional[str] = None
-    ):
+    def __init__(self, tokenizer: Callable[[str], List[str]], name: Optional[str] = None):
         """
         Parameters
         ----------
