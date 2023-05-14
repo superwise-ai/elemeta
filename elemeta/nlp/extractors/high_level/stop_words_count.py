@@ -16,6 +16,4 @@ class StopWordsCount(TokensCount):
         tokenizer: Callable[[str], List[str]] = word_tokenize,
         name: Optional[str] = None,
     ):
-        super().__init__(
-            name=name, tokenizer=tokenizer, include_tokens_list=english_stopwords
-        )
+        super().__init__(name=name, tokenizer=tokenizer, include_tokens_list=english_stopwords)

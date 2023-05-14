@@ -2,9 +2,7 @@ from typing import Callable, List, Optional
 
 from nltk import word_tokenize  # type: ignore
 
-from elemeta.nlp.extractors.low_level.regex_token_matches_count import (
-    TokenRegexMatchesCount,
-)
+from elemeta.nlp.extractors.low_level.regex_token_matches_count import TokenRegexMatchesCount
 
 
 class WordRegexMatchesCount(TokenRegexMatchesCount):

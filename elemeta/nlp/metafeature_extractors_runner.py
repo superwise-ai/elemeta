@@ -22,17 +22,13 @@ from elemeta.nlp.extractors.high_level.must_appear_words_percentage import (
     MustAppearWordsPercentage,
 )
 from elemeta.nlp.extractors.high_level.number_count import NumberCount
-from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import (
-    OutOfVocabularyCount,
-)
+from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import OutOfVocabularyCount
 from elemeta.nlp.extractors.high_level.punctuation_count import PunctuationCount
 from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
 from elemeta.nlp.extractors.high_level.sentence_avg_length import SentenceAvgLength
 from elemeta.nlp.extractors.high_level.sentence_count import SentenceCount
 from elemeta.nlp.extractors.high_level.sentiment_polarity import SentimentPolarity
-from elemeta.nlp.extractors.high_level.sentiment_subjectivity import (
-    SentimentSubjectivity,
-)
+from elemeta.nlp.extractors.high_level.sentiment_subjectivity import SentimentSubjectivity
 from elemeta.nlp.extractors.high_level.special_chars_count import SpecialCharsCount
 from elemeta.nlp.extractors.high_level.stop_words_count import StopWordsCount
 from elemeta.nlp.extractors.high_level.syllable_count import SyllableCount
@@ -41,9 +37,7 @@ from elemeta.nlp.extractors.high_level.text_length import TextLength
 from elemeta.nlp.extractors.high_level.unique_word_count import UniqueWordCount
 from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
 from elemeta.nlp.extractors.high_level.word_count import WordCount
-from elemeta.nlp.extractors.high_level.word_regex_matches_count import (
-    WordRegexMatchesCount,
-)
+from elemeta.nlp.extractors.high_level.word_regex_matches_count import WordRegexMatchesCount
 from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
     AbstractMetafeatureExtractor,
 )
@@ -142,9 +136,7 @@ class MetafeatureExtractorsRunner:
             returns a dictionary of extractor name and the metafeature value
 
         """
-        return {
-            metric.name: metric.extract(text) for metric in self.metafeature_extractors
-        }
+        return {metric.name: metric.extract(text) for metric in self.metafeature_extractors}
 
     def run_on_dataframe(self, dataframe: DataFrame, text_column: str) -> DataFrame:
         """return new dataframe with all metafeature extractors values
@@ -168,16 +160,12 @@ class MetafeatureExtractorsRunner:
 
         names = set()
         for metric in self.metafeature_extractors:
-            assert (
-                metric.name not in names
-            ), f"more than one metric have the name {metric.name}"
+            assert metric.name not in names, f"more than one metric have the name {metric.name}"
             names.add(metric.name)
 
         data_frame_text = dataframe_to_return[text_column]
         for metric in self.metafeature_extractors:
-            dataframe_to_return.loc[:, metric.name] = data_frame_text.map(
-                metric.extract
-            )
+            dataframe_to_return.loc[:, metric.name] = data_frame_text.map(metric.extract)
 
         return dataframe_to_return
 
