@@ -29,7 +29,7 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
             self.model_path = path
     def extract(self, text: str) -> float:
         '''
-        returns a float representing how toxic a piece of text is.
+        returns a float representing how toxic a piece of text is
 
         Parameters
         ----------
@@ -41,13 +41,17 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
             a float closer to one is more toxic, closer to zero is non toxic.
         '''
         #toxicity_tokenizer = LambdaTokenizer(tokenizer_func= self.tokenizer)
-        toxicity_tokenizer = AutoTokenizer.from_pretrained(self.model_path)
-        model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
-        pipeline =  TextClassificationPipeline(model=model, tokenizer=toxicity_tokenizer)
         result = []
-        for pair in pipeline(text):
-            if pair["label"] == "toxic":
-                result.append(pair["score"])
-            else:
-                result.append(1 - pair["score"])
-        return result
+        if self.model_path == "martin-ha/toxic-comment-model":
+            toxicity_tokenizer = AutoTokenizer.from_pretrained(self.model_path)
+            model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
+            pipeline =  TextClassificationPipeline(model=model, tokenizer=toxicity_tokenizer)
+            for pair in pipeline(text):
+                if pair["label"] == "toxic":
+                    result.append(pair["score"])
+                else:
+                    result.append(1 - pair["score"])
+            return result
+        else:
+            #if the model path is not the same as the huggingface library
+            return
