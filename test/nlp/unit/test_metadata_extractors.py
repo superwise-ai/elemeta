@@ -34,10 +34,31 @@ from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import OutOfVocab
 from elemeta.nlp.extractors.high_level.word_count import WordCount
 from elemeta.nlp.extractors.high_level.word_regex_matches_count import WordRegexMatchesCount
 from elemeta.nlp.extractors import length_check_basic, avg_check_basic
-
+from elemeta.nlp.extractors.high_level.toxicity_measure import ToxicityExtractor
 
 # TODO for all check tokenizer difference. example can be between twitter and not. the parse isn't differently
+@pytest.mark.parametrize(
+    "name, text, min_toxicity_threshold, max_toxicity_threshold",
+    [
+        ("non-toxic sentence", "Elemeta is amazing", 0.0, 0.3),
+        ("toxic sentence", "Kill youself you piece of shit", 0.5, 1),
 
+        (
+            "many sentences",
+            "The presence of toxicity in a sentence is hard to measure. A negative sentence does not imply toxicity. So how do you tell?",
+            0,
+            1,
+        ),
+    ],
+)
+def test_sentiment_analysis(name, text, min_toxicity_threshold, max_toxicity_threshold):
+    toxicity = ToxicityExtractor().extract(text)
+    assert (
+        toxicity >= min_toxicity_threshold
+    ), f"output {toxicity} is smaller than min threshold {min_toxicity_threshold} for test {name}"
+    assert (
+        sentiment <= max_toxicity_threshold
+    ), f"output {toxicity} is larger than max threshold {max_toxicity_threshold} for test {name}"
 
 @pytest.mark.parametrize(
     "name, text, sentiment_min, sentiment_max",
