@@ -14,11 +14,11 @@ Let’s create IsPalindromeExtractor that will return if the given text is palin
 
 ::
 
-    >>> class IsPalindromeExtractor(AbstractMetadataExtractor):
+    >>> class IsPalindromeExtractor(AbstractMetafeatureExtractor):
     ...     def extract(self, text: str) -> bool:
     ...         normalized_text = text.replace(" ", "").lower()
     ...         return normalized_text == normalized_text[::-1]
-    >>> ipe = IsPlindromExtractor()
+    >>> ipe = IsPalindromeExtractor()
 
 Let’s test it:
 
