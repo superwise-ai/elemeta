@@ -32,10 +32,10 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
         """
 
         super().__init__(name)
-        self.model_path = "martin-ha/toxic-comment-model"
+        self.model_path = "tillschwoerer/roberta-base-finetuned-toxic-comment-detection"
         # self.tokenizer = tokenizer
         # if path is None:
-        #    self.model_path = "martin-ha/toxic-comment-model"
+        #    self.model_path = "tillschwoerer/roberta-base-finetuned-toxic-comment-detection"
         # else:
         #    self.model_path = path
 
@@ -59,7 +59,7 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
         model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
         pipeline = TextClassificationPipeline(model=model, tokenizer=toxicity_tokenizer)
         for pair in pipeline(text):
-            if pair["label"] == "toxic":
+            if pair["label"] == "TOXIC":
                 result = pair["score"]
             else:
                 result = 1 - pair["score"]
