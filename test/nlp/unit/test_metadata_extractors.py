@@ -33,11 +33,30 @@ from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
 from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import OutOfVocabularyCount
 from elemeta.nlp.extractors.high_level.word_count import WordCount
 from elemeta.nlp.extractors.high_level.word_regex_matches_count import WordRegexMatchesCount
+from elemeta.nlp.extractors.high_level.pii_identifier import PII_Identifier
 from elemeta.nlp.extractors import length_check_basic, avg_check_basic
 
 
 # TODO for all check tokenizer difference. example can be between twitter and not. the parse isn't differently
 
+@pytest.mark.parametrize(
+    "name, text, required_PII",
+    [
+        ("Name Detection", "Her name was Jane, and she was gorgeous", "Jane"),
+        ("Location Detection", "They reside in the outskirts of rural China", "China")
+
+    ],
+)
+def test_PII_identifier(name, text, required_PII):
+    entities = PII_Identifier().extract(text)
+    if 'B-PER' in entities:
+        assert(
+            required_PII in entities['B-PER']
+        ), f"output {entities} does not contain required PII: {required_PII}"
+    elif 'B-LOC' in entities:
+        assert(
+            required_PII in entities['B-LOC']
+        ), f"output {entities} does not contain required PII: {required_PII}"
 
 @pytest.mark.parametrize(
     "name, text, sentiment_min, sentiment_max",
