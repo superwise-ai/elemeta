@@ -148,6 +148,14 @@ elemeta.nlp.extractors.high\_level.out\_of\_vocabulary\_count module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.pii\_identifier module
+---------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.pii_identifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.punctuation\_count module
 ------------------------------------------------------------
 
