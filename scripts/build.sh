@@ -2,5 +2,5 @@
 
 poetry check
 poetry lock --no-update
-poetry install --only root
+poetry install --only-root
 poetry build
