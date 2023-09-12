@@ -331,11 +331,11 @@ document.write(`
 </pre></div>
 </div>
 <p>Let’s create IsPalindromeExtractor that will return if the given text is palindrome:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">IsPalindromeExtractor</span><span class="p">(</span><span class="n">AbstractMetadataExtractor</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">IsPalindromeExtractor</span><span class="p">(</span><span class="n">AbstractMetafeatureExtractor</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">normalized_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="n">normalized_text</span> <span class="o">==</span> <span class="n">normalized_text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ipe</span> <span class="o">=</span> <span class="n">IsPlindromExtractor</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ipe</span> <span class="o">=</span> <span class="n">IsPalindromeExtractor</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Let’s test it:</p>
