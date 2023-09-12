@@ -1,6 +1,6 @@
 from typing import Optional
 
-from transformers import (  # PreTrainedTokenizer,
+from transformers import (
     AutoModelForSequenceClassification,
     AutoTokenizer,
     TextClassificationPipeline,
@@ -19,8 +19,6 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
     def __init__(
         self,
         name: Optional[str] = None,
-        # tokenizer: Callable[[str], List[str]],
-        # path: Optional[str] = None
     ):
         """
         Parameters
@@ -33,11 +31,6 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
 
         super().__init__(name)
         self.model_path = "tillschwoerer/roberta-base-finetuned-toxic-comment-detection"
-        # self.tokenizer = tokenizer
-        # if path is None:
-        #    self.model_path = "tillschwoerer/roberta-base-finetuned-toxic-comment-detection"
-        # else:
-        #    self.model_path = path
 
     def extract(self, text: str) -> float:
         """
@@ -52,8 +45,6 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
         float
             a float closer to one is more toxic, closer to zero is non toxic.
         """
-        # toxicity_tokenizer = LambdaTokenizer(tokenizer_func= self.tokenizer)
-        # if self.model_path == "martin-ha/toxic-comment-model":
         result = 0.0
         toxicity_tokenizer = AutoTokenizer.from_pretrained(self.model_path)
         model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
@@ -64,6 +55,3 @@ class ToxicityExtractor(AbstractMetafeatureExtractor):
             else:
                 result = 1 - pair["score"]
         return result
-        # else:
-        # if the model path is not the same as the huggingface library
-        #    return
