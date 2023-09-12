@@ -44,7 +44,7 @@ open docs/_build/html/index.html
 Before committing any new code change, please run the full test suite to ensure its quality and coverage. To do this, please run
 
 ```sh
-./script/test.sh
+./scripts/test.sh
 ```
 
 You can run the script directly by running the following: `Poetry run pytest`
