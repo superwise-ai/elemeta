@@ -1,3 +1,17 @@
+## [1.0.7](https://github.com/superwise-ai/elemeta/compare/1.0.6...1.0.7) (2023-09-12)
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **build:** fix build.sh script ([778dd77](https://github.com/superwise-ai/elemeta/commit/778dd7714d4581212ca091001b01623ec474fa7e))
+* **docs:** fix typo in CONTRIBUTING.md ([22c2e1e](https://github.com/superwise-ai/elemeta/commit/22c2e1e2568b23714924ad56b69f52f6d67be0d0))
+
+
+### <!-- 6. -->:broom: Chore
+
+* **formatting:** Apply pre-commit formmating ([3f3c1a1](https://github.com/superwise-ai/elemeta/commit/3f3c1a1c0746f14e0632b3855547906fcfa5c363))
+* **formatting:** Use pre-commit for lint & format ([f2a4261](https://github.com/superwise-ai/elemeta/commit/f2a42618440254844094879719d09e48334e916f))
+
 ## [1.0.6](https://github.com/superwise-ai/elemeta/compare/1.0.5...1.0.6) (2023-05-14)
 
 
