@@ -34,6 +34,7 @@ from elemeta.nlp.extractors.high_level.stop_words_count import StopWordsCount
 from elemeta.nlp.extractors.high_level.syllable_count import SyllableCount
 from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
 from elemeta.nlp.extractors.high_level.text_length import TextLength
+from elemeta.nlp.extractors.high_level.toxicity_measure import ToxicityExtractor
 from elemeta.nlp.extractors.high_level.unique_word_count import UniqueWordCount
 from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
 from elemeta.nlp.extractors.high_level.word_count import WordCount
@@ -47,6 +48,7 @@ intensive_metrics = [
     SentimentSubjectivity(),
     HintedProfanityWordsCount(),
     HintedProfanitySentenceCount(),
+    ToxicityExtractor(),
 ]
 non_intensive_metrics = [
     EmojiCount(),
