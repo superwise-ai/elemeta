@@ -2,12 +2,12 @@ from typing import Optional
 
 import textstat  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class SyllableCount(AbstractMetafeatureExtractor):
+class SyllableCount(AbstractTextMetafeatureExtractor):
     """
     Counts the total number of syllables in the text
     """
@@ -21,5 +21,5 @@ class SyllableCount(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> int:
-        return textstat.textstat.syllable_count(text)
+    def extract(self, input: str) -> int:
+        return textstat.textstat.syllable_count(input)

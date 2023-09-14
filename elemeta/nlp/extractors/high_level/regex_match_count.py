@@ -1,12 +1,12 @@
 import re
 from typing import Optional
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class RegexMatchCount(AbstractMetafeatureExtractor):
+class RegexMatchCount(AbstractTextMetafeatureExtractor):
     """
     For a given regex return the number of matches it has in the text
     """
@@ -21,12 +21,12 @@ class RegexMatchCount(AbstractMetafeatureExtractor):
         super().__init__(name)
         self.regex = regex
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """regex count function
 
         Parameters
         ----------
-        text:str
+        input:str
             a text to run the regex on
 
         Returns
@@ -35,4 +35,4 @@ class RegexMatchCount(AbstractMetafeatureExtractor):
            how many times the regex is found in the string
 
         """
-        return len(re.findall(self.regex, text))
+        return len(re.findall(self.regex, input))

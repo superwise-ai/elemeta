@@ -1,6 +1,10 @@
 import pytest as pytest
 
-from elemeta.dataset.dataset import get_avengers_endgame_tweets, get_imdb_reviews,get_tweets_likes
+from elemeta.dataset.dataset import (
+    get_avengers_endgame_tweets,
+    get_imdb_reviews,
+    get_tweets_likes,
+)
 import pytest
 
 
@@ -21,9 +25,7 @@ import pytest
             "get_tweets_likes",
             get_tweets_likes,
             52542,
-        )
-
-
+        ),
     ],
 )
 def test_datasets(name, pd_f, rows):

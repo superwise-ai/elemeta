@@ -17,5 +17,5 @@ class EmailCount(RegexMatchCount):
         """
         super().__init__(regex="[\w\-\.\+]+@([\w-]+\.)+[\w-]{2,4}", name=name)  # noqa
 
-    def extract(self, text: str) -> int:
-        return super().extract(text)
+    def extract(self, input: str) -> int:
+        return super().extract(input)
