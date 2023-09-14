@@ -26,4 +26,6 @@ class WordCount(TokensCount):
         exclude_tokens_list: Set[str]
             set of words to exclude
         """
-        super().__init__(name=name, tokenizer=tokenizer, exclude_tokens_list=exclude_tokens_list)
+        super().__init__(
+            name=name, tokenizer=tokenizer, exclude_tokens_list=exclude_tokens_list
+        )

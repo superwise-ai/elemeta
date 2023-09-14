@@ -2,12 +2,12 @@ from typing import Optional
 
 import datefinder  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class DateCount(AbstractMetafeatureExtractor):
+class DateCount(AbstractTextMetafeatureExtractor):
     """
     Counts the number of dates in the text
     """
@@ -21,17 +21,17 @@ class DateCount(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """
         return the number of dates in the text
 
         Parameters
         ----------
-        text: str
+        input: str
             the string to run on
         Returns
         -------
         int
             the number of dates in the text
         """
-        return len(list(datefinder.find_dates(text)))
+        return len(list(datefinder.find_dates(input)))

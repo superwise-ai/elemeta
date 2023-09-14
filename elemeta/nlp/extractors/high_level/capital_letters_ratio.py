@@ -1,11 +1,11 @@
 from typing import Optional
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class CapitalLettersRatio(AbstractMetafeatureExtractor):
+class CapitalLettersRatio(AbstractTextMetafeatureExtractor):
     """
     Counts the ratio of capital letters to all letters
     """
@@ -19,13 +19,13 @@ class CapitalLettersRatio(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> float:
+    def extract(self, input: str) -> float:
         """case ratio calculator
         returns the ratio of capital letters / length
 
         Parameters
         ----------
-        text: str
+        input: str
             the text to check the ratio on
 
         Returns
@@ -34,7 +34,7 @@ class CapitalLettersRatio(AbstractMetafeatureExtractor):
             the ratio of capital letters / lower letters
 
         """
-        alph = list(filter(str.isalpha, text))
+        alph = list(filter(str.isalpha, input))
         if len(alph) == 0:
             return 0
         return sum(map(str.isupper, alph)) / len(alph)

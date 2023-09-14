@@ -2,12 +2,12 @@ from typing import Callable, Optional
 
 import textstat  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class TextComplexity(AbstractMetafeatureExtractor):
+class TextComplexity(AbstractTextMetafeatureExtractor):
     """
     Return the Flesch Reading Ease Score of the text
     """
@@ -29,5 +29,5 @@ class TextComplexity(AbstractMetafeatureExtractor):
         super().__init__(name)
         self.metric = metric
 
-    def extract(self, text: str) -> float:
-        return self.metric(text)
+    def extract(self, input: str) -> float:
+        return self.metric(input)

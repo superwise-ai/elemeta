@@ -14,7 +14,9 @@ class OutOfVocabularyCount(TokensCount):
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = RegexpTokenizer(r"""\w(?<!\d)[\w'-]*""").tokenize,
+        tokenizer: Callable[[str], List[str]] = RegexpTokenizer(
+            r"""\w(?<!\d)[\w'-]*"""
+        ).tokenize,
         vocabulary: Optional[Set[str]] = None,
         name: Optional[str] = None,
     ):

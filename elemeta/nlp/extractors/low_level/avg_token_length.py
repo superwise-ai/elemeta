@@ -1,13 +1,13 @@
 from typing import Callable, List, Optional, Set
 
 from elemeta.nlp.extractors import avg_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class AvgTokenLength(AbstractMetafeatureExtractor):
-    """Implementation of AbstractMetafeatureExtractor class that return the average token length"""
+class AvgTokenLength(AbstractTextMetafeatureExtractor):
+    """Implementation of AbstractTextMetafeatureExtractor class that return the average token length"""
 
     def __init__(
         self,

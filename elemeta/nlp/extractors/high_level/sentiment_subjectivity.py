@@ -2,12 +2,12 @@ from typing import Optional
 
 from textblob import TextBlob  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class SentimentSubjectivity(AbstractMetafeatureExtractor):
+class SentimentSubjectivity(AbstractTextMetafeatureExtractor):
     """
     Returns the Sentiment Subjectivity
     """
@@ -21,12 +21,12 @@ class SentimentSubjectivity(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> float:
+    def extract(self, input: str) -> float:
         """sentiment subjectivity prediction function
 
         Parameters
         ----------
-        text: str
+        input: str
             the text we want sentiment subjectivity to run on
 
         Returns
@@ -35,4 +35,4 @@ class SentimentSubjectivity(AbstractMetafeatureExtractor):
             return subjectivity score as a float within the range [0.0, 1.0]
         where 0.0 is very objective and 1.0 is very subjective.
         """
-        return TextBlob(text).sentiment.subjectivity
+        return TextBlob(input).sentiment.subjectivity
