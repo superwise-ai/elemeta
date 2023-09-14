@@ -2,13 +2,13 @@ import re
 from typing import Callable, List, Optional
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class TokenRegexMatchesCount(AbstractMetafeatureExtractor):
-    """Implementation of AbstractMetafeatureExtractor class that return number of tokens
+class TokenRegexMatchesCount(AbstractTextMetafeatureExtractor):
+    """Implementation of AbstractTextMetafeatureExtractor class that return number of tokens
     that match the given regex"""
 
     def __init__(
@@ -49,17 +49,17 @@ class TokenRegexMatchesCount(AbstractMetafeatureExtractor):
         """
         return bool(re.fullmatch(self.regex, token))
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """
         return the number of matches of the given regex in the text
 
         Parameters
         ----------
-        text: str
+        input: str
             the string to run on
         Returns
         -------
         int
             the number of the given text in the text
         """
-        return length_check_basic(self.tokenizer, self.validator)(text)
+        return length_check_basic(self.tokenizer, self.validator)(input)

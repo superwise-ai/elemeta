@@ -3,12 +3,12 @@ from typing import Callable, List, Optional
 from nltk import word_tokenize  # type: ignore
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class NumberCount(AbstractMetafeatureExtractor):
+class NumberCount(AbstractTextMetafeatureExtractor):
     """
     Counts the number of numbers in the text
     """
@@ -47,17 +47,17 @@ class NumberCount(AbstractMetafeatureExtractor):
         """
         return token.isnumeric()
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """
         return the number of numbers in the text
 
         Parameters
         ----------
-        text: str
+        input: str
             the string to run on
         Returns
         -------
         int
             the number of numbers in the text
         """
-        return length_check_basic(self.tokenizer, self.validator)(text)
+        return length_check_basic(self.tokenizer, self.validator)(input)

@@ -1,13 +1,13 @@
 from typing import Callable, Dict, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class UniqueTokenCount(AbstractMetafeatureExtractor):
+class UniqueTokenCount(AbstractTextMetafeatureExtractor):
     """
-    Implementation of AbstractMetafeatureExtractor class that return the number of unique tokens
+    Implementation of AbstractTextMetafeatureExtractor class that return the number of unique tokens
      in the text
     """
 
