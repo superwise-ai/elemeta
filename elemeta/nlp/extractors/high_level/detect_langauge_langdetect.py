@@ -2,12 +2,12 @@ from typing import Optional
 
 from langdetect import DetectorFactory, LangDetectException, detect  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class DetectLanguage(AbstractMetafeatureExtractor):
+class DetectLanguage(AbstractTextMetafeatureExtractor):
     """
     Returns the language of the text
     """
@@ -22,12 +22,12 @@ class DetectLanguage(AbstractMetafeatureExtractor):
         super().__init__(name)
         DetectorFactory.seed = 42
 
-    def extract(self, text: str) -> str:
+    def extract(self, input: str) -> str:
         """language detection function
 
         Parameters
         ----------
-        text: str
+        input: str
             the text to detect the language on
 
         Returns
@@ -36,6 +36,6 @@ class DetectLanguage(AbstractMetafeatureExtractor):
            the most likely language of the text
         """
         try:
-            return detect(text)
+            return detect(input)
         except LangDetectException:
             return "unknown"

@@ -2,12 +2,12 @@ from typing import Optional
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class SentimentPolarity(AbstractMetafeatureExtractor):
+class SentimentPolarity(AbstractTextMetafeatureExtractor):
     """
     Returns the Sentiment Polarity
     """
@@ -21,12 +21,12 @@ class SentimentPolarity(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> float:
+    def extract(self, input: str) -> float:
         """sentiment analysis prediction function
 
         Parameters
         ----------
-        text: str
+        input: str
             the text we want sentiment analysis to run on
 
         Returns
@@ -37,6 +37,6 @@ class SentimentPolarity(AbstractMetafeatureExtractor):
 
         """
         sid_obj = SentimentIntensityAnalyzer()
-        sentiment_dict = sid_obj.polarity_scores(text)
+        sentiment_dict = sid_obj.polarity_scores(input)
         sentiment = sentiment_dict["compound"]
         return sentiment

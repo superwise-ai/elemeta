@@ -4,12 +4,12 @@ from nltk import word_tokenize  # type: ignore
 
 from elemeta.nlp import extended_punctuations
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class PunctuationCount(AbstractMetafeatureExtractor):
+class PunctuationCount(AbstractTextMetafeatureExtractor):
     """
     Counts the number of punctuation marks in the text
     """
@@ -36,17 +36,19 @@ class PunctuationCount(AbstractMetafeatureExtractor):
         self.tokenizer = tokenizer
         self.punctuations = punctuations
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """
         return the number of punctuations in the text
 
         Parameters
         ----------
-        text: str
+        input: str
             the string to run on
         Returns
         -------
         int
             the number of punctuations in the text
         """
-        return length_check_basic(self.tokenizer, lambda token: token in self.punctuations)(text)
+        return length_check_basic(
+            self.tokenizer, lambda token: token in self.punctuations
+        )(input)

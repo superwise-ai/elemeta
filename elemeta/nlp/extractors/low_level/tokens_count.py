@@ -1,13 +1,13 @@
 from typing import Callable, List, Optional, Set
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class TokensCount(AbstractMetafeatureExtractor):
-    """Implementation of AbstractMetafeatureExtractor class that return the number of sentences
+class TokensCount(AbstractTextMetafeatureExtractor):
+    """Implementation of AbstractTextMetafeatureExtractor class that return the number of sentences
     in the text"""
 
     def __init__(

@@ -9,20 +9,26 @@ from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectL
 from elemeta.nlp.extractors.high_level.email_count import EmailCount
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
 from elemeta.nlp.extractors.high_level.hashtag_count import HashtagCount
-from elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count import \
-    HintedProfanitySentenceCount
-from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import \
-    HintedProfanityWordsCount
+from elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count import (
+    HintedProfanitySentenceCount,
+)
+from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import (
+    HintedProfanityWordsCount,
+)
 from elemeta.nlp.extractors.high_level.link_count import LinkCount
 from elemeta.nlp.extractors.high_level.mention_count import MentionCount
-from elemeta.nlp.extractors.high_level.must_appear_words_percentage import MustAppearWordsPercentage
+from elemeta.nlp.extractors.high_level.must_appear_words_percentage import (
+    MustAppearWordsPercentage,
+)
 from elemeta.nlp.extractors.high_level.number_count import NumberCount
 from elemeta.nlp.extractors.high_level.punctuation_count import PunctuationCount
 from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
 from elemeta.nlp.extractors.high_level.sentence_avg_length import SentenceAvgLength
 from elemeta.nlp.extractors.high_level.sentence_count import SentenceCount
 from elemeta.nlp.extractors.high_level.sentiment_polarity import SentimentPolarity
-from elemeta.nlp.extractors.high_level.sentiment_subjectivity import SentimentSubjectivity
+from elemeta.nlp.extractors.high_level.sentiment_subjectivity import (
+    SentimentSubjectivity,
+)
 from elemeta.nlp.extractors.high_level.special_chars_count import SpecialCharsCount
 from elemeta.nlp.extractors.high_level.stop_words_count import StopWordsCount
 from elemeta.nlp.extractors.high_level.syllable_count import SyllableCount
@@ -30,9 +36,13 @@ from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
 from elemeta.nlp.extractors.high_level.text_length import TextLength
 from elemeta.nlp.extractors.high_level.unique_word_count import UniqueWordCount
 from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
-from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import OutOfVocabularyCount
+from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import (
+    OutOfVocabularyCount,
+)
 from elemeta.nlp.extractors.high_level.word_count import WordCount
-from elemeta.nlp.extractors.high_level.word_regex_matches_count import WordRegexMatchesCount
+from elemeta.nlp.extractors.high_level.word_regex_matches_count import (
+    WordRegexMatchesCount,
+)
 from elemeta.nlp.extractors import length_check_basic, avg_check_basic
 
 
@@ -127,7 +137,7 @@ def test_emoji_counter(name, text, expected):
     [
         ("no text", "", set(), 0),
         ("valid text", "I love to move it move it", set(), 3 / 5),
-        ("valid text", "I love to move it move it", {"I", "it", "not"}, 2/3),
+        ("valid text", "I love to move it move it", {"I", "it", "not"}, 2 / 3),
     ],
 )
 def test_unique_words_ratio(name, text, exception, expected):
@@ -243,7 +253,7 @@ def test_number_count(name, text, expected):
     [
         ("default vocabulary", "Rick said Wubba Lubba dub-dub", None, 3),
         ("Many sentences", "Rick said Wubba Lubba dub-dub. Second sentence!!", None, 3),
-        ("custom vocabulary", "I am ok now", set(["i", "am"]), 2)
+        ("custom vocabulary", "I am ok now", set(["i", "am"]), 2),
     ],
 )
 def test_unknown_words_count(name, text, existing, expected):
@@ -260,7 +270,7 @@ def test_unknown_words_count(name, text, existing, expected):
     "name, text, appearing, expected",
     [
         ("no appearing", "I am ok now", set("Love"), 0),
-        ("some appearing", "I am ok now", {"I", "am"}, 2/2),
+        ("some appearing", "I am ok now", {"I", "am"}, 2 / 2),
     ],
 )
 def test_must_appear_count(name, text, appearing, expected):
@@ -401,10 +411,7 @@ def test_count_special_chars(name, text, expected):
 
 @pytest.mark.parametrize(
     "name, text, expected",
-    [
-        ("upper lower case chars", "HalF Ok", 1 / 2),
-        ("no text", "", 0)
-    ],
+    [("upper lower case chars", "HalF Ok", 1 / 2), ("no text", "", 0)],
 )
 def test_case_ratio(name, text, expected):
     res = CapitalLettersRatio().extract(text)
@@ -417,7 +424,11 @@ def test_case_ratio(name, text, expected):
     "name, text, expected",
     [
         ("no email", "@not_a_email", 0),
-        ("2 emails", "lior.something@gmail.ac.il is ok but lior@superwise.il is better", 2)
+        (
+            "2 emails",
+            "lior.something@gmail.ac.il is ok but lior@superwise.il is better",
+            2,
+        ),
     ],
 )
 def test_email_count(name, text, expected):
@@ -429,10 +440,7 @@ def test_email_count(name, text, expected):
 
 @pytest.mark.parametrize(
     "name, text, expected",
-    [
-        ("no link", "myname@gmail.com", 0),
-        ("1 link", "https://google.com", 1)
-    ],
+    [("no link", "myname@gmail.com", 0), ("1 link", "https://google.com", 1)],
 )
 def test_link_count(name, text, expected):
     res = LinkCount().extract(text)
@@ -445,7 +453,11 @@ def test_link_count(name, text, expected):
     "name, text, expected",
     [
         ("simple", "This love cakes", 119.19),
-        ("complex", "Production of biodiesel by enzymatic transesterifcation of non-edible Salvadora persica (Pilu) oil and crude coconut oil in a solvent-free system", 17.34),
+        (
+            "complex",
+            "Production of biodiesel by enzymatic transesterifcation of non-edible Salvadora persica (Pilu) oil and crude coconut oil in a solvent-free system",
+            17.34,
+        ),
     ],
 )
 def test_complex_count(name, text, expected):
@@ -529,7 +541,11 @@ def test_profanity_words_count(name, text, expected):
 @pytest.mark.parametrize(
     "name, text, expected",
     [
-        ("bad sentences", "fuck this sh!t,I want to fucking leave the country, but I am fine", 1),
+        (
+            "bad sentences",
+            "fuck this sh!t,I want to fucking leave the country, but I am fine",
+            1,
+        ),
     ],
 )
 def test_profanity_sentences_count(name, text, expected):
@@ -542,9 +558,11 @@ def test_profanity_sentences_count(name, text, expected):
 @pytest.mark.parametrize(
     "name, text, expected",
     [
-        ("dates",
-         "Entries are due by January 4th, 2017 at 8:00pm, created 01/15/2005 by ACME Inc. and associates.",
-         2),
+        (
+            "dates",
+            "Entries are due by January 4th, 2017 at 8:00pm, created 01/15/2005 by ACME Inc. and associates.",
+            2,
+        ),
     ],
 )
 def test_date_count(name, text, expected):
@@ -557,13 +575,20 @@ def test_date_count(name, text, expected):
 @pytest.mark.parametrize(
     "name, regex ,text, expected",
     [
-        ("detected_specific_word", "test",
-         "This is a test text, will this test pass?", 2),
+        (
+            "detected_specific_word",
+            "test",
+            "This is a test text, will this test pass?",
+            2,
+        ),
         ("no_matches", "Elemeta", "This is a test text, will this test pass?", 0),
         ("no_text", "test", "", 0),
-        ("detected_specific_word", "test",
-         "This is a test text, will this test pass?", 2),
-
+        (
+            "detected_specific_word",
+            "test",
+            "This is a test text, will this test pass?",
+            2,
+        ),
     ],
 )
 def test_regex_match_count(name, regex, text, expected):
