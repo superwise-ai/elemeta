@@ -25,7 +25,7 @@
 
 ### <!-- 5. -->:memo: Documentation
 
-* **formatting:** Fix AbstractMetafeatureExtractor indentation ([0fbf0f1](https://github.com/superwise-ai/elemeta/commit/0fbf0f1461e00ae27712c0f8ed4dfb66996e92d7))
+* **formatting:** Fix AbstractTextMetafeatureExtractor indentation ([0fbf0f1](https://github.com/superwise-ai/elemeta/commit/0fbf0f1461e00ae27712c0f8ed4dfb66996e92d7))
 
 
 ### <!-- 2. -->:bug: Bug Fixes

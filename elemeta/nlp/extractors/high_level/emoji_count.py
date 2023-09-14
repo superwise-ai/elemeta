@@ -2,12 +2,12 @@ from typing import Optional
 
 import emoji
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class EmojiCount(AbstractMetafeatureExtractor):
+class EmojiCount(AbstractTextMetafeatureExtractor):
     """
     Counts the number of emojis in the text
     """
@@ -21,12 +21,12 @@ class EmojiCount(AbstractMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, text: str) -> int:
+    def extract(self, input: str) -> int:
         """emoji counter function
 
         Parameters
         ----------
-        text: str
+        input: str
             the text to count emoji on
 
         Returns
@@ -35,4 +35,4 @@ class EmojiCount(AbstractMetafeatureExtractor):
             the number of emojis in the text
 
         """
-        return emoji.emoji_count(text)
+        return emoji.emoji_count(input)

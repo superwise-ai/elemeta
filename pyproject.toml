@@ -23,6 +23,7 @@ profanity-check = "^1.0"
 better-profanity = "^0.7"
 textblob = "^0.17"
 datefinder = "^0.7"
+pydantic = "^2.3.0"
 
 [tool.poetry.group.test.dependencies]
 setuptools = "^67.6"
