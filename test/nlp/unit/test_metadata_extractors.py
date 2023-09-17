@@ -42,14 +42,17 @@ from elemeta.nlp.extractors import length_check_basic, avg_check_basic
 @pytest.mark.parametrize(
     "name, text, required_PII",
     [
+
         ("Name Detection", "Her name was Jane Dee, and she was gorgeous. So was her roommate Louis Lee ", {'B-PER':["Jane", "Louis"], 'I-PER': ['Lee', 'Dee']}),
         ("Location Detection", "My pen pal lives in Hong Kong, China while I reside in France. Quite a far distance away.", {'B-LOC': ['Hong', 'China', 'France'], 'I-LOC': ['Kong']}),
         ("Combination", "My friend Darrell recently got employed at the NY ISO branch" , {'B-PER': ['Darrell'], 'B-LOC': ['NY'], 'B-ORG': ['ISO']}),
         ("Combination 2", "Searching through banking information, we know that Joseph Smith created various credit lines with Citadel and his address is 106 Glen Creek Rd." , {'B-PER': ['Joseph'], 'I-PER': ['Smith'], 'B-ORG': ['Citadel'], 'B-LOC': ['Glen'], 'I-LOC': ['Creek', 'Rd']}),
+
     ],
 )
 def test_PII_identifier(name, text, required_PII):
     entities = PII_Identifier().extract(text)
+
     for keys in required_PII:
         assert(
             keys in required_PII
@@ -58,6 +61,7 @@ def test_PII_identifier(name, text, required_PII):
             assert(
                 PII in entities[keys]
             ), f"output {entities} does not contain required PII: {PII}"
+
 
 
 @pytest.mark.parametrize(
