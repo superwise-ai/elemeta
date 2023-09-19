@@ -49,6 +49,4 @@ class PunctuationCount(AbstractTextMetafeatureExtractor):
         int
             the number of punctuations in the text
         """
-        return length_check_basic(
-            self.tokenizer, lambda token: token in self.punctuations
-        )(input)
+        return length_check_basic(self.tokenizer, lambda token: token in self.punctuations)(input)

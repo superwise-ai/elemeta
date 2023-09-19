@@ -24,6 +24,7 @@ better-profanity = "^0.7"
 textblob = "^0.17"
 datefinder = "^0.7"
 pydantic = "^2.3.0"
+sentence-transformers = "^2.2.2"
 
 [tool.poetry.group.test.dependencies]
 setuptools = "^67.6"

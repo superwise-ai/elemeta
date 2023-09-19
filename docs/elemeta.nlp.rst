@@ -20,6 +20,14 @@ elemeta.nlp.metafeature\_extractors\_runner module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.pair\_metafeature\_extractors\_runner module
+--------------------------------------------------------
+
+.. automodule:: elemeta.nlp.pair_metafeature_extractors_runner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 
