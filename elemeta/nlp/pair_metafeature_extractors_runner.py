@@ -10,13 +10,13 @@ from elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor i
 )
 
 
-class PairRunnerResult(BaseModel):
+class PairMetafeatureExtractorsRunnerResult(BaseModel):
     input_1: List[Any]
     input_2: List[Any]
     input_1_and_2: List[Any]
 
 
-class PairRunner:
+class PairMetafeatureExtractorsRunner:
     def __init__(
         self,
         input_1_extractors: List[AbstractTextMetafeatureExtractor],
@@ -27,8 +27,22 @@ class PairRunner:
         self.input_2_extractors = input_2_extractors
         self.input_1_and_2_extractors = input_1_and_2_extractors
 
-    def run(self, input_1: Any, input_2: Any) -> PairRunnerResult:
-        return PairRunnerResult(
+    def run(self, input_1: str, input_2: str) -> PairMetafeatureExtractorsRunnerResult:
+        """
+        run input_1_extractors on input_1, input_2_extractors on input_2 and input_1_and_2_extractors on the pair of
+        input_1 and input_2
+
+        Parameters
+        ----------
+        input_1: str
+        input_2: str
+
+        Returns
+        -------
+        PairMetafeatureExtractorsRunnerResult
+            the metafeatures extracted from text
+        """
+        return PairMetafeatureExtractorsRunnerResult(
             input_1=[extractor(input_1) for extractor in self.input_1_extractors],
             input_2=[extractor(input_2) for extractor in self.input_2_extractors],
             input_1_and_2=[

@@ -7,7 +7,10 @@ from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import
 
 
 class AvgTokenLength(AbstractTextMetafeatureExtractor):
-    """Implementation of AbstractTextMetafeatureExtractor class that return the average token length"""
+    """
+    Implementation of AbstractTextMetafeatureExtractor class that return the
+    average token length
+    """
 
     def __init__(
         self,

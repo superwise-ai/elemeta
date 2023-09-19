@@ -7,8 +7,8 @@ from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import
 
 class UniqueTokenCount(AbstractTextMetafeatureExtractor):
     """
-    Implementation of AbstractTextMetafeatureExtractor class that return the number of unique tokens
-     in the text
+    Implementation of AbstractTextMetafeatureExtractor class that return the
+    number of unique tokens in the text
     """
 
     def __init__(
