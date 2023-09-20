@@ -4,8 +4,9 @@ from sentence_transformers import util
 from torch import nn
 
 from elemeta.nlp.extractors.high_level.embedding import Embedding
-from elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor import \
-    AbstractTextPairMetafeatureExtractor
+from elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor import (
+    AbstractTextPairMetafeatureExtractor,
+)
 
 
 class SemanticTextPairSimilarity(AbstractTextPairMetafeatureExtractor):
