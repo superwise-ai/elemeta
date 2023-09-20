@@ -5,6 +5,11 @@ import pandas
 import pytest
 
 import elemeta.nlp.metafeature_extractors_runner as met
+from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
+from elemeta.nlp.extractors.high_level.semantic_text_similarity import (
+    SemanticTextPairSimilarity,
+)
+from elemeta.nlp.pair_metafeature_extractors_runner import PairMetafeatureExtractorsRunner
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
 from elemeta.nlp.metafeature_extractors_runner import (
@@ -80,3 +85,20 @@ def test_non_existing_column_name():
     metrics = met.MetafeatureExtractorsRunner([metric])
     with pytest.raises(AssertionError):
         metrics.run_on_dataframe(df, "I dont exist")
+
+
+def test_pair_metafeature_extractor():
+    avg_word_length = AvgWordLength()
+    emoji_count = EmojiCount()
+    semantic_text_similarity = SemanticTextPairSimilarity()
+    refusals_similarity = RefusalSimilarity()
+
+    metrics = PairMetafeatureExtractorsRunner(
+        input_1_extractors=[avg_word_length, emoji_count],
+        input_2_extractors=[refusals_similarity],
+        input_1_and_2_extractors=[semantic_text_similarity],
+    )
+    pair_runner_result = metrics.run("What is it 1+2", "the answer is 3")
+    assert len(pair_runner_result.input_1) == 2, "Expecting to see two metafeatures"
+    assert len(pair_runner_result.input_2) == 1, "Expecting to see one metafeatures"
+    assert len(pair_runner_result.input_1_and_2) == 1, "Expecting to see one metafeatures"
