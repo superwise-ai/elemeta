@@ -29,8 +29,8 @@ class PairMetafeatureExtractorsRunner:
 
     def run(self, input_1: str, input_2: str) -> PairMetafeatureExtractorsRunnerResult:
         """
-        run input_1_extractors on input_1, input_2_extractors on input_2 and input_1_and_2_extractors on the pair of
-        input_1 and input_2
+        run input_1_extractors on input_1, input_2_extractors on input_2 and
+        input_1_and_2_extractors on the pair of input_1 and input_2
 
         Parameters
         ----------
