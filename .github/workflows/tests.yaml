@@ -24,13 +24,8 @@ jobs:
           python-version: "3.9"
           cache: "poetry"
 
-      - uses: Jimver/cuda-toolkit@v0.2.11
-        id: cuda-toolkit
-        with:
-          cuda: '12.1.0'
-      - run: 'echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"'
-      - run: 'echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"'
-      - run: nvcc -V
-
       - name: coverage
-        run: bash -ex scripts/test.sh
+        run: |
+          poetry source add --priority=explicit pytorch https://download.pytorch.org/whl/cpu
+          poetry add "torch@^$(poetry show torch | grep '^ version' | awk -F ':' '{print $NF}')" --source pytorch
+          bash -ex scripts/test.sh
