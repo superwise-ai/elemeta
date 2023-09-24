@@ -25,7 +25,6 @@ class PII_Identifier(AbstractMetafeatureExtractor):
         super().__init__(name)
         if path is None:
             self.model_path = "dslim/bert-base-NER"
-            # "Babelscape/wikineural-multilingual-ner"
         else:
             self.model_path = path
 
@@ -56,7 +55,6 @@ class PII_Identifier(AbstractMetafeatureExtractor):
         tokenizer = AutoTokenizer.from_pretrained(self.model_path)
         ner = pipeline("ner", model=model, tokenizer=tokenizer)
         pii_entities = ner(text)
-        print(pii_entities)
         result: Dict[str, List[str]] = dict()
         for entity in pii_entities:
             if entity["entity"] in result:
