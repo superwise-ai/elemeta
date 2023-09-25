@@ -56,7 +56,7 @@ from elemeta.nlp.extractors.high_level.word_regex_matches_count import (
     WordRegexMatchesCount,
 )
 from elemeta.nlp.extractors import length_check_basic, avg_check_basic
-from elemeta.nlp.extractors.low_level.semantic_embedding_similarity import (
+from elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity import (
     SemanticEmbeddingPairSimilarity,
 )
 from elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity import (
