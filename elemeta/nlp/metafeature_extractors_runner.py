@@ -16,6 +16,8 @@ from elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count import (
 from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import (
     HintedProfanityWordsCount,
 )
+from elemeta.nlp.extractors.high_level.injection_similarity import InjectionSimilarity
+from elemeta.nlp.extractors.high_level.jailbreak_similarity import JailBreakSimilarity
 from elemeta.nlp.extractors.high_level.link_count import LinkCount
 from elemeta.nlp.extractors.high_level.mention_count import MentionCount
 from elemeta.nlp.extractors.high_level.must_appear_words_percentage import (
@@ -24,6 +26,7 @@ from elemeta.nlp.extractors.high_level.must_appear_words_percentage import (
 from elemeta.nlp.extractors.high_level.number_count import NumberCount
 from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import OutOfVocabularyCount
 from elemeta.nlp.extractors.high_level.punctuation_count import PunctuationCount
+from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
 from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
 from elemeta.nlp.extractors.high_level.sentence_avg_length import SentenceAvgLength
 from elemeta.nlp.extractors.high_level.sentence_count import SentenceCount
@@ -49,6 +52,9 @@ intensive_metrics = [
     HintedProfanityWordsCount(),
     HintedProfanitySentenceCount(),
     ToxicityExtractor(),
+    InjectionSimilarity(),
+    JailBreakSimilarity(),
+    RefusalSimilarity(),
 ]
 non_intensive_metrics = [
     EmojiCount(),

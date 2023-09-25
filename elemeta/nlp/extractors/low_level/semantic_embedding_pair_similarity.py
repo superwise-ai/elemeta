@@ -5,5 +5,5 @@ from common.abstract_pair_metafeature_extractor import AbstractPairMetafeatureEx
 
 
 class SemanticEmbeddingPairSimilarity(AbstractPairMetafeatureExtractor):
-    def extract(self, embeddings1: Tensor, embeddings2: Tensor) -> Tensor:
-        return util.cos_sim(embeddings1, embeddings2)
+    def extract(self, input_1: Tensor, input_2: Tensor) -> Tensor:
+        return util.cos_sim(input_1, input_2)
