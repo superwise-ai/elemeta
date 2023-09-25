@@ -252,6 +252,14 @@ elemeta.nlp.extractors.high\_level.text\_length module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.toxicity\_measure module
+-----------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.toxicity_measure
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.unique\_word\_count module
 -------------------------------------------------------------
 
