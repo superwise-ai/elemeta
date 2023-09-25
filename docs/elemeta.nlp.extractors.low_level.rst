@@ -52,10 +52,10 @@ elemeta.nlp.extractors.low\_level.regex\_token\_matches\_count module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.low\_level.semantic\_embedding\_similarity module
-------------------------------------------------------------------------
+elemeta.nlp.extractors.low\_level.semantic\_embedding\_pair\_similarity module
+------------------------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.low_level.semantic_embedding_similarity
+.. automodule:: elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity
    :members:
    :undoc-members:
    :show-inheritance:
