@@ -6,12 +6,12 @@ from transformers import (
     TextClassificationPipeline,
 )
 
-from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import (
-    AbstractMetafeatureExtractor,
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
+    AbstractTextMetafeatureExtractor,
 )
 
 
-class ToxicityExtractor(AbstractMetafeatureExtractor):
+class ToxicityExtractor(AbstractTextMetafeatureExtractor):
     """
     measures toxicity of a given text
     """
