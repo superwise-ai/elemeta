@@ -24,10 +24,11 @@ jobs:
         id: cuda-toolkit
         with:
           cuda: "10.2.89"
-      - run: 'echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"'
-      - run: 'echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"'
-      - run: nvcc -V
-      - run: 'echo "${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin" >> $GITHUB_PATH'
+      - name: Verify CUDA installation
+        run: |
+          echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
+          echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"
+          nvcc -V
 
       - name: coverage
-        run: LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} bash -ex scripts/test.sh
+        run: LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin${PATH:+:${PATH}} bash -ex scripts/test.sh
