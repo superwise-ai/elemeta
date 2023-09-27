@@ -30,11 +30,16 @@ jobs:
         id: cuda-toolkit
         with:
           cuda: "11.2.2"
+
       - name: Verify CUDA installation
         run: |
           echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
           echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"
           nvcc -V
+          sudo apt install nvidia-cudnn
 
       - name: coverage
-        run: LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin${PATH:+:${PATH}} bash -ex scripts/test.sh
+        run: >
+          LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+          PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin${PATH:+:${PATH}}
+          bash -ex scripts/test.sh
