@@ -30,6 +30,4 @@ jobs:
       - run: 'echo "${{steps.cuda-toolkit.outputs.CUDA_PATH}}" >> $GITHUB_PATH'
 
       - name: coverage
-        run: |
-          export LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-          bash -ex scripts/test.sh
+        run: LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} bash -ex scripts/test.sh
