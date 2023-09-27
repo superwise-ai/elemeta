@@ -27,7 +27,7 @@ jobs:
       - run: 'echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"'
       - run: 'echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"'
       - run: nvcc -V
-      - run: 'echo "${{steps.cuda-toolkit.outputs.CUDA_PATH}}" >> $GITHUB_PATH'
+      - run: 'echo "${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin" >> $GITHUB_PATH'
 
       - name: coverage
         run: LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}} bash -ex scripts/test.sh
