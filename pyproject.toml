@@ -25,7 +25,7 @@ textblob = "^0.17"
 datefinder = "^0.7"
 pydantic = "^2.3.0"
 sentence-transformers = "^2.2.2"
-torch = "^ 2.0.1"
+torch = "^2.0.1"
 transformers = "^4.33.1"
 
 [tool.poetry.group.test.dependencies]
@@ -46,4 +46,3 @@ sphinx-book-theme = "^1.0"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = ">=2.6.1"
-
