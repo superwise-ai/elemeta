@@ -36,11 +36,12 @@ jobs:
           echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
           echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"
           nvcc -V
-          sudo apt install -y --no-install-recommends nvidia-cudnn
+          poetry add -G test nvidia-cudnn-cu11==8.6.0.163
 
       - name: coverage
         run: >
-          LD_LIBRARY_PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+          CUDNN_PATH=$(dirname $(poetry run python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
+          LD_LIBRARY_PATH="${CUDNN_PATH}/lib:${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
           PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin${PATH:+:${PATH}}
           CUDA_HOME=${{steps.cuda-toolkit.outputs.CUDA_PATH}}
           bash -ex scripts/test.sh
