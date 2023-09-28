@@ -21,4 +21,6 @@ jobs:
           cache: "poetry"
 
       - name: coverage
-        run: poetry lock --no-update && bash -ex scripts/test.sh
+        run: |
+          poetry add "torch@^$(poetry show torch | grep '^ version' | awk -F ':' '{print $NF}')" --source pytorch
+          bash -ex scripts/test.sh

@@ -25,11 +25,7 @@ textblob = "^0.17"
 datefinder = "^0.7"
 pydantic = "^2.3.0"
 sentence-transformers = "^2.2.2"
-torch = [
-  {platform = 'darwin', version = "^2.0.1"},
-  {platform = 'windows', version = "^2.0.1"},
-  {platform = "linux", version = "^2.0.1", source = "pytorch"},
-]
+torch = "^ 2.0.1"
 transformers = "^4.33.1"
 
 [tool.poetry.group.test.dependencies]
