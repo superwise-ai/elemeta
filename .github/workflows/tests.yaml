@@ -21,4 +21,4 @@ jobs:
           cache: "poetry"
 
       - name: coverage
-        run: bash -ex scripts/test.sh
+        run: poetry lock --no-update && bash -ex scripts/test.sh
