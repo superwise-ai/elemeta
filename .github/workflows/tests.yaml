@@ -22,5 +22,6 @@ jobs:
 
       - name: coverage
         run: |
+          poetry source add --priority=explicit pytorch https://download.pytorch.org/whl/cpu
           poetry add "torch@^$(poetry show torch | grep '^ version' | awk -F ':' '{print $NF}')" --source pytorch
           bash -ex scripts/test.sh

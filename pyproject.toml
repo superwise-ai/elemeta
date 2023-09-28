@@ -47,7 +47,3 @@ sphinx-book-theme = "^1.0"
 [tool.poetry.group.dev.dependencies]
 jupyterlab = ">=2.6.1"
 
-[[tool.poetry.source]]
-name = "pytorch"
-url = "https://download.pytorch.org/whl/cpu"
-priority = "explicit"
