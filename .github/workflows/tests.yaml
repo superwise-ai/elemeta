@@ -20,28 +20,5 @@ jobs:
           python-version: "3.9"
           cache: "poetry"
 
-      - name: Set up GCC
-        uses: egor-tensin/setup-gcc@v1
-        with:
-          version: "9"
-          platform: x64
-
-      - uses: Jimver/cuda-toolkit@v0.2.11
-        id: cuda-toolkit
-        with:
-          cuda: "11.2.2"
-
-      - name: Verify CUDA installation
-        run: |
-          echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
-          echo "Cuda install location: ${{steps.cuda-toolkit.outputs.CUDA_PATH}}"
-          nvcc -V
-          poetry add -G test nvidia-cudnn-cu11==8.6.0.163
-
       - name: coverage
-        run: >
-          CUDNN_PATH=$(dirname $(poetry run python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
-          LD_LIBRARY_PATH="${CUDNN_PATH}/lib:${{steps.cuda-toolkit.outputs.CUDA_PATH}}/lib64{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
-          PATH=${{steps.cuda-toolkit.outputs.CUDA_PATH}}/bin${PATH:+:${PATH}}
-          CUDA_HOME=${{steps.cuda-toolkit.outputs.CUDA_PATH}}
-          bash -ex scripts/test.sh
+        run: bash -ex scripts/test.sh
