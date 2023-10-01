@@ -172,10 +172,10 @@ elemeta.nlp.extractors.high\_level.regex\_match\_count module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.semantic\_text\_similarity module
---------------------------------------------------------------------
+elemeta.nlp.extractors.high\_level.semantic\_text\_pair\_similarity module
+--------------------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.high_level.semantic_text_similarity
+.. automodule:: elemeta.nlp.extractors.high_level.semantic_text_pair_similarity
    :members:
    :undoc-members:
    :show-inheritance:
@@ -252,10 +252,10 @@ elemeta.nlp.extractors.high\_level.text\_length module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.toxicity\_measure module
------------------------------------------------------------
+elemeta.nlp.extractors.high\_level.toxicity\_extractor module
+-------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.high_level.toxicity_measure
+.. automodule:: elemeta.nlp.extractors.high_level.toxicity_extractor
    :members:
    :undoc-members:
    :show-inheritance:

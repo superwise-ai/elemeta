@@ -4,18 +4,21 @@ import numpy as np
 import pandas
 import pytest
 
-import elemeta.nlp.metafeature_extractors_runner as met
+import elemeta.nlp.runners.metafeature_extractors_runner as met
 from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
-from elemeta.nlp.extractors.high_level.semantic_text_similarity import (
+from elemeta.nlp.extractors.high_level.semantic_text_pair_similarity import (
     SemanticTextPairSimilarity,
 )
-from elemeta.nlp.pair_metafeature_extractors_runner import PairMetafeatureExtractorsRunner
+from elemeta.nlp.runners.pair_metafeature_extractors_runner import (
+    PairMetafeatureExtractorsRunner,
+)
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
-from elemeta.nlp.metafeature_extractors_runner import (
+from elemeta.nlp.runners.metafeature_extractors_runner import (
     non_intensive_metrics,
     intensive_metrics,
 )
+from elemeta.nlp.extractors.high_level.toxicity_extractor import ToxicityExtractor
 
 TEST_ASSET_FOLDER = os.path.join(os.path.dirname(__file__), "../assets")
 TEXT_FILE = f"{TEST_ASSET_FOLDER}/short_text.csv"
@@ -92,13 +95,16 @@ def test_pair_metafeature_extractor():
     emoji_count = EmojiCount()
     semantic_text_similarity = SemanticTextPairSimilarity()
     refusals_similarity = RefusalSimilarity()
+    toxicity = ToxicityExtractor()
 
     metrics = PairMetafeatureExtractorsRunner(
-        input_1_extractors=[avg_word_length, emoji_count],
-        input_2_extractors=[refusals_similarity],
+        input_1_extractors=[avg_word_length, emoji_count, toxicity],
+        input_2_extractors=[refusals_similarity, toxicity],
         input_1_and_2_extractors=[semantic_text_similarity],
     )
     pair_runner_result = metrics.run("What is it 1+2", "the answer is 3")
-    assert len(pair_runner_result.input_1) == 2, "Expecting to see two metafeatures"
-    assert len(pair_runner_result.input_2) == 1, "Expecting to see one metafeatures"
-    assert len(pair_runner_result.input_1_and_2) == 1, "Expecting to see one metafeatures"
+    assert len(pair_runner_result.input_1) == 3, "Expecting to see two metafeatures"
+    assert len(pair_runner_result.input_2) == 2, "Expecting to see one metafeatures"
+    assert (
+        len(pair_runner_result.input_1_and_2) == 1
+    ), "Expecting to see one metafeatures"
