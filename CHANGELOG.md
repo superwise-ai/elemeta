@@ -1,3 +1,31 @@
+## [1.1.0](https://github.com/superwise-ai/elemeta/compare/1.0.7...1.1.0) (2023-10-02)
+
+
+### <!-- 1. -->:rocket: New Features
+
+* **AbstractTextPairMetafeatureExtractor:** add AbstractTextPairMetafeatureExtractor ([647724c](https://github.com/superwise-ai/elemeta/commit/647724ca90f0e2e56aff76649c5b7de9919826d5))
+* **metadata_extractors:** add embedding extraction funtion and many embedding and text similarity metrics ([a2343ff](https://github.com/superwise-ai/elemeta/commit/a2343ff1baf7a085d5052cf1a6e6f05ec2ef0bc6))
+* **PII_identifier:** add PII identifying extractor ([1546ad9](https://github.com/superwise-ai/elemeta/commit/1546ad95209bf3b5a8d8cafc6761a2367d8e7183))
+* **poetry:** add torch and transformers to Poetry ([8bc1b22](https://github.com/superwise-ai/elemeta/commit/8bc1b2271feb4e54ae6f073d921724369f2a1cb0))
+* **suites:** add CommonLLMSuite and some fixes ([013a659](https://github.com/superwise-ai/elemeta/commit/013a6595021435043bbbbe711b23c53e75df70c1))
+* **test:** add test for PairMetafeatureExtractorsRunner ([d42fa6c](https://github.com/superwise-ai/elemeta/commit/d42fa6cc19a8a559ded1e47583c41e82dd8b35fc))
+* **toxicity_measure:** Addition of ToxicityExtractor and Test ([eaa41ee](https://github.com/superwise-ai/elemeta/commit/eaa41ee00e1b615f9fcc1cb973998f6f4c8f5b80))
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **extractor_runner:** changes to allow run_on_dataframe to work with ToxicitiyExtractor ([641de63](https://github.com/superwise-ai/elemeta/commit/641de631b5c7946a47dc7094500575249e5e655f))
+
+
+### <!-- 5. -->:memo: Documentation
+
+* **docs:** add docs to the new extractors ([5a0019b](https://github.com/superwise-ai/elemeta/commit/5a0019bf5dbf697b04b47b2d736fe2a763a20963))
+
+
+### <!-- 6. -->:broom: Chore
+
+* **test:** update tests and fix few bugs ([12e9e91](https://github.com/superwise-ai/elemeta/commit/12e9e9119caef2d546afcb03a98424b16f160e10))
+
 ## [1.0.7](https://github.com/superwise-ai/elemeta/compare/1.0.6...1.0.7) (2023-09-12)
 
 
