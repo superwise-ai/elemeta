@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>elemeta.nlp.runners package &#8212; Elemeta  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'elemeta.nlp.runners';</script>
+    <link rel="icon" href="_static/elemeta_favicon_blue.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="elemeta.nlp.extractors.low_level package" href="elemeta.nlp.extractors.low_level.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Elemeta  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="how_to_guides/index.html">How to Guides</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/single_extractor.html">Single Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/extractor_suite.html">Extractor Suite</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/create_low_level_extractor.html">Create Low Level Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="how_to_guides/custom_extractor.html">Custom Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="use_cases/index.html">Use Cases</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/monitoring.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/eda.html">EDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/modeling.html">Modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="supported_languages.html">Supported Languages</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="metafeatures.html">Metafeatures</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="modules.html">elemeta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="elemeta.dataset.html">elemeta.dataset package</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="elemeta.nlp.html">elemeta.nlp package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="faq.html">FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="roadmap.html">Roadmap</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/elemeta.nlp.runners.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>elemeta.nlp.runners package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners.metafeature_extractors_runner">elemeta.nlp.runners.metafeature_extractors_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.metafeature_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.add_metafeature_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">elemeta.nlp.runners.pair_metafeature_extractors_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunner.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_1</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1_and_2"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_1_and_2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_2"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_config"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.model_config</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.model_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners">Module contents</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="elemeta-nlp-runners-package">
+<h1>elemeta.nlp.runners package<a class="headerlink" href="#elemeta-nlp-runners-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-elemeta.nlp.runners.metafeature_extractors_runner">
+<span id="elemeta-nlp-runners-metafeature-extractors-runner-module"></span><h2>elemeta.nlp.runners.metafeature_extractors_runner module<a class="headerlink" href="#module-elemeta.nlp.runners.metafeature_extractors_runner" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.runners.metafeature_extractors_runner.</span></span><span class="sig-name descname"><span class="pre">MetafeatureExtractorsRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metafeature_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><span class="pre">AbstractTextMetafeatureExtractor</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_intensive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class used to run multiple MetadataExtractors on a text</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors">
+<span class="sig-name descname"><span class="pre">metafeature_extractors</span></span><a class="headerlink" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors" title="Permalink to this definition">#</a></dt>
+<dd><p>a list of <a href="#id1"><span class="problematic" id="id2">`</span></a>MetadataExtractor`s to run,
+if not supplied will run with all metadata extractors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optional[List[<a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor">AbstractTextMetafeatureExtractor</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run" title="Permalink to this definition">#</a></dt>
+<dd><p>runs all the metadata extractors on the input text</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe">
+<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe" title="Permalink to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>runs all the metadata extractors on the given text_column in the given dataframe</dt><dd><p>and return new dataframe with metadata values as columns</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(text)</p></td>
+<td><p>run metrics on list of text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id3" title="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_on_dataframe</span></code></a>(dataframe, text_column)</p></td>
+<td><p>return new dataframe with all metafeature extractors values :param dataframe: dataframe with the text column :type dataframe: DataFrame :param text_column: the name of the text column in the given dataframe :type text_column: str</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>add_metafeature_extractor</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor">
+<span class="sig-name descname"><span class="pre">add_metafeature_extractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metafeature_extractor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><span class="pre">AbstractTextMetafeatureExtractor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<dd><p>run metrics on list of text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to run all metrics on</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>metafeature_value_dict</strong> – returns a dictionary of extractor name and the metafeature value</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">run_on_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_column</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#id3" title="Permalink to this definition">#</a></dt>
+<dd><p>return new dataframe with all metafeature extractors values
+:param dataframe: dataframe with the text column
+:type dataframe: DataFrame
+:param text_column: the name of the text column in the given dataframe
+:type text_column: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dataframe</strong> – dataframe with the values of the metafeature extractors as new columns</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-elemeta.nlp.runners.pair_metafeature_extractors_runner">
+<span id="elemeta-nlp-runners-pair-metafeature-extractors-runner-module"></span><h2>elemeta.nlp.runners.pair_metafeature_extractors_runner module<a class="headerlink" href="#module-elemeta.nlp.runners.pair_metafeature_extractors_runner" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.runners.pair_metafeature_extractors_runner.</span></span><span class="sig-name descname"><span class="pre">PairMetafeatureExtractorsRunner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_1_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><span class="pre">AbstractTextMetafeatureExtractor</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_2_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><span class="pre">AbstractTextMetafeatureExtractor</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_1_and_2_extractors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor"><span class="pre">AbstractTextPairMetafeatureExtractor</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run" title="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(input_1, input_2)</p></td>
+<td><p>run input_1_extractors on input_1, input_2_extractors on input_2 and input_1_and_2_extractors on the pair of input_1 and input_2</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult" title="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult"><span class="pre">PairMetafeatureExtractorsRunnerResult</span></a></span></span><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run" title="Permalink to this definition">#</a></dt>
+<dd><p>run input_1_extractors on input_1, input_2_extractors on input_2 and
+input_1_and_2_extractors on the pair of input_1 and input_2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_1</strong> (<em>str</em>) – </p></li>
+<li><p><strong>input_2</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the metafeatures extracted from text</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult" title="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult">PairMetafeatureExtractorsRunnerResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.runners.pair_metafeature_extractors_runner.</span></span><span class="sig-name descname"><span class="pre">PairMetafeatureExtractorsRunnerResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_1_and_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_computed_fields</span></code></dt><dd><p>Get the computed fields of this model instance.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_extra</span></code></dt><dd><p>Get extra fields set during validation.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_fields_set</span></code></dt><dd><p>Returns the set of fields that have been set on this model instance.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>(*[, include, exclude, update, deep])</p></td>
+<td><p>Returns a copy of the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_construct</span></code>([_fields_set])</p></td>
+<td><p>Creates a new instance of the <cite>Model</cite> class with validated data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_copy</span></code>(*[, update, deep])</p></td>
+<td><p>Usage docs: <a class="reference external" href="https://docs.pydantic.dev/2.2/usage/serialization/#model_copy">https://docs.pydantic.dev/2.2/usage/serialization/#model_copy</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_dump</span></code>(*[, mode, include, exclude, ...])</p></td>
+<td><p>Usage docs: <a class="reference external" href="https://docs.pydantic.dev/2.2/usage/serialization/#modelmodel_dump">https://docs.pydantic.dev/2.2/usage/serialization/#modelmodel_dump</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_dump_json</span></code>(*[, indent, include, ...])</p></td>
+<td><p>Usage docs: <a class="reference external" href="https://docs.pydantic.dev/2.2/usage/serialization/#modelmodel_dump_json">https://docs.pydantic.dev/2.2/usage/serialization/#modelmodel_dump_json</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_json_schema</span></code>([by_alias, ref_template, ...])</p></td>
+<td><p>Generates a JSON schema for a model class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_parametrized_name</span></code>(params)</p></td>
+<td><p>Compute the class name for parametrizations of generic classes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_post_init</span></code>(_BaseModel__context)</p></td>
+<td><p>Override this method to perform additional initialization after <cite>__init__</cite> and <cite>model_construct</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_rebuild</span></code>(*[, force, raise_errors, ...])</p></td>
+<td><p>Try to rebuild the pydantic-core schema for the model.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_validate</span></code>(obj, *[, strict, ...])</p></td>
+<td><p>Validate a pydantic model instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_validate_json</span></code>(json_data, *[, strict, ...])</p></td>
+<td><p>Validate the given JSON data against the Pydantic model.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>construct</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>dict</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>from_orm</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>json</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>parse_file</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>parse_obj</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>parse_raw</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>schema</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>schema_json</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>update_forward_refs</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>validate</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1">
+<span class="sig-name descname"><span class="pre">input_1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1_and_2">
+<span class="sig-name descname"><span class="pre">input_1_and_2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1_and_2" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_2">
+<span class="sig-name descname"><span class="pre">input_2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_2" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_config" title="Permalink to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'input_1':</span> <span class="pre">FieldInfo(annotation=List[Any],</span> <span class="pre">required=True),</span> <span class="pre">'input_1_and_2':</span> <span class="pre">FieldInfo(annotation=List[Any],</span> <span class="pre">required=True),</span> <span class="pre">'input_2':</span> <span class="pre">FieldInfo(annotation=List[Any],</span> <span class="pre">required=True)}</span></em><a class="headerlink" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields" title="Permalink to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-elemeta.nlp.runners">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.nlp.runners" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="elemeta.nlp.extractors.low_level.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">elemeta.nlp.extractors.low_level package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="faq.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">FAQ</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners.metafeature_extractors_runner">elemeta.nlp.runners.metafeature_extractors_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.metafeature_extractors</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run_on_dataframe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.add_metafeature_extractor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><code class="docutils literal notranslate"><span class="pre">MetafeatureExtractorsRunner.run_on_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">elemeta.nlp.runners.pair_metafeature_extractors_runner module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunner</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunner.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_1</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1_and_2"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_1_and_2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_2"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.input_2</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_config"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.model_config</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields"><code class="docutils literal notranslate"><span class="pre">PairMetafeatureExtractorsRunnerResult.model_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.runners">Module contents</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Lior Durahly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, Elemeta.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

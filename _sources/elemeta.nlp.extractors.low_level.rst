@@ -4,10 +4,18 @@ elemeta.nlp.extractors.low\_level package
 Submodules
 ----------
 
-elemeta.nlp.extractors.low\_level.abstract\_metafeature\_extractor module
--------------------------------------------------------------------------
+elemeta.nlp.extractors.low\_level.abstract\_text\_metafeature\_extractor module
+-------------------------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.low_level.abstract_metafeature_extractor
+.. automodule:: elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.low\_level.abstract\_text\_pair\_metafeature\_extractor module
+-------------------------------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor
    :members:
    :undoc-members:
    :show-inheritance:
@@ -40,6 +48,22 @@ elemeta.nlp.extractors.low\_level.regex\_token\_matches\_count module
 ---------------------------------------------------------------------
 
 .. automodule:: elemeta.nlp.extractors.low_level.regex_token_matches_count
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.low\_level.semantic\_embedding\_pair\_similarity module
+------------------------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.low\_level.semantic\_text\_to\_group\_similarity module
+------------------------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity
    :members:
    :undoc-members:
    :show-inheritance:

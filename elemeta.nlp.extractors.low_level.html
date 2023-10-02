@@ -44,7 +44,7 @@
     <link rel="icon" href="_static/elemeta_favicon_blue.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="next" title="elemeta.nlp.runners package" href="elemeta.nlp.runners.html" />
     <link rel="prev" title="elemeta.nlp.extractors.high_level package" href="elemeta.nlp.extractors.high_level.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -318,9 +318,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_metafeature_extractor module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor.extract()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractTextPairMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractTextPairMetafeatureExtractor.extract()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -354,6 +361,8 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>
@@ -392,11 +401,11 @@ document.write(`
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor">
-<span id="elemeta-nlp-extractors-low-level-abstract-metafeature-extractor-module"></span><h2>elemeta.nlp.extractors.low_level.abstract_metafeature_extractor module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">
+<span id="elemeta-nlp-extractors-low-level-abstract-text-metafeature-extractor-module"></span><h2>elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.</span></span><span class="sig-name descname"><span class="pre">AbstractMetafeatureExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.</span></span><span class="sig-name descname"><span class="pre">AbstractTextMetafeatureExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <p>Representation of a MetafeatureExtractor
 This class holds a function to be run to extract the metadata value and the name
@@ -407,14 +416,14 @@ of the metadata</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>This function will extract the metric from the text :param text: :type text: str</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>This function will extract the metric from the text
 :param text:
 :type text: str</p>
@@ -431,13 +440,54 @@ of the metadata</p>
 </dd></dl>
 
 </section>
+<section id="module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">
+<span id="elemeta-nlp-extractors-low-level-abstract-text-pair-metafeature-extractor-module"></span><h2>elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.</span></span><span class="sig-name descname"><span class="pre">AbstractTextPairMetafeatureExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractPairMetafeatureExtractor</span></code></p>
+<p>This class holds a function to be run to extract the metadata value and the name
+of the metadata</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(input_1, input_2)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract" title="elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input_1, input_2)</p></td>
+<td><p>This function will extract the metric from the text :param input_1: :type input_1: str :param input_2: :type input_2: str</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>This function will extract the metric from the text
+:param input_1:
+:type input_1: str
+:param input_2:
+:type input_2: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the metadata extracted from</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-elemeta.nlp.extractors.low_level.avg_token_length">
 <span id="elemeta-nlp-extractors-low-level-avg-token-length-module"></span><h2>elemeta.nlp.extractors.low_level.avg_token_length module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.avg_token_length" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.avg_token_length.</span></span><span class="sig-name descname"><span class="pre">AvgTokenLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tokens_to_exclude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that return the average token length</p>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return the
+average token length</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -474,8 +524,8 @@ of the metadata</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.hinted_profanity_token_count.</span></span><span class="sig-name descname"><span class="pre">HintedProfanityTokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that count the number profanity words</p>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that count the number profanity words</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -512,8 +562,8 @@ of the metadata</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.</span></span><span class="sig-name descname"><span class="pre">MustAppearTokensPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">must_appear</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.must_appear_tokens_parentage.MustAppearTokensPercentage" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that return the ration between
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return the ration between
 the number of appearances of tokens from</p>
 <p>given tokens list in the text to all the tokens</p>
 <p class="rubric">Methods</p>
@@ -552,8 +602,8 @@ the number of appearances of tokens from</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.regex_token_matches_count.</span></span><span class="sig-name descname"><span class="pre">TokenRegexMatchesCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that return number of tokens
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return number of tokens
 that match the given regex</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
@@ -561,7 +611,7 @@ that match the given regex</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
 <td><p>return the number of matches of the given regex in the text</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator" title="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validator</span></code></a>(token)</p></td>
@@ -571,11 +621,11 @@ that match the given regex</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>return the number of matches of the given regex in the text</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the string to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the number of the given text in the text</p>
@@ -607,13 +657,19 @@ checks if the token abides by the regex</p>
 </dd></dl>
 
 </section>
+<section id="elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">
+<h2>elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">
+<h2>elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module" title="Permalink to this heading">#</a></h2>
+</section>
 <section id="module-elemeta.nlp.extractors.low_level.tokens_count">
 <span id="elemeta-nlp-extractors-low-level-tokens-count-module"></span><h2>elemeta.nlp.extractors.low_level.tokens_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.tokens_count" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.tokens_count.TokensCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.tokens_count.</span></span><span class="sig-name descname"><span class="pre">TokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that return the number of sentences
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return the number of sentences
 in the text</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
@@ -651,11 +707,9 @@ in the text</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_count.</span></span><span class="sig-name descname"><span class="pre">UniqueTokenCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<dl class="simple">
-<dt>Implementation of AbstractMetafeatureExtractor class that return the number of unique tokens</dt><dd><p>in the text</p>
-</dd>
-</dl>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return the
+number of unique tokens in the text</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -692,8 +746,8 @@ in the text</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_ratio.</span></span><span class="sig-name descname"><span class="pre">UniqueTokensRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exceptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractMetafeatureExtractor class that return the ratio between the
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Implementation of AbstractTextMetafeatureExtractor class that return the ratio between the
 number of unique tokens to all tokens</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
@@ -755,11 +809,11 @@ filters on tokens that are defined as relevant</p>
       </div>
     </a>
     <a class="right-next"
-       href="faq.html"
+       href="elemeta.nlp.runners.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">FAQ</p>
+        <p class="prev-next-title">elemeta.nlp.runners package</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -782,9 +836,16 @@ filters on tokens that are defined as relevant</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_metafeature_extractor module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractMetafeatureExtractor.extract()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor"><code class="docutils literal notranslate"><span class="pre">AbstractTextPairMetafeatureExtractor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract"><code class="docutils literal notranslate"><span class="pre">AbstractTextPairMetafeatureExtractor.extract()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -818,6 +879,8 @@ filters on tokens that are defined as relevant</p>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>

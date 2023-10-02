@@ -6,7 +6,7 @@ Custom Extractor
 
 ::
 
-    >>> from elemeta.nlp.extractors.low_level.abstract_metafeature_extractor import AbstractMetafeatureExtractor
+    >>> from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
     Let’s create IsPalindromeExtractor that will return if the given text is palindrome:
 
@@ -14,7 +14,7 @@ Let’s create IsPalindromeExtractor that will return if the given text is palin
 
 ::
 
-    >>> class IsPalindromeExtractor(AbstractMetafeatureExtractor):
+    >>> class IsPalindromeExtractor(AbstractTextMetafeatureExtractor):
     ...     def extract(self, text: str) -> bool:
     ...         normalized_text = text.replace(" ", "").lower()
     ...         return normalized_text == normalized_text[::-1]

@@ -278,6 +278,7 @@ document.write(`
  | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
@@ -294,14 +295,16 @@ document.write(`
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor">AbstractMetafeatureExtractor (class in elemeta.nlp.extractors.low_level.abstract_metafeature_extractor)</a>
+      <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor">AbstractTextMetafeatureExtractor (class in elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor)</a>
+</li>
+      <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor">AbstractTextPairMetafeatureExtractor (class in elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor)</a>
 </li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.acronym_count.AcronymCount">AcronymCount (class in elemeta.nlp.extractors.high_level.acronym_count)</a>
 </li>
-      <li><a href="elemeta.nlp.html#elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor">add_metafeature_extractor() (elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.add_metafeature_extractor">add_metafeature_extractor() (elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>
+</li>
       <li><a href="elemeta.nlp.extractors.html#elemeta.nlp.extractors.avg_check_basic">avg_check_basic() (in module elemeta.nlp.extractors)</a>
 </li>
       <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength">AvgTokenLength (class in elemeta.nlp.extractors.low_level.avg_token_length)</a>
@@ -544,8 +547,6 @@ document.write(`
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.syllable_count">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     elemeta.nlp.extractors.high_level.text_complexity
 
@@ -560,6 +561,8 @@ document.write(`
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.text_length">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     elemeta.nlp.extractors.high_level.unique_word_count
 
@@ -596,10 +599,17 @@ document.write(`
 </li>
       </ul></li>
       <li>
-    elemeta.nlp.extractors.low_level.abstract_metafeature_extractor
+    elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor
 
       <ul>
-        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor">module</a>
+        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">module</a>
+</li>
+      </ul></li>
+      <li>
+    elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor
+
+      <ul>
+        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">module</a>
 </li>
       </ul></li>
       <li>
@@ -652,10 +662,24 @@ document.write(`
 </li>
       </ul></li>
       <li>
-    elemeta.nlp.metafeature_extractors_runner
+    elemeta.nlp.runners
 
       <ul>
-        <li><a href="elemeta.nlp.html#module-elemeta.nlp.metafeature_extractors_runner">module</a>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners">module</a>
+</li>
+      </ul></li>
+      <li>
+    elemeta.nlp.runners.metafeature_extractors_runner
+
+      <ul>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.metafeature_extractors_runner">module</a>
+</li>
+      </ul></li>
+      <li>
+    elemeta.nlp.runners.pair_metafeature_extractors_runner
+
+      <ul>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">module</a>
 </li>
       </ul></li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.email_count.EmailCount">EmailCount (class in elemeta.nlp.extractors.high_level.email_count)</a>
@@ -697,7 +721,9 @@ document.write(`
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.text_length.TextLength.extract">(elemeta.nlp.extractors.high_level.text_length.TextLength method)</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor.extract">(elemeta.nlp.extractors.low_level.abstract_metafeature_extractor.AbstractMetafeatureExtractor method)</a>
+        <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor.extract">(elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor method)</a>
+</li>
+        <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor.extract">(elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor.AbstractTextPairMetafeatureExtractor method)</a>
 </li>
         <li><a href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength.extract">(elemeta.nlp.extractors.low_level.avg_token_length.AvgTokenLength method)</a>
 </li>
@@ -747,6 +773,20 @@ document.write(`
   </ul></td>
 </tr></table>
 
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1">input_1 (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_1_and_2">input_1_and_2 (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
+</li>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.input_2">input_2 (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -764,9 +804,13 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.mention_count.MentionCount">MentionCount (class in elemeta.nlp.extractors.high_level.mention_count)</a>
 </li>
-      <li><a href="elemeta.nlp.html#elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors">metafeature_extractors (elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner attribute)</a>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.metafeature_extractors">metafeature_extractors (elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner attribute)</a>
 </li>
-      <li><a href="elemeta.nlp.html#elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner">MetafeatureExtractorsRunner (class in elemeta.nlp.metafeature_extractors_runner)</a>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner">MetafeatureExtractorsRunner (class in elemeta.nlp.runners.metafeature_extractors_runner)</a>
+</li>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_config">model_config (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
+</li>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields">model_fields (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
 </li>
       <li>
     module
@@ -846,7 +890,9 @@ document.write(`
 </li>
         <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level">elemeta.nlp.extractors.low_level</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_metafeature_extractor</a>
+        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor</a>
+</li>
+        <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor</a>
 </li>
         <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.avg_token_length">elemeta.nlp.extractors.low_level.avg_token_length</a>
 </li>
@@ -862,7 +908,11 @@ document.write(`
 </li>
         <li><a href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.unique_token_ratio">elemeta.nlp.extractors.low_level.unique_token_ratio</a>
 </li>
-        <li><a href="elemeta.nlp.html#module-elemeta.nlp.metafeature_extractors_runner">elemeta.nlp.metafeature_extractors_runner</a>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners">elemeta.nlp.runners</a>
+</li>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.metafeature_extractors_runner">elemeta.nlp.runners.metafeature_extractors_runner</a>
+</li>
+        <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">elemeta.nlp.runners.pair_metafeature_extractors_runner</a>
 </li>
       </ul></li>
   </ul></td>
@@ -893,6 +943,12 @@ document.write(`
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner">PairMetafeatureExtractorsRunner (class in elemeta.nlp.runners.pair_metafeature_extractors_runner)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult">PairMetafeatureExtractorsRunnerResult (class in elemeta.nlp.runners.pair_metafeature_extractors_runner)</a>
+</li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount">PunctuationCount (class in elemeta.nlp.extractors.high_level.punctuation_count)</a>
 </li>
   </ul></td>
@@ -903,11 +959,15 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount">RegexMatchCount (class in elemeta.nlp.extractors.high_level.regex_match_count)</a>
 </li>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run">run() (elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>, <a href="elemeta.nlp.runners.html#id0">[1]</a>
+
+      <ul>
+        <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run">(elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.nlp.html#elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner.run">run() (elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>, <a href="elemeta.nlp.html#id0">[1]</a>
-</li>
-      <li><a href="elemeta.nlp.html#elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe">run_on_dataframe() (elemeta.nlp.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>, <a href="elemeta.nlp.html#id3">[1]</a>
+      <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run_on_dataframe">run_on_dataframe() (elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>, <a href="elemeta.nlp.runners.html#id3">[1]</a>
 </li>
   </ul></td>
 </tr></table>

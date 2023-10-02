@@ -325,13 +325,13 @@ document.write(`
 <div class="line">It is possible to create your own <code class="docutils literal notranslate"><span class="pre">MetadataExtractor</span></code> to fit you needs.</div>
 <div class="line">You can do this by implementing the abstract class <code class="docutils literal notranslate"><span class="pre">AbstractMetadataExtractor</span></code></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.abstract_metafeature_extractor</span> <span class="kn">import</span> <span class="n">AbstractMetafeatureExtractor</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor</span> <span class="kn">import</span> <span class="n">AbstractTextMetafeatureExtractor</span>
 
 <span class="go">Let’s create IsPalindromeExtractor that will return if the given text is palindrome:</span>
 </pre></div>
 </div>
 <p>Let’s create IsPalindromeExtractor that will return if the given text is palindrome:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">IsPalindromeExtractor</span><span class="p">(</span><span class="n">AbstractMetafeatureExtractor</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">IsPalindromeExtractor</span><span class="p">(</span><span class="n">AbstractTextMetafeatureExtractor</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="n">normalized_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="n">normalized_text</span> <span class="o">==</span> <span class="n">normalized_text</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>

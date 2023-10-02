@@ -52,6 +52,14 @@ elemeta.nlp.extractors.high\_level.email\_count module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.embedding module
+---------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.embedding
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.emoji\_count module
 ------------------------------------------------------
 
@@ -80,6 +88,22 @@ elemeta.nlp.extractors.high\_level.hinted\_profanity\_words\_count module
 -------------------------------------------------------------------------
 
 .. automodule:: elemeta.nlp.extractors.high_level.hinted_profanity_words_count
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.high\_level.injection\_similarity module
+---------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.injection_similarity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.high\_level.jailbreak\_similarity module
+---------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.jailbreak_similarity
    :members:
    :undoc-members:
    :show-inheritance:
@@ -124,6 +148,14 @@ elemeta.nlp.extractors.high\_level.out\_of\_vocabulary\_count module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.pii\_identifier module
+---------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.pii_identifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.punctuation\_count module
 ------------------------------------------------------------
 
@@ -132,10 +164,26 @@ elemeta.nlp.extractors.high\_level.punctuation\_count module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.refusal\_similarity module
+-------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.refusal_similarity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.regex\_match\_count module
 -------------------------------------------------------------
 
 .. automodule:: elemeta.nlp.extractors.high_level.regex_match_count
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.high\_level.semantic\_text\_pair\_similarity module
+--------------------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.semantic_text_pair_similarity
    :members:
    :undoc-members:
    :show-inheritance:
@@ -208,6 +256,14 @@ elemeta.nlp.extractors.high\_level.text\_length module
 ------------------------------------------------------
 
 .. automodule:: elemeta.nlp.extractors.high_level.text_length
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+elemeta.nlp.extractors.high\_level.toxicity\_extractor module
+-------------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.toxicity_extractor
    :members:
    :undoc-members:
    :show-inheritance:
