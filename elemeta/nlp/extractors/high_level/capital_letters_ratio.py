@@ -19,13 +19,13 @@ class CapitalLettersRatio(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> float:
+    def extract(self, text: str) -> float:
         """case ratio calculator
         returns the ratio of capital letters / length
 
         Parameters
         ----------
-        input: str
+        text: str
             the text to check the ratio on
 
         Returns
@@ -34,7 +34,7 @@ class CapitalLettersRatio(AbstractTextMetafeatureExtractor):
             the ratio of capital letters / lower letters
 
         """
-        alph = list(filter(str.isalpha, input))
+        alph = list(filter(str.isalpha, text))
         if len(alph) == 0:
             return 0
         return sum(map(str.isupper, alph)) / len(alph)

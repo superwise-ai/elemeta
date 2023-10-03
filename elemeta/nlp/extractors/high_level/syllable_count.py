@@ -21,5 +21,5 @@ class SyllableCount(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> int:
-        return textstat.textstat.syllable_count(input)
+    def extract(self, text: str) -> int:
+        return textstat.textstat.syllable_count(text)

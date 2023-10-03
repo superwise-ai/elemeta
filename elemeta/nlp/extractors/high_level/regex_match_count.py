@@ -21,7 +21,7 @@ class RegexMatchCount(AbstractTextMetafeatureExtractor):
         super().__init__(name)
         self.regex = regex
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """regex count function
 
         Parameters
@@ -35,4 +35,4 @@ class RegexMatchCount(AbstractTextMetafeatureExtractor):
            how many times the regex is found in the string
 
         """
-        return len(re.findall(self.regex, input))
+        return len(re.findall(self.regex, text))

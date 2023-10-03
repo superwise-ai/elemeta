@@ -33,7 +33,7 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
 
 ::
 
-    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
     >>> metafeature_extractors_runner = MetafeatureExtractorsRunner()
     >>> metafeature_extractors_runner.add_metafeature_extractor(ipe)
     >>> metafeature_extractors_runner.run("Never odd or even")

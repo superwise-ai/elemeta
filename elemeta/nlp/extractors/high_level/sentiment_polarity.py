@@ -21,12 +21,12 @@ class SentimentPolarity(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> float:
+    def extract(self, text: str) -> float:
         """sentiment analysis prediction function
 
         Parameters
         ----------
-        input: str
+        text: str
             the text we want sentiment analysis to run on
 
         Returns
@@ -37,6 +37,6 @@ class SentimentPolarity(AbstractTextMetafeatureExtractor):
 
         """
         sid_obj = SentimentIntensityAnalyzer()
-        sentiment_dict = sid_obj.polarity_scores(input)
+        sentiment_dict = sid_obj.polarity_scores(text)
         sentiment = sentiment_dict["compound"]
         return sentiment

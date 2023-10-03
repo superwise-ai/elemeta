@@ -21,12 +21,12 @@ class EmojiCount(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """emoji counter function
 
         Parameters
         ----------
-        input: str
+        text: str
             the text to count emoji on
 
         Returns
@@ -35,4 +35,4 @@ class EmojiCount(AbstractTextMetafeatureExtractor):
             the number of emojis in the text
 
         """
-        return emoji.emoji_count(input)
+        return emoji.emoji_count(text)

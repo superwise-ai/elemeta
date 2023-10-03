@@ -34,7 +34,7 @@ reviews = get_imdb_reviews()
 After you have a dataset with the text column, you can start using the library with the following Python API:
 
 ```python
-from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
 metafeature_extractors_runner = MetafeatureExtractorsRunner()
 reviews = metafeature_extractors_runner.run_on_dataframe(dataframe=reviews, text_column='review')
@@ -48,7 +48,7 @@ reviews.show()
 Elemeta can enrich standard dataframe objects:
 
 ```python
-from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
 import pandas as pd
 
 df = pd.dataframe({"text": ["Hi I just met you, and this is crazy", "What does the fox say?", "I love robots"})
@@ -61,7 +61,7 @@ df_with_metafeatures = metafeature_extractors_runner.run_on_dataframe(dataframe=
 Elemeta can enrich specific strings:
 
 ```python
-from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
 metafeature_extractors_runner = MetafeatureExtractorsRunner()
 metafeature_extractors_runner.run("This is a text about how good life is :)")
