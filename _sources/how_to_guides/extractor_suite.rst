@@ -5,7 +5,7 @@ To extract multiple metafeature values at once use MetafeatureExtractorsRunner. 
 
 ::
 
-    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
     >>> metafeature_extractors_runner = MetafeatureExtractorsRunner(metafeature_extractors=[sp,ld])
     >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'sentiment_polarity': 0.7096, 'detect_langauge': 'en'}
@@ -14,7 +14,7 @@ If no metafeature extractors are supplied, a default set of extractors will be s
 
 ::
 
-    >>> from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    >>> from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
     >>> metafeature_extractors_runner = MetafeatureExtractorsRunner()
     >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'detect_langauge': 'en',

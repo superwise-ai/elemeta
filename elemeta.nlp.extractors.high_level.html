@@ -518,7 +518,7 @@ document.write(`
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>regex count function</p></td>
 </tr>
 </tbody>
@@ -560,19 +560,19 @@ document.write(`
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract" title="elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract" title="elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>case ratio calculator returns the ratio of capital letters / length</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>case ratio calculator
 returns the ratio of capital letters / length</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text to check the ratio on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to check the ratio on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the ratio of capital letters / lower letters</p>
@@ -599,18 +599,18 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.date_count.DateCount.extract" title="elemeta.nlp.extractors.high_level.date_count.DateCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.date_count.DateCount.extract" title="elemeta.nlp.extractors.high_level.date_count.DateCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>return the number of dates in the text</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.date_count.DateCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.date_count.DateCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.date_count.DateCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>return the number of dates in the text</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the string to run on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the number of dates in the text</p>
@@ -637,18 +637,18 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>language detection function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>language detection function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text to detect the language on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to detect the language on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the most likely language of the text</p>
@@ -716,18 +716,18 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract" title="elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract" title="elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>emoji counter function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>emoji counter function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text to count emoji on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to count emoji on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the number of emojis in the text</p>
@@ -754,7 +754,7 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>regex count function</p></td>
 </tr>
 </tbody>
@@ -823,7 +823,7 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>regex count function</p></td>
 </tr>
 </tbody>
@@ -844,7 +844,7 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>regex count function</p></td>
 </tr>
 </tbody>
@@ -886,7 +886,7 @@ returns the ratio of capital letters / length</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.number_count.NumberCount.extract" title="elemeta.nlp.extractors.high_level.number_count.NumberCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.number_count.NumberCount.extract" title="elemeta.nlp.extractors.high_level.number_count.NumberCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>return the number of numbers in the text</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.number_count.NumberCount.validator" title="elemeta.nlp.extractors.high_level.number_count.NumberCount.validator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validator</span></code></a>(token)</p></td>
@@ -896,11 +896,11 @@ returns the ratio of capital letters / length</p>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.number_count.NumberCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.number_count.NumberCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.number_count.NumberCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>return the number of numbers in the text</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the string to run on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the number of numbers in the text</p>
@@ -987,18 +987,18 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract" title="elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract" title="elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>return the number of punctuations in the text</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.punctuation_count.PunctuationCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>return the number of punctuations in the text</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the string to run on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the string to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the number of punctuations in the text</p>
@@ -1028,14 +1028,14 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract" title="elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract" title="elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>regex count function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>regex count function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1111,18 +1111,18 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract" title="elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract" title="elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>sentiment analysis prediction function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.sentiment_polarity.SentimentPolarity.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>sentiment analysis prediction function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text we want sentiment analysis to run on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text we want sentiment analysis to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>sentiment</strong> – between 0 and 1 representing the sentiment.
@@ -1150,18 +1150,18 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract" title="elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract" title="elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>sentiment subjectivity prediction function</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.sentiment_subjectivity.SentimentSubjectivity.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>sentiment subjectivity prediction function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text we want sentiment subjectivity to run on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text we want sentiment subjectivity to run on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
@@ -1231,14 +1231,14 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract" title="elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract" title="elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>This function will extract the metric from the text :param text: :type text: str</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.syllable_count.SyllableCount.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>This function will extract the metric from the text
 :param text:
 :type text: str</p>
@@ -1268,14 +1268,14 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract" title="elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract" title="elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>This function will extract the metric from the text :param text: :type text: str</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.text_complexity.TextComplexity.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>This function will extract the metric from the text
 :param text:
 :type text: str</p>
@@ -1305,19 +1305,19 @@ return the number of words outside of the vocabulary</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.text_length.TextLength.extract" title="elemeta.nlp.extractors.high_level.text_length.TextLength.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.high_level.text_length.TextLength.extract" title="elemeta.nlp.extractors.high_level.text_length.TextLength.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(text)</p></td>
 <td><p>text length counter returns the length of the text</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.text_length.TextLength.extract">
-<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.text_length.TextLength.extract" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.text_length.TextLength.extract" title="Permalink to this definition">#</a></dt>
 <dd><p>text length counter
 returns the length of the text</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – the text to check length on</p>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – the text to check length on</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the length of the text</p>
@@ -1413,7 +1413,7 @@ of unique words (total number of values that only appear once in the dataset).</
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
 <td><p>run self.extract on the given text</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>return the number of matches of the given regex in the text</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validator</span></code>(token)</p></td>

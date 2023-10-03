@@ -23,7 +23,7 @@ After you have a dataset with the text column, you can start using the library w
 
 .. code-block:: python
 
-    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
     metafeature_extractors_runner = MetafeatureExtractorsRunner()
     # Running on all the data should take around a minute
     tweets = metafeature_extractors_runner.run_on_dataframe(dataframe = tweets,text_column="text")
@@ -36,7 +36,7 @@ Elemeta can enrich standard dataframe objects:
 
 .. code-block:: python
 
-    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
     import pandas as pd
 
     df = pd.DataFrame({"text": ["Hi I just met you, and this is crazy","What does the fox say?","I love robots"] })
@@ -51,7 +51,7 @@ Elemeta can enrich specific strings:
 
 .. code-block:: python
 
-    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
     metafeature_extractors_runner = MetafeatureExtractorsRunner()
     metafeature_extractors_runner.run("This is a text about how good life is :)")
