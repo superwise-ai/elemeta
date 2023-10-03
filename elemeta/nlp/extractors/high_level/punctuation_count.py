@@ -36,17 +36,17 @@ class PunctuationCount(AbstractTextMetafeatureExtractor):
         self.tokenizer = tokenizer
         self.punctuations = punctuations
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """
         return the number of punctuations in the text
 
         Parameters
         ----------
-        input: str
+        text: str
             the string to run on
         Returns
         -------
         int
             the number of punctuations in the text
         """
-        return length_check_basic(self.tokenizer, lambda token: token in self.punctuations)(input)
+        return length_check_basic(self.tokenizer, lambda token: token in self.punctuations)(text)

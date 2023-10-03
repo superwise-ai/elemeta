@@ -21,12 +21,12 @@ class SentimentSubjectivity(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> float:
+    def extract(self, text: str) -> float:
         """sentiment subjectivity prediction function
 
         Parameters
         ----------
-        input: str
+        text: str
             the text we want sentiment subjectivity to run on
 
         Returns
@@ -35,4 +35,4 @@ class SentimentSubjectivity(AbstractTextMetafeatureExtractor):
             return subjectivity score as a float within the range [0.0, 1.0]
         where 0.0 is very objective and 1.0 is very subjective.
         """
-        return TextBlob(input).sentiment.subjectivity
+        return TextBlob(text).sentiment.subjectivity

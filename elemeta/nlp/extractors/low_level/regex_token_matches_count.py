@@ -49,17 +49,17 @@ class TokenRegexMatchesCount(AbstractTextMetafeatureExtractor):
         """
         return bool(re.fullmatch(self.regex, token))
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """
         return the number of matches of the given regex in the text
 
         Parameters
         ----------
-        input: str
+        text: str
             the string to run on
         Returns
         -------
         int
             the number of the given text in the text
         """
-        return length_check_basic(self.tokenizer, self.validator)(input)
+        return length_check_basic(self.tokenizer, self.validator)(text)

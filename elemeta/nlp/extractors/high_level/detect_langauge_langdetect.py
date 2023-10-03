@@ -22,12 +22,12 @@ class DetectLanguage(AbstractTextMetafeatureExtractor):
         super().__init__(name)
         DetectorFactory.seed = 42
 
-    def extract(self, input: str) -> str:
+    def extract(self, text: str) -> str:
         """language detection function
 
         Parameters
         ----------
-        input: str
+        text: str
             the text to detect the language on
 
         Returns
@@ -36,6 +36,6 @@ class DetectLanguage(AbstractTextMetafeatureExtractor):
            the most likely language of the text
         """
         try:
-            return detect(input)
+            return detect(text)
         except LangDetectException:
             return "unknown"

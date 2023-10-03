@@ -21,17 +21,17 @@ class DateCount(AbstractTextMetafeatureExtractor):
         """
         super().__init__(name)
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """
         return the number of dates in the text
 
         Parameters
         ----------
-        input: str
+        text: str
             the string to run on
         Returns
         -------
         int
             the number of dates in the text
         """
-        return len(list(datefinder.find_dates(input)))
+        return len(list(datefinder.find_dates(text)))

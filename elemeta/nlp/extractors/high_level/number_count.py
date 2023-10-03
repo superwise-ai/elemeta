@@ -47,17 +47,17 @@ class NumberCount(AbstractTextMetafeatureExtractor):
         """
         return token.isnumeric()
 
-    def extract(self, input: str) -> int:
+    def extract(self, text: str) -> int:
         """
         return the number of numbers in the text
 
         Parameters
         ----------
-        input: str
+        text: str
             the string to run on
         Returns
         -------
         int
             the number of numbers in the text
         """
-        return length_check_basic(self.tokenizer, self.validator)(input)
+        return length_check_basic(self.tokenizer, self.validator)(text)

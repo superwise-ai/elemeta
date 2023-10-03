@@ -29,5 +29,5 @@ class TextComplexity(AbstractTextMetafeatureExtractor):
         super().__init__(name)
         self.metric = metric
 
-    def extract(self, input: str) -> float:
-        return self.metric(input)
+    def extract(self, text: str) -> float:
+        return self.metric(text)

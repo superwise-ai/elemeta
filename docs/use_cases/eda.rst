@@ -17,7 +17,7 @@ Let's start by enriching our tweets dataset
 
 .. code-block:: python
 
-    from elemeta.nlp.metafeature_extractors_runner import MetafeatureExtractorsRunner
+    from elemeta.nlp.runners.metafeature_extractors_runner import MetafeatureExtractorsRunner
 
     metafeature_extractors_runner = MetafeatureExtractorsRunner()
     print("The original dataset had {} columns".format(tweets_eda.shape[1]))
