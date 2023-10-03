@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/superwise-ai/elemeta/compare/1.1.0...1.1.1) (2023-10-03)
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **docs:** fix docs for the changes for the new version and rename the input parameter in few extractors ([33a3bc2](https://github.com/superwise-ai/elemeta/commit/33a3bc2e9eb4d48f472e94e7763a1881f2aab377))
+
 ## [1.1.0](https://github.com/superwise-ai/elemeta/compare/1.0.7...1.1.0) (2023-10-02)
 
 
