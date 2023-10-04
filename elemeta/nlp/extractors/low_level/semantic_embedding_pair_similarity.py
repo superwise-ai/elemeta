@@ -1,7 +1,7 @@
 from sentence_transformers import util
 from torch import Tensor
 
-from common.abstract_pair_metafeature_extractor import AbstractPairMetafeatureExtractor
+from elemeta.common.abstract_pair_metafeature_extractor import AbstractPairMetafeatureExtractor
 
 
 class SemanticEmbeddingPairSimilarity(AbstractPairMetafeatureExtractor):

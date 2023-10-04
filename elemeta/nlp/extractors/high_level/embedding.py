@@ -4,7 +4,7 @@ from numpy import ndarray
 from sentence_transformers import SentenceTransformer
 from torch import Tensor, nn
 
-from common.abstract_metafeature_extractor import AbstractMetafeatureExtractor
+from elemeta.common.abstract_metafeature_extractor import AbstractMetafeatureExtractor
 
 
 class Embedding(AbstractMetafeatureExtractor):
