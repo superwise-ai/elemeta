@@ -1,6 +1,6 @@
 import re
 from abc import ABC, abstractmethod
-from typing import Any, Optional, Dict
+from typing import Any, Optional
 
 
 class AbstractPairMetafeatureExtractor(ABC):
