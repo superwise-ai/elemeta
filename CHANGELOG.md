@@ -1,3 +1,21 @@
+## [1.1.2](https://github.com/superwise-ai/elemeta/compare/1.1.1...1.1.2) (2023-10-04)
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **common:** move the common folder to be inside the package ([02013ab](https://github.com/superwise-ai/elemeta/commit/02013ab37afa2dbfa25758a3085932494aaf6cd3))
+* **suites:** add __init__.py to the suites folder ([7083870](https://github.com/superwise-ai/elemeta/commit/7083870ed0832a10a18ee6d8f70ff403447c3594))
+
+
+### <!-- 4. -->:tractor: Refactor
+
+* **PairMetafeatureExtractorsRunnerResult:** will have the name of the extractor near the value ([44bdfc4](https://github.com/superwise-ai/elemeta/commit/44bdfc4cc0db3a2066a96ca786786786934a44a0))
+
+
+### <!-- 6. -->:broom: Chore
+
+* **tests:** add more tests ([6e16828](https://github.com/superwise-ai/elemeta/commit/6e168284a9671c3f6bed7501bb72ed0f0aa02c86))
+
 ## [1.1.1](https://github.com/superwise-ai/elemeta/compare/1.1.0...1.1.1) (2023-10-03)
 
 
