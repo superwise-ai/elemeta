@@ -44,6 +44,7 @@ from elemeta.nlp.extractors.high_level.stop_words_count import StopWordsCount
 from elemeta.nlp.extractors.high_level.syllable_count import SyllableCount
 from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
 from elemeta.nlp.extractors.high_level.text_length import TextLength
+from elemeta.nlp.extractors.high_level.toxicity_extractor import ToxicityExtractor
 from elemeta.nlp.extractors.high_level.unique_word_count import UniqueWordCount
 from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
 from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import (
@@ -63,7 +64,28 @@ from elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity import (
 )
 
 
-# TODO for all check tokenizer difference. example can be between twitter and not. the parse isn't differently
+@pytest.mark.parametrize(
+    "name, text, min_toxicity_threshold, max_toxicity_threshold",
+    [
+        ("non-toxic sentence", "Elemeta is amazing", 0.0, 0.5),
+        ("toxic sentence", "Kill youself you piece of shit", 0.5, 1),
+        (
+            "many sentences",
+            "The presence of toxicity in a sentence is hard to measure. A negative sentence does not imply toxicity. So how do you tell?",
+            0,
+            1
+        ),
+    ],
+)
+
+def test_toxicity_analysis(name, text, min_toxicity_threshold, max_toxicity_threshold):
+    toxicity = ToxicityExtractor().extract(text)
+    assert (
+        toxicity >= min_toxicity_threshold
+    ), f"output {toxicity} is smaller than min threshold {min_toxicity_threshold} for test {name}"
+    assert (
+        toxicity <= max_toxicity_threshold
+    ), f"output {toxicity} is larger than max threshold {max_toxicity_threshold} for test {name}"
 
 @pytest.mark.parametrize(
     "name, text, required_PII",
