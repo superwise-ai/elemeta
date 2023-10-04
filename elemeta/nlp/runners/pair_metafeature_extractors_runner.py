@@ -1,4 +1,4 @@
-from typing import Any, List, Dict
+from typing import Any, Dict, List
 
 from pydantic import BaseModel
 
@@ -43,14 +43,8 @@ class PairMetafeatureExtractorsRunner:
             the metafeatures extracted from text
         """
         return PairMetafeatureExtractorsRunnerResult(
-            input_1={
-                extractor.name: extractor(input_1)
-                for extractor in self.input_1_extractors
-            },
-            input_2={
-                extractor.name: extractor(input_2)
-                for extractor in self.input_2_extractors
-            },
+            input_1={extractor.name: extractor(input_1) for extractor in self.input_1_extractors},
+            input_2={extractor.name: extractor(input_2) for extractor in self.input_2_extractors},
             input_1_and_2={
                 extractor.name: extractor(input_1, input_2)
                 for extractor in self.input_1_and_2_extractors
