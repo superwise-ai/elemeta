@@ -2,7 +2,7 @@ import re
 from abc import abstractmethod
 from typing import Any, Optional
 
-from common.abstract_pair_metafeature_extractor import AbstractPairMetafeatureExtractor
+from elemeta.common.abstract_pair_metafeature_extractor import AbstractPairMetafeatureExtractor
 
 
 class AbstractTextPairMetafeatureExtractor(AbstractPairMetafeatureExtractor):
