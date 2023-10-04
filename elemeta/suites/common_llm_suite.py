@@ -19,6 +19,10 @@ from elemeta.nlp.runners.pair_metafeature_extractors_runner import (
 
 
 class CommonLLMSuite:
+    """
+    Suite that contain common misfeatures extractors that are used in the LLM monitoring
+    """
+
     def __init__(self):
         sentiment_polarity = SentimentPolarity()
         detect_language = DetectLanguage()
