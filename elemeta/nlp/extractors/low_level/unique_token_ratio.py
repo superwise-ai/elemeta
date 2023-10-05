@@ -1,4 +1,5 @@
 from typing import Callable, List, Optional, Set
+from collections import Counter
 
 from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
     AbstractTextMetafeatureExtractor,
@@ -48,11 +49,14 @@ class UniqueTokensRatio(AbstractTextMetafeatureExtractor):
 
         """
         tokens = self.tokenizer(text)
-        corpus = list(filter(lambda x: x not in self.exceptions, tokens))
-        counts = {token: 0 for token in corpus}
-        for token in corpus:
-            counts[token] += 1
-        unique_tokes = list(filter(lambda k: counts[k] == 1, counts))
-        if len(counts.keys()) == 0:
+        counts = Counter(tokens)
+        for exception in self.exceptions:
+            counts.pop(exception)
+
+        unique_tokens_count = sum(1 for count in counts.values() if count == 1)
+        total_tokens_count = len(counts)
+
+        if total_tokens_count == 0:
             return 0
-        return len(unique_tokes) / len(counts.keys())
+
+        return unique_tokens_count / total_tokens_count

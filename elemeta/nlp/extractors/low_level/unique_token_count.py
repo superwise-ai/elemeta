@@ -1,4 +1,5 @@
-from typing import Callable, Dict, List, Optional, Set
+from typing import Callable, List, Optional, Set
+from collections import Counter
 
 from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
     AbstractTextMetafeatureExtractor,
@@ -52,18 +53,15 @@ class UniqueTokenCount(AbstractTextMetafeatureExtractor):
         """
 
         tokens: List[str] = self.tokenizer(text)
-        corpus: List[str] = []
-        if self.exclude_tokens_list:
-            corpus = list(
-                filter(lambda x: x not in self.exclude_tokens_list, tokens)  # type: ignore
-            )
-        elif self.include_tokens_list:
-            corpus = list(filter(lambda x: x in self.include_tokens_list, tokens))  # type: ignore
-        else:
-            corpus = tokens
 
-        counts: Dict[str, int] = {}
-        for token in corpus:
-            counts[token] = counts.get(token, 0) + 1
-        unique_tokes = filter(lambda k: counts[k] == 1, counts)
-        return len(list(unique_tokes))
+        counts: Counter[str] = Counter(tokens)
+
+        if self.exclude_tokens_list:
+            for token in self.exclude_tokens_list:
+                counts[token] = 0
+        elif self.include_tokens_list:
+            for token in counts.copy():
+                if token not in self.include_tokens_list:
+                    counts.pop(token)
+
+        return sum(1 for count in counts.values() if count == 1)
