@@ -50,11 +50,12 @@ from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
 from elemeta.nlp.extractors.high_level.out_of_vocabulary_count import (
     OutOfVocabularyCount,
 )
+from elemeta.nlp.extractors.high_level.pii_identify import PII_Identify
 from elemeta.nlp.extractors.high_level.word_count import WordCount
 from elemeta.nlp.extractors.high_level.word_regex_matches_count import (
     WordRegexMatchesCount,
 )
-from elemeta.nlp.extractors.high_level.pii_identifier import PII_Identifier
+from elemeta.nlp.extractors.high_level.ner_identifier import NER_Identifier
 from elemeta.nlp.extractors import length_check_basic, avg_check_basic
 from elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity import (
     SemanticEmbeddingPairSimilarity,
@@ -88,7 +89,7 @@ def test_toxicity_analysis(name, text, min_toxicity_threshold, max_toxicity_thre
     ), f"output {toxicity} is larger than max threshold {max_toxicity_threshold} for test {name}"
 
 @pytest.mark.parametrize(
-    "name, text, required_PII",
+    "name, text, required_NER",
     [
         ("Name Detection", "Her name was Jane Dee, and she was gorgeous. So was her roommate Louis Lee ", {'B-PER':["Jane", "Louis"], 'I-PER': ['Lee', 'Dee']}),
         ("Location Detection", "My pen pal lives in Hong Kong, China while I reside in France. Quite a far distance away.", {'B-LOC': ['Hong', 'China', 'France'], 'I-LOC': ['Kong']}),
@@ -96,16 +97,34 @@ def test_toxicity_analysis(name, text, min_toxicity_threshold, max_toxicity_thre
         ("Combination 2", "Searching through banking information, we know that Joseph Smith created various credit lines with Citadel and his address is 106 Glen Creek Rd." , {'B-PER': ['Joseph'], 'I-PER': ['Smith'], 'B-ORG': ['Citadel'], 'B-LOC': ['Glen'], 'I-LOC': ['Creek', 'Rd']}),
     ],
 )
-def test_PII_identifier(name, text, required_PII):
-    entities = PII_Identifier().extract(text)
+def test_NER_identifier(name, text, required_NER):
+    entities = NER_Identifier().extract(text)
+    for keys in required_NER:
+        assert(
+            keys in required_NER
+        ), f"Required NER type '{keys}' not found in {entities}"
+        for NER in required_NER[keys]:
+            assert(
+                NER in entities[keys]
+            ), f"output {entities} does not contain required PII: {NER}"
+
+@pytest.mark.parametrize(
+    "name, text, required_PII",
+    [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
+        ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
+        ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
+    ],
+)
+def test_PII_identify(name, text, required_PII):
+    PII = PII_Identify().extract(text)
     for keys in required_PII:
         assert(
             keys in required_PII
-        ), f"Requuired PII type '{keys}' not found in {entities}"
-        for PII in required_PII[keys]:
+        ), f"Required PII type '{keys}' not found in {PII}"
+        for items in required_PII[keys]:
             assert(
-                PII in entities[keys]
-            ), f"output {entities} does not contain required PII: {PII}"
+                items in PII[keys]
+            ), f"output {PII} does not contain required PII: {items}"
 
 
 @pytest.mark.parametrize(
