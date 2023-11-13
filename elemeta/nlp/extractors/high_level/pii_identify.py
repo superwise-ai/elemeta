@@ -12,7 +12,7 @@ os.system("spacy download en_core_web_lg")
 
 class PII_Identify(AbstractTextMetafeatureExtractor):
     """
-    identifies any potential NERs mentioned in a text
+    identifies any potential PII mentioned in a text
     """
 
     def __init__(
@@ -20,7 +20,7 @@ class PII_Identify(AbstractTextMetafeatureExtractor):
         name: Optional[str] = None,
         pii: Optional[List[str]] = None,
     ):
-        """ "
+        """
         Parameters
         ----------
         name: Optional[str]
@@ -31,48 +31,45 @@ class PII_Identify(AbstractTextMetafeatureExtractor):
             supported entities: https://microsoft.github.io/presidio/supported_entities/
         """
         super().__init__(name)
+        valid_pii_list = [
+            "CREDIT_CARD",
+            "CRYPTO",
+            "EMAIL_ADDRESS",
+            "IBAN_CODE",
+            "IP_ADDRESS",
+            "NRP",
+            "PERSON",
+            "PHONE_NUMBER",
+            "MEDICAL_LICENSE",
+            "US_BANK_NUMBER",
+            "US_DRIVER_LICENSE",
+            "US_ITIN",
+            "US_PASSPORT",
+            "US_SSN",
+            "UK_NHS",
+            "ES_NIF",
+            "IT_FISCAL_CODE",
+            "IT_DRIVER_LICENSE",
+            "IT_VAT_CODE",
+            "IT_PASSPORT",
+            "IT_IDENTITY_CARD",
+            "SG_NRIC_FIN",
+            "AU_ABN",
+            "AU_ACN",
+            "AU_TFN",
+            "AU_MEDICARE",
+        ]
         if pii is None:
-            self.limit_pii = None
+            self.limit_pii = valid_pii_list
         else:
-            valid_pii_list = [
-                "CREDIT_CARD",
-                "CRYPTO",
-                "DATE_TIME",
-                "EMAIL_ADDRESS",
-                "IBAN_CODE",
-                "IP_ADDRESS",
-                "NRP",
-                "LOCATION",
-                "PERSON",
-                "PHONE_NUMBER",
-                "MEDICAL_LICENSE",
-                "URL",
-                "US_BANK_NUMBER",
-                "US_DRIVER_LICENSE",
-                "US_ITIN",
-                "US_PASSPORT",
-                "US_SSN",
-                "UK_NHS",
-                "ES_NIF",
-                "IT_FISCAL_CODE",
-                "IT_DRIVER_LICENSE",
-                "IT_VAT_CODE",
-                "IT_PASSPORT",
-                "IT_IDENTITY_CARD",
-                "SG_NRIC_FIN",
-                "AU_ABN",
-                "AU_ACN",
-                "AU_TFN",
-                "AU_MEDICARE",
-            ]
             if len(list(set(pii) - set(valid_pii_list))) == 0:
-                self.limit_pii = pii
+                self.limit_pii = list(set(valid_pii_list) - set(pii))
             else:
-                self.limit_pii = None
+                self.limit_pii = valid_pii_list
 
     def extract(self, text: str) -> Dict[str, List[str]]:
         """
-        detects NER from a text
+        detects PII from a text
 
         Parameters
         ----------
@@ -86,13 +83,7 @@ class PII_Identify(AbstractTextMetafeatureExtractor):
             are the type of PII and the value is a list of all analyzed PII of that type
         """
         analyzer = AnalyzerEngine()
-        if self.limit_pii is None:
-            analyzer_results = analyzer.analyze(text=text, language="en")
-        else:
-            analyzer_results = analyzer.analyze(
-                text=text,
-                language="en",
-            )
+        analyzer_results = analyzer.analyze(text=text, language="en", entities=self.limit_pii)
         result: Dict[str, List[str]] = dict()
         for item in analyzer_results:
             start_index = item.start

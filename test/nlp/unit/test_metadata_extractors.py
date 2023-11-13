@@ -111,8 +111,13 @@ def test_NER_identifier(name, text, required_NER):
 @pytest.mark.parametrize(
     "name, text, required_PII",
     [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
-        ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
-        ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
+        ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com']}),
+        ("Multiple Phone Number", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
+        ("Name and Email", "Jack has created an account in March 15, 2021 with email j4ck@yahoo.com", {'EMAIL_ADDRESS': ['j4ck@yahoo.com'], 'PERSON': ['Jack']}),
+        ("IP Address", "Monitoring the activity of the twitter account, the messages being sent came frome two IP adresses: 192.158.1.38 and 17.5.7.3", {'IP_ADDRESS': ['192.158.1.38', '17.5.7.3']}),
+        ("Race and US Drivers Licence", "The Hispanic male had a drivers licence with numbers C2533891", {'NRP': ['Hispanic'], 'US_DRIVER_LICENSE': ['C2533891']}),
+        ("US Taxpayer Identification Number", "The IRS has records for all tax payers and recognizes them via a ITINs like 935-83-5374", {'US_ITIN': ['935-83-5374']})
+
     ],
 )
 def test_PII_identify(name, text, required_PII):
