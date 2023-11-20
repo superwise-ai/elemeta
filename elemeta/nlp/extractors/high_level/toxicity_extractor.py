@@ -50,7 +50,7 @@ class ToxicityExtractor(AbstractTextMetafeatureExtractor):
         model = AutoModelForSequenceClassification.from_pretrained(self.model_path)
         pipeline = TextClassificationPipeline(model=model, tokenizer=toxicity_tokenizer)
         for pair in pipeline(text):
-            if pair["label"] == "TOXIC":
+            if pair["label"] == "0-3 stars":
                 result = pair["score"]
             else:
                 result = 1 - pair["score"]
