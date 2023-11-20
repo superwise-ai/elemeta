@@ -67,8 +67,9 @@ from elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity import (
 @pytest.mark.parametrize(
     "name, text, min_toxicity_threshold, max_toxicity_threshold",
     [
-        ("non-toxic sentence", "Elemeta is amazing", 0.0, 0.5),
-        ("toxic sentence", "Kill youself you piece of shit", 0.5, 1),
+        ("non-toxic sentence", "I love you Elemeta!", 0.0, 0.5),
+        ("toxic sentence", "You're a waste of oxygen and don't deserve the right to speak", 0.5, 1),
+        ("toxic sentence 2", "Kill youself you piece of shit", 0.5, 1),
         (
             "many sentences",
             "The presence of toxicity in a sentence is hard to measure. A negative sentence does not imply toxicity. So how do you tell?",
