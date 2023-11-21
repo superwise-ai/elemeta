@@ -7,7 +7,7 @@ from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import
 )
 
 
-class PII_Identifier(AbstractTextMetafeatureExtractor):
+class NER_Identifier(AbstractTextMetafeatureExtractor):
     """
     identifies any potential PII mentioned in a text
     """
@@ -30,7 +30,7 @@ class PII_Identifier(AbstractTextMetafeatureExtractor):
 
     def extract(self, text: str) -> Dict[str, List[str]]:
         """
-        gets PII information from a text
+        detects NER from a text
 
         Parameters
         ----------
@@ -55,9 +55,9 @@ class PII_Identifier(AbstractTextMetafeatureExtractor):
         model = AutoModelForTokenClassification.from_pretrained(self.model_path)
         tokenizer = AutoTokenizer.from_pretrained(self.model_path)
         ner = pipeline("ner", model=model, tokenizer=tokenizer)
-        pii_entities = ner(text)
+        entities = ner(text)
         result: Dict[str, List[str]] = dict()
-        for entity in pii_entities:
+        for entity in entities:
             if entity["entity"] in result:
                 result[entity["entity"]].append(entity["word"])
             else:
