@@ -132,6 +132,14 @@ elemeta.nlp.extractors.high\_level.must\_appear\_words\_percentage module
    :undoc-members:
    :show-inheritance:
 
+elemeta.nlp.extractors.high\_level.ner\_identifier module
+---------------------------------------------------------
+
+.. automodule:: elemeta.nlp.extractors.high_level.ner_identifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 elemeta.nlp.extractors.high\_level.number\_count module
 -------------------------------------------------------
 
@@ -148,10 +156,10 @@ elemeta.nlp.extractors.high\_level.out\_of\_vocabulary\_count module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.pii\_identifier module
----------------------------------------------------------
+elemeta.nlp.extractors.high\_level.pii\_identify module
+-------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.high_level.pii_identifier
+.. automodule:: elemeta.nlp.extractors.high_level.pii_identify
    :members:
    :undoc-members:
    :show-inheritance:

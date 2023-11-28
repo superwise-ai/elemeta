@@ -6,6 +6,6 @@ def test_CommonLLMSuite_sanity():
     result = common_llm_suite.run(
         "Question, what kind of bear is best?", "Sorry I can't answer that question"
     )
-    assert len(result.input_1) == 8
-    assert len(result.input_2) == 7
-    assert len(result.input_1_and_2) == 1
+    assert len(list(filter(lambda x: x.startswith("prompt_and_output"), result.keys()))) == 1
+    assert len(list(filter(lambda x: x.startswith("prompt"), result.keys()))) == 9
+    assert len(list(filter(lambda x: x.startswith("output"), result.keys()))) == 7
