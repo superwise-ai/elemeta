@@ -27,6 +27,8 @@ pydantic = "^2.3.0"
 sentence-transformers = "^2.2.2"
 torch = "^2.0.1"
 transformers = "^4.33.1"
+presidio-analyzer = "^2.2.33"
+en-core-web-lg = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1.tar.gz"}
 
 [tool.poetry.group.test.dependencies]
 setuptools = "^67.6"

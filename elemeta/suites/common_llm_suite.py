@@ -1,3 +1,5 @@
+import pandas as pd
+
 from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectLanguage
 from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import (
     HintedProfanityWordsCount,
@@ -12,10 +14,15 @@ from elemeta.nlp.extractors.high_level.sentiment_polarity import SentimentPolari
 from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
 from elemeta.nlp.extractors.high_level.text_length import TextLength
 from elemeta.nlp.extractors.high_level.toxicity_extractor import ToxicityExtractor
-from elemeta.nlp.runners.pair_metafeature_extractors_runner import (
-    PairMetafeatureExtractorsRunner,
-    PairMetafeatureExtractorsRunnerResult,
-)
+from elemeta.nlp.runners.pair_metafeature_extractors_runner import PairMetafeatureExtractorsRunner
+
+
+def _replace(x):
+    return (
+        x.replace("input_1_and_2", "prompt_and_output")
+        .replace("input_1", "prompt")
+        .replace("input_2", "output")
+    )
 
 
 class CommonLLMSuite:
@@ -58,5 +65,8 @@ class CommonLLMSuite:
             input_1_and_2_extractors=[semantic_two_text_similarity],
         )
 
-    def run(self, prompt: str, llm_output: str) -> PairMetafeatureExtractorsRunnerResult:
-        return self.runner.run(prompt, llm_output)
+    def run(self, prompt: str, output: str) -> dict:
+        d = self.runner.run(prompt, output).model_dump()
+        df = pd.json_normalize(d, sep="_")
+        df.rename(columns=_replace, inplace=True)
+        return df.to_dict("records")[0]
