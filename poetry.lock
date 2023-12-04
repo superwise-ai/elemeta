@@ -787,23 +787,6 @@ files = [
 dev = ["coverage", "coveralls", "pytest"]
 
 [[package]]
-name = "en_core_web_lg"
-version = "3.7.1"
-description = "English pipeline optimized for CPU. Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer."
-optional = false
-python-versions = "*"
-files = [
-    {file = "en_core_web_lg-3.7.1.tar.gz", hash = "sha256:4c8b2fd2572a5fb232c7b38345d301e7e092d1242b7184e14a86eff8ef6eb6d7"},
-]
-
-[package.dependencies]
-spacy = ">=3.7.2,<3.8.0"
-
-[package.source]
-type = "url"
-url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1.tar.gz"
-
-[[package]]
 name = "exceptiongroup"
 version = "1.2.0"
 description = "Backport of PEP 654 (exception groups)"
@@ -4588,4 +4571,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4.0.0"
-content-hash = "c1e8cb311370880435de491945e34dc0b5e70531ca11a190a4bb9c17fbb41378"
+content-hash = "d6699616fda48f8b4ebb45d4a2c67344b7ea417f83ed83a8a5c661a12c87e0ae"
