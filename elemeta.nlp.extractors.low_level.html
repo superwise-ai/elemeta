@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -33,8 +33,9 @@
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
@@ -56,6 +57,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -109,9 +119,11 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -278,20 +290,22 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -362,8 +376,20 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity"><code class="docutils literal notranslate"><span class="pre">SemanticEmbeddingPairSimilarity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract"><code class="docutils literal notranslate"><span class="pre">SemanticEmbeddingPairSimilarity.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity"><code class="docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract"><code class="docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>
@@ -658,11 +684,80 @@ checks if the token abides by the regex</p>
 </dd></dl>
 
 </section>
-<section id="elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">
-<h2>elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity">
+<span id="elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module"></span><h2>elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.</span></span><span class="sig-name descname"><span class="pre">SemanticEmbeddingPairSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractPairMetafeatureExtractor</span></code></p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(input_1, input_2)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract" title="elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input_1, input_2)</p></td>
+<td><p>This function will extract the metric from the text :param input_1: :type input_1: Any :param input_2: :type input_2: Any</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tensor</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>This function will extract the metric from the text
+:param input_1:
+:type input_1: Any
+:param input_2:
+:type input_2: Any</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the metadata extracted from</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Any</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">
-<h2>elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module<a class="headerlink" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module" title="Permalink to this heading">#</a></h2>
+<section id="module-elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity">
+<span id="elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module"></span><h2>elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.</span></span><span class="sig-name descname"><span class="pre">SemanticTextToGroupSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Module</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_auth_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
+<td><p>run self.extract on the given text</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract" title="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
+<td><p>Extracts the similarity between a text and a group of texts</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract">
+<span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract" title="Permalink to this definition">#</a></dt>
+<dd><p>Extracts the similarity between a text and a group of texts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – text to compare to the group</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>max similarity between the input text to the group</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="module-elemeta.nlp.extractors.low_level.tokens_count">
 <span id="elemeta-nlp-extractors-low-level-tokens-count-module"></span><h2>elemeta.nlp.extractors.low_level.tokens_count module<a class="headerlink" href="#module-elemeta.nlp.extractors.low_level.tokens_count" title="Permalink to this heading">#</a></h2>
@@ -794,11 +889,10 @@ filters on tokens that are defined as relevant</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="elemeta.nlp.extractors.high_level.html"
@@ -818,10 +912,7 @@ filters on tokens that are defined as relevant</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -880,8 +971,20 @@ filters on tokens that are defined as relevant</p>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-embedding-pair-similarity-module">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta-nlp-extractors-low-level-semantic-text-to-group-similarity-module">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity"><code class="docutils literal notranslate"><span class="pre">SemanticEmbeddingPairSimilarity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity.extract"><code class="docutils literal notranslate"><span class="pre">SemanticEmbeddingPairSimilarity.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity"><code class="docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract"><code class="docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity.extract()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount"><code class="docutils literal notranslate"><span class="pre">TokensCount</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount.extract"><code class="docutils literal notranslate"><span class="pre">TokensCount.extract()</span></code></a></li>
@@ -925,6 +1028,7 @@ By Lior Durahly
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023, Elemeta.
@@ -951,8 +1055,8 @@ By Lior Durahly
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
