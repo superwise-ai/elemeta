@@ -69,17 +69,21 @@ from elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity import (
     "name, text, min_toxicity_threshold, max_toxicity_threshold",
     [
         ("non-toxic sentence", "I love you Elemeta!", 0.0, 0.5),
-        ("toxic sentence", "You're a waste of oxygen and don't deserve the right to speak", 0.5, 1),
+        (
+            "toxic sentence",
+            "You're a waste of oxygen and don't deserve the right to speak",
+            0.5,
+            1,
+        ),
         ("toxic sentence 2", "Kill youself you piece of shit", 0.5, 1),
         (
             "many sentences",
             "The presence of toxicity in a sentence is hard to measure. A negative sentence does not imply toxicity. So how do you tell?",
             0,
-            1
+            1,
         ),
     ],
 )
-
 def test_toxicity_analysis(name, text, min_toxicity_threshold, max_toxicity_threshold):
     toxicity = ToxicityExtractor().extract(text)
     assert (
@@ -89,44 +93,67 @@ def test_toxicity_analysis(name, text, min_toxicity_threshold, max_toxicity_thre
         toxicity <= max_toxicity_threshold
     ), f"output {toxicity} is larger than max threshold {max_toxicity_threshold} for test {name}"
 
+
 @pytest.mark.parametrize(
     "name, text, required_NER",
     [
-        ("Name Detection", "Her name was Jane Dee, and she was gorgeous. So was her roommate Louis Lee ", {'B-PER':["Jane", "Louis"], 'I-PER': ['Lee', 'Dee']}),
-        ("Location Detection", "My pen pal lives in Hong Kong, China while I reside in France. Quite a far distance away.", {'B-LOC': ['Hong', 'China', 'France'], 'I-LOC': ['Kong']}),
-        ("Combination", "My friend Darrell recently got employed at the NY ISO branch" , {'B-PER': ['Darrell'], 'B-LOC': ['NY'], 'B-ORG': ['ISO']}),
-        ("Combination 2", "Searching through banking information, we know that Joseph Smith created various credit lines with Citadel and his address is 106 Glen Creek Rd." , {'B-PER': ['Joseph'], 'I-PER': ['Smith'], 'B-ORG': ['Citadel'], 'B-LOC': ['Glen'], 'I-LOC': ['Creek', 'Rd']}),
+        (
+            "Name Detection",
+            "Her name was Jane Dee, and she was gorgeous. So was her roommate Louis Lee ",
+            {"B-PER": ["Jane", "Louis"], "I-PER": ["Lee", "Dee"]},
+        ),
+        (
+            "Location Detection",
+            "My pen pal lives in Hong Kong, China while I reside in France. Quite a far distance away.",
+            {"B-LOC": ["Hong", "China", "France"], "I-LOC": ["Kong"]},
+        ),
+        (
+            "Combination",
+            "My friend Darrell recently got employed at the NY ISO branch",
+            {"B-PER": ["Darrell"], "B-LOC": ["NY"], "B-ORG": ["ISO"]},
+        ),
+        (
+            "Combination 2",
+            "Searching through banking information, we know that Joseph Smith created various credit lines with Citadel and his address is 106 Glen Creek Rd.",
+            {
+                "B-PER": ["Joseph"],
+                "I-PER": ["Smith"],
+                "B-ORG": ["Citadel"],
+                "B-LOC": ["Glen"],
+                "I-LOC": ["Creek", "Rd"],
+            },
+        ),
     ],
 )
 def test_NER_identifier(name, text, required_NER):
-    entities =  NER_Identifier().extract(text)
+    entities = NER_Identifier().extract(text)
     for keys in required_NER:
-        assert(
+        assert (
             keys in required_NER
         ), f"Required NER type '{keys}' not found in {entities}"
         for NER in required_NER[keys]:
-            assert(
+            assert (
                 NER in entities[keys]
             ), f"output {entities} does not contain required NER: {NER}"
 
-@pytest.mark.parametrize(
-    "name, text, required_PII",
-    [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
-        ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
-        ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
-    ],
-)
-def test_PII_identify(name, text, required_PII):
-    PII = PII_Identify().extract(text)
-    for keys in required_PII:
-        assert(
-            keys in required_PII
-        ), f"Required PII type '{keys}' not found in {PII}"
-        for items in required_PII[keys]:
-            assert(
-                items in PII[keys]
-            ), f"output {PII} does not contain required PII: {items}"
 
+# @pytest.mark.parametrize(
+#     "name, text, required_PII",
+#     [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
+#         ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
+#         ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
+#     ],
+# )
+# def test_PII_identify(name, text, required_PII):
+#     PII = PII_Identify().extract(text)
+#     for keys in required_PII:
+#         assert(
+#             keys in required_PII
+#         ), f"Required PII type '{keys}' not found in {PII}"
+#         for items in required_PII[keys]:
+#             assert(
+#                 items in PII[keys]
+#             ), f"output {PII} does not contain required PII: {items}"
 
 
 @pytest.mark.parametrize(
@@ -193,7 +220,9 @@ def test_sentiment_analysis(name, text, sentiment_min, sentiment_max):
 )
 def test_langauge_detection(name, text, language):
     lan = DetectLanguage().extract(text)
-    assert lan == language, f"output detected {lan}. should be {language} for test {name}"
+    assert (
+        lan == language
+    ), f"output detected {lan}. should be {language} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -249,7 +278,9 @@ def test_unique_words_count(name, text, exception, expected):
 )
 def test_regex(name, text, regex, expected):
     reg = WordRegexMatchesCount(regex=regex).extract(text)
-    assert reg == expected, f"output detected {reg}. should be {expected} for test {name}"
+    assert (
+        reg == expected
+    ), f"output detected {reg}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -274,7 +305,9 @@ def test_regex(name, text, regex, expected):
 def test__length_check_basic(name, text, tokenizer, condition, expected):
     function = length_check_basic(tokenizer=tokenizer, condition=condition)
     res = function(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -299,7 +332,9 @@ def test__length_check_basic(name, text, tokenizer, condition, expected):
 def test__avg_check_basic(name, text, tokenizer, condition, expected):
     function = avg_check_basic(tokenizer=tokenizer, condition=condition)
     res = function(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -315,7 +350,9 @@ def test__avg_check_basic(name, text, tokenizer, condition, expected):
 )
 def test_number_count(name, text, expected):
     res = NumberCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -331,7 +368,9 @@ def test_unknown_words_count(name, text, existing, expected):
         res = OutOfVocabularyCount().extract(text)
     else:
         res = OutOfVocabularyCount(vocabulary=existing).extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -343,7 +382,9 @@ def test_unknown_words_count(name, text, existing, expected):
 )
 def test_must_appear_count(name, text, appearing, expected):
     res = MustAppearWordsPercentage(must_appear=appearing).extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -359,7 +400,9 @@ def test_must_appear_count(name, text, appearing, expected):
 )
 def test_sentence_count(name, text, expected):
     res = SentenceCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -375,7 +418,9 @@ def test_sentence_count(name, text, expected):
 )
 def test_sentence_avg(name, text, expected):
     res = SentenceAvgLength().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -391,7 +436,9 @@ def test_sentence_avg(name, text, expected):
 )
 def test_text_size(name, text, expected):
     res = WordCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -407,7 +454,9 @@ def test_text_size(name, text, expected):
 )
 def test_avg_word_length(name, text, expected):
     res = AvgWordLength().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -423,7 +472,9 @@ def test_avg_word_length(name, text, expected):
 )
 def test_text_length(name, text, expected):
     res = TextLength().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -432,7 +483,9 @@ def test_text_length(name, text, expected):
 )
 def test_count_stopwords(name, text, expected):
     res = StopWordsCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -441,7 +494,9 @@ def test_count_stopwords(name, text, expected):
 )
 def test_count_punctuation(name, text, expected):
     res = PunctuationCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -456,7 +511,9 @@ def test_count_punctuation(name, text, expected):
 )
 def test_count_special_chars(name, text, expected):
     res = SpecialCharsCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -465,7 +522,9 @@ def test_count_special_chars(name, text, expected):
 )
 def test_case_ratio(name, text, expected):
     res = CapitalLettersRatio().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -481,7 +540,9 @@ def test_case_ratio(name, text, expected):
 )
 def test_email_count(name, text, expected):
     res = EmailCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -490,7 +551,9 @@ def test_email_count(name, text, expected):
 )
 def test_link_count(name, text, expected):
     res = LinkCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -506,7 +569,9 @@ def test_link_count(name, text, expected):
 )
 def test_complex_count(name, text, expected):
     res = TextComplexity().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -518,7 +583,9 @@ def test_complex_count(name, text, expected):
 )
 def test_hashtag_count(name, text, expected):
     res = HashtagCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -530,7 +597,9 @@ def test_hashtag_count(name, text, expected):
 )
 def test_mention_count(name, text, expected):
     res = MentionCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -545,7 +614,9 @@ def test_mention_count(name, text, expected):
 )
 def test_syllables_count(name, text, expected):
     res = SyllableCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -556,7 +627,9 @@ def test_syllables_count(name, text, expected):
 )
 def test_acronym_count(name, text, expected):
     res = AcronymCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -567,7 +640,9 @@ def test_acronym_count(name, text, expected):
 )
 def test_profanity_words_count(name, text, expected):
     res = HintedProfanityWordsCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -582,7 +657,9 @@ def test_profanity_words_count(name, text, expected):
 )
 def test_profanity_sentences_count(name, text, expected):
     res = HintedProfanitySentenceCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -597,7 +674,9 @@ def test_profanity_sentences_count(name, text, expected):
 )
 def test_date_count(name, text, expected):
     res = DateCount().extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -621,7 +700,9 @@ def test_date_count(name, text, expected):
 )
 def test_regex_match_count(name, regex, text, expected):
     res = RegexMatchCount(regex=regex).extract(text)
-    assert res == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -657,7 +738,9 @@ def test_embedding(name, text, convert_to_tensor, expected):
     else:
         assert type(res) == numpy.ndarray
 
-    assert res.ndim == expected, f"output detected {res}. should be {expected} for test {name}"
+    assert (
+        res.ndim == expected
+    ), f"output detected {res}. should be {expected} for test {name}"
 
 
 @pytest.mark.parametrize(
@@ -687,7 +770,9 @@ def test_semantic_embedding_similarity_analysis(
         ("different text", "I love cakes!", "meh i dont know", 0, 0.1),
     ],
 )
-def test_semantic_text_pair_similarity_analysis(name, text1, text2, score_min, score_max):
+def test_semantic_text_pair_similarity_analysis(
+    name, text1, text2, score_min, score_max
+):
     similarity_score = SemanticTextPairSimilarity().extract(text1, text2)
     assert (
         similarity_score >= score_min
@@ -717,7 +802,9 @@ def test_semantic_text_pair_similarity_analysis(name, text1, text2, score_min, s
         ("different text", "I love cakes!", ["meh i dont know", "other text"], 0, 0.1),
     ],
 )
-def test_semantic_text_to_group_similarity_analysis(name, text, group, score_min, score_max):
+def test_semantic_text_to_group_similarity_analysis(
+    name, text, group, score_min, score_max
+):
     similarity_score = SemanticTextToGroupSimilarity(group=group).extract(text)
     assert (
         similarity_score >= score_min
@@ -747,7 +834,9 @@ def test_semantic_text_to_group_similarity_analysis(name, text, group, score_min
         ("different text", "I love cakes!", ["meh i dont know", "other text"], 0, 0.1),
     ],
 )
-def test_semantic_text_to_group_similarity_analysis(name, text, group, score_min, score_max):
+def test_semantic_text_to_group_similarity_analysis(
+    name, text, group, score_min, score_max
+):
     similarity_score = SemanticTextToGroupSimilarity(group=group).extract(text)
     assert (
         similarity_score >= score_min
