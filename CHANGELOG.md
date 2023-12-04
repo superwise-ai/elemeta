@@ -1,3 +1,28 @@
+## [1.2.0](https://github.com/superwise-ai/elemeta/compare/1.1.2...1.2.0) (2023-12-04)
+
+
+### <!-- 1. -->:rocket: New Features
+
+* **extractor:** added PII extractor ([ab07e51](https://github.com/superwise-ai/elemeta/commit/ab07e516304806e8355c0831db683d0d55816f14))
+* **extractor:** toxicity handle long text ([11d6657](https://github.com/superwise-ai/elemeta/commit/11d6657a216716a4477a895cdba796bf2c3ce40c))
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **ner identifier:** Changing the name of the extractor to the appropriate name. Using the correct extractors in the test file ([ccc8b05](https://github.com/superwise-ai/elemeta/commit/ccc8b05628f428907d37ddd88c877a90e9fc2b32))
+* spacy dependency ([b83094a](https://github.com/superwise-ai/elemeta/commit/b83094a973f5940499a18123b5ae61b01b1e5509))
+
+
+### <!-- 5. -->:memo: Documentation
+
+* **suites:** add suites to docs ([361834e](https://github.com/superwise-ai/elemeta/commit/361834ecd30e8e5c3c8c9bd1df2a2047ac5edb93))
+
+
+### <!-- 6. -->:broom: Chore
+
+* **test:** add tests for ToxicityExtractor ([f3b2b33](https://github.com/superwise-ai/elemeta/commit/f3b2b3390112dded2b7b4b2de3e27fdf53ec828b))
+* **toxicity_extractor:** extractor fixes to match huggingface output change ([89244b3](https://github.com/superwise-ai/elemeta/commit/89244b37fb983a4f46580179b2552c3cec1e08f0))
+
 ## [1.1.2](https://github.com/superwise-ai/elemeta/compare/1.1.1...1.1.2) (2023-10-04)
 
 
