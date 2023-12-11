@@ -92,14 +92,6 @@ elemeta.nlp.extractors.high\_level.hinted\_profanity\_words\_count module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.injection\_similarity module
----------------------------------------------------------------
-
-.. automodule:: elemeta.nlp.extractors.high_level.injection_similarity
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 elemeta.nlp.extractors.high\_level.link\_count module
 -----------------------------------------------------
 
