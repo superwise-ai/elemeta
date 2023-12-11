@@ -13,9 +13,7 @@ from elemeta.nlp.extractors.high_level.sentiment_polarity import SentimentPolari
 from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
 from elemeta.nlp.extractors.high_level.text_length import TextLength
 from elemeta.nlp.extractors.high_level.toxicity_extractor import ToxicityExtractor
-from elemeta.nlp.runners.pair_metafeature_extractors_runner import (
-    PairMetafeatureExtractorsRunner,
-)
+from elemeta.nlp.runners.pair_metafeature_extractors_runner import PairMetafeatureExtractorsRunner
 
 
 def _replace(x):
