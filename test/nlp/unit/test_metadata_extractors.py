@@ -136,23 +136,23 @@ def test_NER_identifier(name, text, required_NER):
             ), f"output {entities} does not contain required NER: {NER}"
 
 
-# @pytest.mark.parametrize(
-#     "name, text, required_PII",
-#     [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
-#         ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
-#         ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
-#     ],
-# )
-# def test_PII_identify(name, text, required_PII):
-#     PII = PII_Identify().extract(text)
-#     for keys in required_PII:
-#         assert(
-#             keys in required_PII
-#         ), f"Required PII type '{keys}' not found in {PII}"
-#         for items in required_PII[keys]:
-#             assert(
-#                 items in PII[keys]
-#             ), f"output {PII} does not contain required PII: {items}"
+@pytest.mark.parametrize(
+    "name, text, required_PII",
+    [   ("US Info", "Can this collect ssn like 519-50-2661? What about passport numbers like C60975351?", {'US_SSN': ['519-50-2661'], 'US_PASSPORT': ['C60975351']}),
+        ("UK Info", "From London, his NHS number is 943 476 5919 and his email is jsmithy25@gmail.com", {'UK_NHS': ['943 476 5919'], 'LOCATION': ['London'],'EMAIL_ADDRESS': ['jsmithy25@gmail.com'],'URL': ['gmail.com']}),
+        ("Combination", "His name is Jones Holmes and his phone number is 212-555-5555, what if youre given two phone numbers? 916-225-3241." , {'PERSON': ['Jones Holmes'], 'PHONE_NUMBER': ['212-555-5555', '916-225-3241']} ),
+    ],
+)
+def test_PII_identify(name, text, required_PII):
+    PII = PII_Identify().extract(text)
+    for keys in required_PII:
+        assert(
+            keys in required_PII
+        ), f"Required PII type '{keys}' not found in {PII}"
+        for items in required_PII[keys]:
+            assert(
+                items in PII[keys]
+            ), f"output {PII} does not contain required PII: {items}"
 
 
 @pytest.mark.parametrize(
