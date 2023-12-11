@@ -48,7 +48,6 @@ class CommonLLMSuite:
                 text_length,
                 hinted_profanity_words_count,
                 toxicity,
-                jail_break_similarity,
                 injection_similarity,
             ],
             input_2_extractors=[
