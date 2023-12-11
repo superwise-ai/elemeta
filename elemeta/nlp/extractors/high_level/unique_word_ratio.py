@@ -1,4 +1,4 @@
-from typing import Callable, List, Optional, Set
+from typing import Optional, Set
 
 from nltk import word_tokenize  # type: ignore
 
@@ -11,11 +11,18 @@ class UniqueWordRatio(UniqueTokensRatio):
     Gives the ratio between the number of distinct words (total number of different
     values regardless how many times it appears in the dataset) to the number
     of unique words (total number of values that only appear once in the dataset).
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.high_level.unique_word_ratio import UniqueWordRatio
+    >>> text = "I love to move it move it"
+    >>> unique_word_ratio = UniqueWordRatio()
+    >>> result = unique_word_ratio(text)
+    >>> print(result)  # Output: 0.6
     """
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = word_tokenize,
         exceptions: Set[str] = english_punctuations,
         name: Optional[str] = None,
     ):
@@ -24,9 +31,7 @@ class UniqueWordRatio(UniqueTokensRatio):
         ----------
         name: Optional[str]
             name to of the metadata of not given will extract the name from the class name
-        tokenizer: Callable[[str],List[str]]
-            a function that splits a text into components
         exceptions: Set[str]
             words to exclude
         """
-        super().__init__(name=name, tokenizer=tokenizer, exceptions=exceptions)
+        super().__init__(name=name, tokenizer=word_tokenize, exceptions=exceptions)

@@ -1,15 +1,23 @@
 from typing import Callable, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class MustAppearTokensPercentage(AbstractTextMetafeatureExtractor):
     """Implementation of AbstractTextMetafeatureExtractor class that return the ration between
     the number of appearances of tokens from
 
-    given tokens list in the text to all the tokens"""
+    given tokens list in the text to all the tokens
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.must_appear_tokens_parentage import MustAppearTokensPercentage
+    >>> from nltk import word_tokenize
+    >>> text = "Once I was afraid, I was petrified"
+    >>> must_appear_tokens_percentage = MustAppearTokensPercentage(word_tokenize, {"I","yes"})
+    >>> result = must_appear_tokens_percentage(text)
+    >>> print(result)  # Output: 0.5
+    """
 
     def __init__(
         self,

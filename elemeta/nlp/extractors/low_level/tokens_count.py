@@ -1,14 +1,21 @@
 from typing import Callable, List, Optional, Set
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class TokensCount(AbstractTextMetafeatureExtractor):
-    """Implementation of AbstractTextMetafeatureExtractor class that return the number of sentences
-    in the text"""
+    """Return the number of tokens in the text.
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.tokens_count import TokensCount
+    >>> from nltk import word_tokenize
+    >>> text = "Once I was afraid, I was petrified"
+    >>> tokens_count = TokensCount(word_tokenize)
+    >>> result = tokens_count(text)
+    >>> print(result)  # Output: 8
+    """
 
     def __init__(
         self,

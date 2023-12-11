@@ -5,7 +5,6 @@ import pandas
 import pytest
 
 import elemeta.nlp.runners.metafeature_extractors_runner as met
-from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
 from elemeta.nlp.extractors.high_level.semantic_text_pair_similarity import (
     SemanticTextPairSimilarity,
 )
@@ -94,17 +93,16 @@ def test_pair_metafeature_extractor():
     avg_word_length = AvgWordLength()
     emoji_count = EmojiCount()
     semantic_text_similarity = SemanticTextPairSimilarity()
-    refusals_similarity = RefusalSimilarity()
     toxicity = ToxicityExtractor()
 
     metrics = PairMetafeatureExtractorsRunner(
         input_1_extractors=[avg_word_length, emoji_count, toxicity],
-        input_2_extractors=[refusals_similarity, toxicity],
+        input_2_extractors=[toxicity],
         input_1_and_2_extractors=[semantic_text_similarity],
     )
     pair_runner_result = metrics.run("What is it 1+2", "the answer is 3")
     assert len(pair_runner_result.input_1) == 3, "Expecting to see two metafeatures"
-    assert len(pair_runner_result.input_2) == 2, "Expecting to see one metafeatures"
+    assert len(pair_runner_result.input_2) == 1, "Expecting to see one metafeatures"
     assert (
         len(pair_runner_result.input_1_and_2) == 1
     ), "Expecting to see one metafeatures"

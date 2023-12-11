@@ -9,7 +9,6 @@ Subpackages
 
    elemeta.dataset
    elemeta.nlp
-   elemeta.suites
 
 Module contents
 ---------------

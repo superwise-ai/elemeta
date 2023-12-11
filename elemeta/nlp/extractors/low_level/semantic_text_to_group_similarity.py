@@ -4,12 +4,41 @@ from sentence_transformers import util
 from torch import nn
 
 from elemeta.nlp.extractors.high_level.embedding import Embedding
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class SemanticTextToGroupSimilarity(AbstractTextMetafeatureExtractor):
+    """
+    Extracts the similarity between a text and a group of texts.
+
+    Parameters
+    ----------
+    group : List[str]
+        Group of strings to compare to.
+    embedding_model : Optional[str]
+        The name of the SentenceTransformer model to use, by default "all-MiniLM-L6-v2".
+    modules : Optional[Iterable[nn.Module]]
+        This parameter can be used to create custom SentenceTransformer models from scratch.
+    device : Optional[str]
+        Device (like 'cuda' / 'cpu') that should be used for computation.
+        If None, checks if a GPU can be used.
+    cache_folder : Optional[str]
+        Path to store models.
+    use_auth_token : Union[bool, str, None]
+        HuggingFace authentication token to download private models.
+    name : Optional[str]
+        Name of the extractor.
+
+    Examples
+    --------
+    >>> from elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity import SemanticTextToGroupSimilarity
+    >>> group = ["apple", "banana", "orange"]
+    >>> extractor = SemanticTextToGroupSimilarity(group)
+    >>> text = "apple"
+    >>> similarity = extractor.extract(text)
+    >>> print(similarity) #Output: 1.000000238418579
+    """
+
     def __init__(
         self,
         group: List[str],
@@ -20,25 +49,6 @@ class SemanticTextToGroupSimilarity(AbstractTextMetafeatureExtractor):
         use_auth_token: Union[bool, str, None] = None,
         name: Optional[str] = None,
     ):
-        """
-        Parameters
-        ----------
-        group: List[str]
-            group of string to compare to
-        embedding_model: Optional[str]
-            The name of the SentenceTransformer model to use, by default "all-MiniLM-L6-v2"
-        modules: Optional[Iterable[nn.Module]]
-            This parameter can be used to create custom SentenceTransformer models from scratch.
-        device: Optional[str]
-            Device (like 'cuda' / 'cpu') that should be used for computation.
-            If None, checks if a GPU can be used.
-        cache_folder: Optional[str]
-            Path to store models
-        use_auth_token: Union[bool, str, None]
-            HuggingFace authentication token to download private models.
-        name: Optional[str]
-            Name of the extractor
-        """
         self.group = group
         if embedding_model is not None:
             self.embedding_extractor = Embedding(
@@ -47,7 +57,6 @@ class SemanticTextToGroupSimilarity(AbstractTextMetafeatureExtractor):
                 cache_folder=cache_folder,
                 use_auth_token=use_auth_token,
             )
-
         else:
             if modules is None:
                 embedding_model = "all-MiniLM-L6-v2"
@@ -65,17 +74,17 @@ class SemanticTextToGroupSimilarity(AbstractTextMetafeatureExtractor):
 
     def extract(self, input: str) -> float:
         """
-        Extracts the similarity between a text and a group of texts
+        Extracts the similarity between a text and a group of texts.
 
         Parameters
         ----------
-        input: str
-            text to compare to the group
+        input : str
+            Text to compare to the group.
 
         Returns
         -------
         float
-            max similarity between the input text to the group
+            Maximum similarity between the input text and the group.
         """
         all_embedding = self.embedding_extractor.extract([input] + self.group)
         return util.cos_sim(all_embedding, all_embedding)[0][1:].max().tolist()

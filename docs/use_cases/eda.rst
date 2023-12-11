@@ -50,9 +50,9 @@ According to the below analysis, there is a clear correlation between tweet lang
 .. code-block:: python
 
     plt.subplots(figsize=(10,7))
-    sns.boxplot(x="detect_langauge", y="number_of_likes", data=tweets_eda);
+    sns.boxplot(x="detect_language", y="number_of_likes", data=tweets_eda);
 
-.. image:: ../images/eda_number_of_link_detect_langauge.png
+.. image:: ../images/eda_number_of_link_detect_language.png
         :width: 600
         :alt: histogram of word_count feature
 

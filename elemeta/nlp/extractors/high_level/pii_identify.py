@@ -2,14 +2,31 @@ from typing import Dict, List, Optional
 
 from presidio_analyzer import AnalyzerEngine
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class PII_Identify(AbstractTextMetafeatureExtractor):
     """
-    identifies any potential NERs mentioned in a text
+    Identifies any potential Named Entity Recognitions (NERs) mentioned in a text.
+
+    Parameters
+    ----------
+    name : str, optional
+        Name of the metafeature. If not given, it will be extracted from the class name.
+    pii : list of str, optional
+        List of specific Personally Identifiable Information (PII) to narrow down the analyzer.
+        If none or an unsupported PII is given, the default is to search for all.
+        Supported entities can be found at: https://microsoft.github.io/presidio/supported_entities/
+
+    Examples
+    --------
+    >>> from elemeta.nlp.extractors.high_level.pii_identify import PII_Identify
+    >>> pii = PII_Identify()
+    >>> text = "My email address is john.doe@example.com and my phone number is 123-456-7890."
+    >>> result = pii(text)
+    >>> print(result)
+    {'EMAIL_ADDRESS': ['john.doe@example.com'], 'PHONE_NUMBER': ['123-456-7890'], 'URL': ['john.do', 'example.com']}
+
     """
 
     def __init__(
@@ -17,16 +34,6 @@ class PII_Identify(AbstractTextMetafeatureExtractor):
         name: Optional[str] = None,
         pii: Optional[List[str]] = None,
     ):
-        """ "
-        Parameters
-        ----------
-        name: Optional[str]
-            name of the metadata and if not given will extract the name from the class name
-        pii: Optional[List[str]]
-            the list of specific pii to narrow down the analyzer. If none or an unsupported pii
-            is given, the default is to search for all. Can only be selected from this list of
-            supported entities: https://microsoft.github.io/presidio/supported_entities/
-        """
         super().__init__(name)
         if pii is None:
             self.limit_pii = None
@@ -69,18 +76,28 @@ class PII_Identify(AbstractTextMetafeatureExtractor):
 
     def extract(self, text: str) -> Dict[str, List[str]]:
         """
-        detects NER from a text
+        Detects Named Entity Recognitions (NERs) from a text.
 
         Parameters
         ----------
-        text: str
-            the string to run on
+        text : str
+            The string to run the analysis on.
 
         Returns
         -------
         Dict[str, List[str]]
-            returns a dictionary of the identified PII from the text such that the keys
-            are the type of PII and the value is a list of all analyzed PII of that type
+            A dictionary of the identified PII from the text, where the keys are the type of PII
+            and the values are lists of all analyzed PII of that type.
+
+        Examples
+        --------
+        >>> from elemeta.nlp.extractors.high_level.pii_identify import PII_Identify
+        >>> extractor = PII_Identify()
+        >>> text = "My email address is john.doe@example.com and my phone number is 123-456-7890."
+        >>> result = extractor.extract(text)
+        >>> print(result)
+        {'EMAIL_ADDRESS': ['john.doe@example.com'], 'PHONE_NUMBER': ['123-456-7890'], 'URL': ['john.do', 'example.com']}
+
         """
         analyzer = AnalyzerEngine()
         if self.limit_pii is None:

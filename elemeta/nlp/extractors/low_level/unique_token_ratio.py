@@ -1,13 +1,20 @@
 from typing import Callable, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class UniqueTokensRatio(AbstractTextMetafeatureExtractor):
-    """Implementation of AbstractTextMetafeatureExtractor class that return the ratio between the
-    number of unique tokens to all tokens"""
+    """Return the ratio between the number of unique tokens to all tokens
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.unique_token_ratio import UniqueTokensRatio
+    >>> from nltk import word_tokenize
+    >>> text = "Once I was afraid, I was petrified"
+    >>> unique_tokens_ratio = UniqueTokensRatio(word_tokenize,exceptions={"was"})
+    >>> result = unique_tokens_ratio(text)
+    >>> print(result)  # Output: 0.8
+    """
 
     def __init__(
         self,

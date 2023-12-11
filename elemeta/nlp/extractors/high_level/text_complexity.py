@@ -2,14 +2,19 @@ from typing import Callable, Optional
 
 import textstat  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class TextComplexity(AbstractTextMetafeatureExtractor):
     """
     Return the Flesch Reading Ease Score of the text
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.high_level.text_complexity import TextComplexity
+    >>> text_complexity = TextComplexity()
+    >>> print(text_complexity("This love cakes"))  # Output: 119.19
+    >>> print(text_complexity("Production of biodiesel by enzymatic transesterifcation of non-edible Salvadora persica (Pilu) oil and crude coconut oil in a solvent-free system"))  # Output: 17.34
     """
 
     def __init__(
