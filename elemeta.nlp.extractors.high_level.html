@@ -395,14 +395,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.hinted_profanity_words_count.HintedProfanityWordsCount"><code class="docutils literal notranslate"><span class="pre">HintedProfanityWordsCount</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.injection_similarity">elemeta.nlp.extractors.high_level.injection_similarity module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.injection_similarity.InjectionSimilarity"><code class="docutils literal notranslate"><span class="pre">InjectionSimilarity</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.jailbreak_similarity">elemeta.nlp.extractors.high_level.jailbreak_similarity module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.jailbreak_similarity.JailBreakSimilarity"><code class="docutils literal notranslate"><span class="pre">JailBreakSimilarity</span></code></a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.link_count">elemeta.nlp.extractors.high_level.link_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.link_count.LinkCount"><code class="docutils literal notranslate"><span class="pre">LinkCount</span></code></a></li>
 </ul>
@@ -891,49 +883,6 @@ returns the ratio of capital letters / length</p>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(text)</p></td>
 <td><p>return the number of profanity words in the text</p></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</section>
-<section id="module-elemeta.nlp.extractors.high_level.injection_similarity">
-<span id="elemeta-nlp-extractors-high-level-injection-similarity-module"></span><h2>elemeta.nlp.extractors.high_level.injection_similarity module<a class="headerlink" href="#module-elemeta.nlp.extractors.high_level.injection_similarity" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.injection_similarity.InjectionSimilarity">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.high_level.injection_similarity.</span></span><span class="sig-name descname"><span class="pre">InjectionSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embedding_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'all-MiniLM-L6-v2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Module</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_auth_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.injection_similarity.InjectionSimilarity" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity" title="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity"><code class="xref py py-class docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity</span></code></a></p>
-<p>Checks the similarity of the text to the group of known injection
-instructions</p>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
-<td><p>run self.extract on the given text</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
-<td><p>Extracts the similarity between a text and a group of texts</p></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</section>
-<section id="module-elemeta.nlp.extractors.high_level.jailbreak_similarity">
-<span id="elemeta-nlp-extractors-high-level-jailbreak-similarity-module"></span><h2>elemeta.nlp.extractors.high_level.jailbreak_similarity module<a class="headerlink" href="#module-elemeta.nlp.extractors.high_level.jailbreak_similarity" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="elemeta.nlp.extractors.high_level.jailbreak_similarity.JailBreakSimilarity">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.high_level.jailbreak_similarity.</span></span><span class="sig-name descname"><span class="pre">JailBreakSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embedding_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'all-MiniLM-L6-v2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Module</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_auth_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.high_level.jailbreak_similarity.JailBreakSimilarity" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="elemeta.nlp.extractors.low_level.html#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity" title="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity"><code class="xref py py-class docutils literal notranslate"><span class="pre">SemanticTextToGroupSimilarity</span></code></a></p>
-<p>Checks the similarity of the text to the group of known jailbreak instructions</p>
-<p class="rubric">Methods</p>
-<table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(text)</p></td>
-<td><p>run self.extract on the given text</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code>(input)</p></td>
-<td><p>Extracts the similarity between a text and a group of texts</p></td>
 </tr>
 </tbody>
 </table>
@@ -1838,14 +1787,6 @@ of unique words (total number of values that only appear once in the dataset).</
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.hinted_profanity_words_count">elemeta.nlp.extractors.high_level.hinted_profanity_words_count module</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.hinted_profanity_words_count.HintedProfanityWordsCount"><code class="docutils literal notranslate"><span class="pre">HintedProfanityWordsCount</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.injection_similarity">elemeta.nlp.extractors.high_level.injection_similarity module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.injection_similarity.InjectionSimilarity"><code class="docutils literal notranslate"><span class="pre">InjectionSimilarity</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.jailbreak_similarity">elemeta.nlp.extractors.high_level.jailbreak_similarity module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.nlp.extractors.high_level.jailbreak_similarity.JailBreakSimilarity"><code class="docutils literal notranslate"><span class="pre">JailBreakSimilarity</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.nlp.extractors.high_level.link_count">elemeta.nlp.extractors.high_level.link_count module</a><ul class="nav section-nav flex-column">
