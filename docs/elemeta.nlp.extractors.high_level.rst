@@ -100,14 +100,6 @@ elemeta.nlp.extractors.high\_level.injection\_similarity module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.jailbreak\_similarity module
----------------------------------------------------------------
-
-.. automodule:: elemeta.nlp.extractors.high_level.jailbreak_similarity
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 elemeta.nlp.extractors.high\_level.link\_count module
 -----------------------------------------------------
 
