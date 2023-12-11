@@ -5,14 +5,29 @@ from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
 
 class AcronymCount(RegexMatchCount):
     """
-    Counts the number of acronyms in the text
+    Counts the number of acronyms in the text.
+
+    Parameters
+    ----------
+    name : Optional[str], optional
+        Name to use for the metadata. If not given, the name will be extracted from the class name.
+
+    Examples
+    --------
+    >>> from elemeta.nlp.extractors.high_level.acronym_count import AcronymCount
+    >>> text = "W.T.F that was LOL"
+    >>> counter = AcronymCount()
+    >>> result = counter(text)
+    >>> print(result) # Output: 2
     """
 
     def __init__(self, name: Optional[str] = None):
         """
+        Initialize the AcronymCount object.
+
         Parameters
         ----------
-        name: Optional[str]
-            name to of the metadata of not given will extract the name from the class name
+        name : Optional[str], optional
+            Name to use for the metadata. If not given, the name will be extracted from the class name.
         """
         super().__init__(regex="(([A-Z](.|-)?)+)(\s|$)", name=name)  # noqa: W605

@@ -1,28 +1,29 @@
-from typing import Callable, List, Optional
+from typing import Optional
 
 import nltk  # type: ignore
 
-from elemeta.nlp.extractors.low_level.hinted_profanity_token_count import (
-    HintedProfanityTokensCount,
-)
+from elemeta.nlp.extractors.low_level.hinted_profanity_token_count import HintedProfanityTokensCount
 
 
 class HintedProfanitySentenceCount(HintedProfanityTokensCount):
     """
-    Counts the number of sentences with profanity words in them
+    Counts the number of sentences with profanity words in them uses better_profanity library. https://github.com/snguyenthanh/better_profanity
+
+    Parameters
+    ----------
+    name : str, optional
+        Name of the metadata. If not given, the name will be extracted from the class name.
+
+    Examples
+    --------
+    >>> profanity_counter = HintedProfanitySentenceCount()
+    >>> text = "Fuck this sh!t. I want to fucking leave the country, but I am fine"
+    >>> profanity_count = profanity_counter(text)
+    >>> print(profanity_count) #Output: 1
     """
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = nltk.sent_tokenize,
         name: Optional[str] = None,
     ):
-        """
-        Parameters
-        ----------
-        name: Optional[str]
-            name to of the metadata of not given will extract the name from the class name
-        tokenizer: Callable[[str],List[str]]
-        a function that splits a text into components.
-        """
-        super().__init__(name=name, tokenizer=tokenizer)
+        super().__init__(name=name, tokenizer=nltk.sent_tokenize)

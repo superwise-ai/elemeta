@@ -37,7 +37,7 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
     >>> metafeature_extractors_runner = MetafeatureExtractorsRunner()
     >>> metafeature_extractors_runner.add_metafeature_extractor(ipe)
     >>> metafeature_extractors_runner.run("Never odd or even")
-    {'detect_langauge': 'en',
+    {'detect_language': 'en',
      'emoji_count': 0,
      'text_complexity': 92.8,
      'unique_word_ratio': 1.0,
@@ -66,7 +66,7 @@ Now you can easily use it and add it your ``MetadataExtractorRunner``
      'is_palindrome_extractor': True}
 
     >>> metafeature_extractors_runner.run("I love cats")
-    {'detect_langauge': 'ca',
+    {'detect_language': 'ca',
      'emoji_count': 0,
      'text_complexity': 119.19,
      'unique_word_ratio': 1.0,

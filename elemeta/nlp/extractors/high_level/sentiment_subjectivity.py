@@ -2,14 +2,23 @@ from typing import Optional
 
 from textblob import TextBlob  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class SentimentSubjectivity(AbstractTextMetafeatureExtractor):
     """
-    Returns the Sentiment Subjectivity
+    Returns the Sentiment Subjectivity (read more about the
+    difference between sentiment polarity and
+    sentiment subjectivity
+    here:https://www.tasq.ai/tasq-question/what-are-polarity-and-subjectivity-in-sentiment-analysis/)
+    value as a range between 0 to 1, where 0.0 is utterly objective, and 1.0 is utterly subjective.
+
+    Example
+    --------
+    >>> from elemeta.nlp.extractors.high_level.sentiment_subjectivity import SentimentSubjectivity
+    >>> sentiment_subjectivity = SentimentSubjectivity()
+    >>> print(sentiment_subjectivity("I hate cakes!")) #Output: 0.9
+    >>> print(sentiment_subjectivity("They all failed the test")) #Output: 0.3
     """
 
     def __init__(self, name: Optional[str] = None):

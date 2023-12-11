@@ -1,15 +1,22 @@
 from typing import Callable, List, Optional, Set
 
 from elemeta.nlp.extractors import avg_check_basic
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class AvgTokenLength(AbstractTextMetafeatureExtractor):
     """
     Implementation of AbstractTextMetafeatureExtractor
     class that return the average token length
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.avg_token_length import AvgTokenLength
+    >>> from nltk import word_tokenize
+    >>> text = "Once I was afraid, I was petrified"
+    >>> avg_token_length = AvgTokenLength(word_tokenize)
+    >>> result = avg_token_length(text)
+    >>> print(result)  # Output: 3.5
     """
 
     def __init__(
@@ -48,6 +55,4 @@ class AvgTokenLength(AbstractTextMetafeatureExtractor):
         if self.tokens_to_exclude is None:
             return avg_check_basic(self.tokenizer, lambda _: True)(text)
         else:
-            return avg_check_basic(
-                self.tokenizer, lambda token: token not in self.tokens_to_exclude  # type: ignore
-            )(text)
+            return avg_check_basic(self.tokenizer, lambda token: token not in self.tokens_to_exclude)(text)  # type: ignore

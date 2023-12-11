@@ -1,9 +1,7 @@
 from typing import Callable, List
 
 
-def length_check_basic(
-    tokenizer: Callable[[str], List[str]], condition: Callable[[str], bool]
-) -> Callable[[str], int]:
+def length_check_basic(tokenizer: Callable[[str], List[str]], condition: Callable[[str], bool]) -> Callable[[str], int]:
     """generic count function generator
 
     Parameters
@@ -44,9 +42,7 @@ def length_check_basic(
     return length_check_basic_function
 
 
-def avg_check_basic(
-    tokenizer: Callable[[str], List[str]], condition: Callable[[str], bool]
-) -> Callable[[str], float]:
+def avg_check_basic(tokenizer: Callable[[str], List[str]], condition: Callable[[str], bool]) -> Callable[[str], float]:
     """generic avg counter generator
 
     Parameters
@@ -81,9 +77,7 @@ def avg_check_basic(
         """
         tokens = tokenizer(text)
         corpus_filter = list(map(len, filter(condition, tokens)))
-        corpus_filter_count = (
-            sum(corpus_filter) / len(corpus_filter) if len(corpus_filter) != 0 else 0
-        )
+        corpus_filter_count = sum(corpus_filter) / len(corpus_filter) if len(corpus_filter) != 0 else 0
         return corpus_filter_count
 
     return avg_check_basic_function

@@ -1,4 +1,4 @@
-from typing import Callable, List, Optional
+from typing import Optional
 
 from nltk import word_tokenize  # type: ignore
 
@@ -8,11 +8,19 @@ from elemeta.nlp.extractors.low_level.regex_token_matches_count import TokenRege
 class WordRegexMatchesCount(TokenRegexMatchesCount):
     """
     For a given regex return the number of words matching the regex
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.high_level.word_regex_matches_count import WordRegexMatchesCount
+    >>> text = "he hee is"
+    >>> regex = "h.+"
+    >>> word_regex_matches_counter = WordRegexMatchesCount(regex=regex)
+    >>> result = word_regex_matches_counter(text)
+    >>> print(result)  # Output: 2
     """
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = word_tokenize,
         regex: str = ".*",
         name: Optional[str] = None,
     ):
@@ -21,10 +29,8 @@ class WordRegexMatchesCount(TokenRegexMatchesCount):
         ----------
         name: Optional[str]
             name to of the metadata of not given will extract the name from the class name
-        tokenizer: Callable[[str],List[str]]
-            a function that splits a text into components
         regex: str
             regex to try to match
         """
 
-        super().__init__(name=name, tokenizer=tokenizer, regex=regex)
+        super().__init__(name=name, tokenizer=word_tokenize, regex=regex)

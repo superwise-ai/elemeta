@@ -1,5 +1,3 @@
-import pytest as pytest
-
 from elemeta.dataset.dataset import (
     get_avengers_endgame_tweets,
     get_imdb_reviews,

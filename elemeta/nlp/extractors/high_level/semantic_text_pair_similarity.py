@@ -4,14 +4,18 @@ from sentence_transformers import util
 from torch import nn
 
 from elemeta.nlp.extractors.high_level.embedding import Embedding
-from elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor import (
-    AbstractTextPairMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor import AbstractTextPairMetafeatureExtractor
 
 
 class SemanticTextPairSimilarity(AbstractTextPairMetafeatureExtractor):
     """
-    Checks the similarity of two texts
+    Returns the similarity of two texts
+
+    Examples
+    --------
+    >>> pair_similarity = SemanticTextPairSimilarity()
+    >>> print(pair_similarity("I love cats", "I love dogs")) #Output: 0.7720986008644104
+    >>> print(pair_similarity("Hi","Bye")) #Output: 0.36858582496643066
     """
 
     def __init__(

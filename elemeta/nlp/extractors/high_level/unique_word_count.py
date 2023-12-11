@@ -1,4 +1,4 @@
-from typing import Callable, List, Optional, Set
+from typing import Optional, Set
 
 from nltk import word_tokenize  # type: ignore
 
@@ -7,12 +7,20 @@ from elemeta.nlp.extractors.low_level.unique_token_count import UniqueTokenCount
 
 
 class UniqueWordCount(UniqueTokenCount):
-    """Implementation of AbstractMetadataExtractor class that return the ratio between the
-    number of unique words to all words"""
+    """Currently returns the number of words in the text that appear exactly once,
+    will change to count the unique words in the text
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.high_level.unique_word_count import UniqueWordCount
+    >>> text = "Once I was afraid, I was petrified"
+    >>> unique_word_count = UniqueWordCount()
+    >>> result = unique_word_count(text)
+    >>> print(result)  # Output: 3
+    """
 
     def __init__(
         self,
-        tokenizer: Callable[[str], List[str]] = word_tokenize,
         exceptions: Set[str] = english_punctuations,
         name: Optional[str] = None,
     ):
@@ -20,10 +28,8 @@ class UniqueWordCount(UniqueTokenCount):
         Parameters
         ----------
         name: Optional[str]
-            name to of the metadata of not given will extract the name from the class name
-        tokenizer: Callable[[str],List[str]]
-            a function that splits a text into components
+            name to of the metafeature of not given will extract the name from the class name
         exceptions: Set[str]
             words to exclude
         """
-        super().__init__(name=name, tokenizer=tokenizer, exclude_tokens_list=exceptions)
+        super().__init__(name=name, tokenizer=word_tokenize, exclude_tokens_list=exceptions)

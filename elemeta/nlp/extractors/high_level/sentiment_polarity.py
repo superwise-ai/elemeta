@@ -2,14 +2,25 @@ from typing import Optional
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # type: ignore
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class SentimentPolarity(AbstractTextMetafeatureExtractor):
     """
-    Returns the Sentiment Polarity
+    Returns the Sentiment Polarity (read more about the difference
+    between sentiment polarity and sentiment subjectivity
+    here: https://www.tasq.ai/tasq-question/what-are-polarity-and-subjectivity-in-sentiment-analysis/)
+    value as a range between -1 to 1, where -1 means
+    the text is an utterly negative sentiment
+    and 1 is an utterly positive sentiment.
+
+
+    Example
+    --------
+    >>> from elemeta.nlp.extractors.high_level.sentiment_polarity import SentimentPolarity
+    >>> sentiment_polarity = SentimentPolarity()
+    >>> print(sentiment_polarity("I love cake!")) #Output: 0.669
+    >>> print(sentiment_polarity("I HATE cake!")) #Output: -0.693
     """
 
     def __init__(self, name: Optional[str] = None):

@@ -36,10 +36,10 @@ elemeta.nlp.extractors.high\_level.date\_count module
    :undoc-members:
    :show-inheritance:
 
-elemeta.nlp.extractors.high\_level.detect\_langauge\_langdetect module
+elemeta.nlp.extractors.high\_level.detect\_language\_langdetect module
 ----------------------------------------------------------------------
 
-.. automodule:: elemeta.nlp.extractors.high_level.detect_langauge_langdetect
+.. automodule:: elemeta.nlp.extractors.high_level.detect_language_langdetect
    :members:
    :undoc-members:
    :show-inheritance:
@@ -152,14 +152,6 @@ elemeta.nlp.extractors.high\_level.punctuation\_count module
 ------------------------------------------------------------
 
 .. automodule:: elemeta.nlp.extractors.high_level.punctuation_count
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-elemeta.nlp.extractors.high\_level.refusal\_similarity module
--------------------------------------------------------------
-
-.. automodule:: elemeta.nlp.extractors.high_level.refusal_similarity
    :members:
    :undoc-members:
    :show-inheritance:

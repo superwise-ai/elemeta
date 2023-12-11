@@ -44,6 +44,7 @@ optional = true
 sphinx = ">=4.0"
 numpydoc = "^1.5"
 sphinx-book-theme = "^1.0"
+sphinx-copybutton = "^0.5.2"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = ">=2.6.1"

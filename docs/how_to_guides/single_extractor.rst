@@ -22,13 +22,13 @@ This extractor will automatically detect the sentiment of the text.
     >>> sp("This is not a super happy excited sentence")
     -0.5337
 
-Detect Langauge
+Detect Language
 ================
 This extractor will automatically detect the language of the text.
 
 ::
 
-    >>> from elemeta.nlp.extractors.high_level.detect_langauge_fastText import DetectLanguage
+    >>> from elemeta.nlp.extractors.high_level.detect_language_fastText import DetectLanguage
     >>> ld = DetectLanguage()
     >>> ld("This text is in English")
     en

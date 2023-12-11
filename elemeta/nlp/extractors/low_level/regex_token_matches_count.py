@@ -2,14 +2,22 @@ import re
 from typing import Callable, List, Optional
 
 from elemeta.nlp.extractors import length_check_basic
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class TokenRegexMatchesCount(AbstractTextMetafeatureExtractor):
-    """Implementation of AbstractTextMetafeatureExtractor class that return number of tokens
-    that match the given regex"""
+    """Return number of tokens that match the given regex.
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.regex_token_matches_count import TokenRegexMatchesCount
+    >>> from nltk import word_tokenize
+    >>> text = "he hee is"
+    >>> regex = "h.+"
+    >>> token_regex_matches_counter = TokenRegexMatchesCount(word_tokenize, regex=regex)
+    >>> result = token_regex_matches_counter(text)
+    >>> print(result)  # Output: 2
+    """
 
     def __init__(
         self,

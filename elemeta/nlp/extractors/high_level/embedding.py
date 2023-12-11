@@ -10,6 +10,28 @@ from elemeta.common.abstract_metafeature_extractor import AbstractMetafeatureExt
 class Embedding(AbstractMetafeatureExtractor):
     """
     Extracts embeddings from a text using a SentenceTransformer model.
+
+    Parameters
+    ----------
+    embedding_model : Optional[str]
+        The name of the SentenceTransformer model to use, by default "all-MiniLM-L6-v2"
+    modules: Optional[Iterable[nn.Module]]
+        This parameter can be used to create custom SentenceTransformer models from scratch.
+    device: Optional[str]
+        Device (like 'cuda' / 'cpu') that should be used for computation.
+        If None, checks if a GPU can be used.
+    cache_folder: Optional[str]
+        Path to store models
+    use_auth_token: Union[bool, str, None]
+        HuggingFace authentication token to download private models.
+    name: Optional[str]
+        Name of the extractor
+
+    Examples
+    --------
+    >>> embed = Embedding(embedding_model="all-MiniLM-L6-v2")
+    >>> text = "NLP"
+    >>> embedding = embed(text)
     """
 
     def __init__(
@@ -21,23 +43,6 @@ class Embedding(AbstractMetafeatureExtractor):
         use_auth_token: Union[bool, str, None] = None,
         name: Optional[str] = None,
     ):
-        """
-        Parameters
-        ----------
-        embedding_model : Optional[str]
-            The name of the SentenceTransformer model to use, by default "all-MiniLM-L6-v2"
-        modules: Optional[Iterable[nn.Module]]
-            This parameter can be used to create custom SentenceTransformer models from scratch.
-        device: Optional[str]
-            Device (like 'cuda' / 'cpu') that should be used for computation.
-            If None, checks if a GPU can be used.
-        cache_folder: Optional[str]
-            Path to store models
-        use_auth_token: Union[bool, str, None]
-            HuggingFace authentication token to download private models.
-        name: Optional[str]
-            Name of the extractor
-        """
         self.model = SentenceTransformer(
             model_name_or_path=embedding_model,
             modules=modules,
@@ -46,10 +51,6 @@ class Embedding(AbstractMetafeatureExtractor):
             use_auth_token=use_auth_token,
         )
         super().__init__(name=name)
-
-    """
-    Extracts embeddings from a text using a SentenceTransformer model.
-    """
 
     def extract(
         self,
@@ -62,13 +63,21 @@ class Embedding(AbstractMetafeatureExtractor):
         Parameters
         ----------
         input: Union[str, List[str]]
-            text or list of texts to extract embeddings from
+            Text or list of texts to extract embeddings from.
         convert_to_tensor: bool
-            whether to convert the output to a tensor or keep it as a numpy array
+            Whether to convert the output to a tensor or keep it as a numpy array.
 
         Returns
         -------
         Union[List[Tensor], ndarray, Tensor]
-            embeddings of the input text(s)
+            Embeddings of the input text(s).
+
+        Examples
+        --------
+        >>> embedding = Embedding(embedding_model="all-MiniLM-L6-v2")
+        >>> text = "This is a sample sentence."
+        >>> embeddings = embedding.extract(text)
+        >>> print(embeddings)
+        [[-0.123, 0.456, ...]]
         """
         return self.model.encode(input, convert_to_tensor=convert_to_tensor)

@@ -8,7 +8,7 @@ from elemeta.nlp.extractors.high_level.acronym_count import AcronymCount
 from elemeta.nlp.extractors.high_level.avg_word_length import AvgWordLength
 from elemeta.nlp.extractors.high_level.capital_letters_ratio import CapitalLettersRatio
 from elemeta.nlp.extractors.high_level.date_count import DateCount
-from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectLanguage
+from elemeta.nlp.extractors.high_level.detect_language_langdetect import DetectLanguage
 from elemeta.nlp.extractors.high_level.email_count import EmailCount
 from elemeta.nlp.extractors.high_level.embedding import Embedding
 from elemeta.nlp.extractors.high_level.emoji_count import EmojiCount
@@ -26,7 +26,6 @@ from elemeta.nlp.extractors.high_level.must_appear_words_percentage import (
 )
 from elemeta.nlp.extractors.high_level.number_count import NumberCount
 from elemeta.nlp.extractors.high_level.punctuation_count import PunctuationCount
-from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
 from elemeta.nlp.extractors.high_level.regex_match_count import RegexMatchCount
 from elemeta.nlp.extractors.high_level.semantic_text_pair_similarity import (
     SemanticTextPairSimilarity,
@@ -235,7 +234,7 @@ def test_sentiment_analysis(name, text, sentiment_min, sentiment_max):
         ),
     ],
 )
-def test_langauge_detection(name, text, language):
+def test_language_detection(name, text, language):
     lan = DetectLanguage().extract(text)
     assert (
         lan == language
@@ -855,34 +854,6 @@ def test_semantic_text_to_group_similarity_analysis(
     name, text, group, score_min, score_max
 ):
     similarity_score = SemanticTextToGroupSimilarity(group=group).extract(text)
-    assert (
-        similarity_score >= score_min
-    ), f"output {similarity_score} is smaller than min threshold {score_min} for test {name}"
-    assert (
-        similarity_score <= score_max
-    ), f"output {similarity_score} is larger than max threshold {score_max} for test {name}"
-
-
-@pytest.mark.parametrize(
-    "name, text, score_min, score_max",
-    [
-        (
-            "string of refusal from the list",
-            "Sorry, but I can't assist with that",
-            0.99,
-            1.1,
-        ),
-        (
-            "refusal not from the list",
-            "Sorry, but I can't help you with that",
-            0.4,
-            0.95,
-        ),
-        ("not refusal", "I love cakes!", 0, 0.3),
-    ],
-)
-def test_refusal_similarity_analysis(name, text, score_min, score_max):
-    similarity_score = RefusalSimilarity().extract(text)
     assert (
         similarity_score >= score_min
     ), f"output {similarity_score} is smaller than min threshold {score_min} for test {name}"

@@ -18,7 +18,12 @@ author = "Lior Durahly"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx.ext.napoleon", "numpydoc", "sphinx.ext.autosectionlabel"]
+extensions = [
+    "sphinx.ext.napoleon",
+    "numpydoc",
+    "sphinx.ext.autosectionlabel",
+    "sphinx_copybutton",
+]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]

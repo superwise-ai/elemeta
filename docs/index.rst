@@ -34,8 +34,7 @@ To quickly try Elemeta please use our `quickstart colab <https://colab.research.
    ./getting_started.rst
    ./how_to_guides/index.rst
    ./use_cases/index.rst
-   ./supported_languages.rst
-   ./metafeatures.rst
+   ./extractors.rst
    ./apidocs
    ./faq.rst
    ./roadmap.rst

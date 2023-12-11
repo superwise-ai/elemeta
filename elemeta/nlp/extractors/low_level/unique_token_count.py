@@ -1,14 +1,20 @@
 from typing import Callable, Dict, List, Optional, Set
 
-from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import (
-    AbstractTextMetafeatureExtractor,
-)
+from elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor import AbstractTextMetafeatureExtractor
 
 
 class UniqueTokenCount(AbstractTextMetafeatureExtractor):
     """
-    Implementation of AbstractTextMetafeatureExtractor class
-    that return the number of unique tokens in the text
+    Returns the number of unique tokens in the text.
+
+    Example
+    -------
+    >>> from elemeta.nlp.extractors.low_level.unique_token_count import UniqueTokenCount
+    >>> from nltk import word_tokenize
+    >>> text = "Once I was afraid, I was petrified"
+    >>> unique_token_count = UniqueTokenCount(word_tokenize)
+    >>> result = unique_token_count(text)
+    >>> print(result)  # Output: 4
     """
 
     def __init__(
@@ -54,9 +60,7 @@ class UniqueTokenCount(AbstractTextMetafeatureExtractor):
         tokens: List[str] = self.tokenizer(text)
         corpus: List[str] = []
         if self.exclude_tokens_list:
-            corpus = list(
-                filter(lambda x: x not in self.exclude_tokens_list, tokens)  # type: ignore
-            )
+            corpus = list(filter(lambda x: x not in self.exclude_tokens_list, tokens))  # type: ignore
         elif self.include_tokens_list:
             corpus = list(filter(lambda x: x in self.include_tokens_list, tokens))  # type: ignore
         else:

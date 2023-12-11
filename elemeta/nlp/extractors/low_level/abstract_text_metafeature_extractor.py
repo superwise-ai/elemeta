@@ -6,8 +6,8 @@ from typing import Any, Optional
 class AbstractTextMetafeatureExtractor(ABC):
     """
     Representation of a MetafeatureExtractor
-    This class holds a function to be run to extract the metadata value and the name
-    of the metadata
+    This class holds a function to be run to extract the metafeature value and the name
+    of the metafeature
     """
 
     def __init__(self, name: Optional[str] = None):
@@ -16,7 +16,7 @@ class AbstractTextMetafeatureExtractor(ABC):
         Parameters
         ----------
         name: Optional[str]
-            name to of the metadata of not given will extract the name from the class name
+            name to of the metafeature of not given will extract the name from the class name
         """
         if name:
             self.name = name
