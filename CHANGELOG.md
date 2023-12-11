@@ -1,3 +1,18 @@
+## [1.2.1](https://github.com/superwise-ai/elemeta/compare/1.2.0...1.2.1) (2023-12-11)
+
+
+### <!-- 2. -->:bug: Bug Fixes
+
+* **InjectorSimilarityExtractor:** removed injection ([ed4206f](https://github.com/superwise-ai/elemeta/commit/ed4206fd5a6b83205f63787c3d25c9938a899615))
+* **JailbreakSimilarityExtractor:** remove jailbreak ([b45c079](https://github.com/superwise-ai/elemeta/commit/b45c079f4c464500739ed99a7a6295e0689d46b0))
+* **JailbreakSimilarityExtractor:** remove jailbreak ([6f3ddc1](https://github.com/superwise-ai/elemeta/commit/6f3ddc1be31a54d50461c98837eb1f1048fc366b))
+* **ToxicityExtractor:** toxicity model ([a53e8dd](https://github.com/superwise-ai/elemeta/commit/a53e8ddd0a31632686ae4464e49879bec7c1479b))
+
+
+### <!-- 4. -->:tractor: Refactor
+
+* pre-commit ([cfd9c49](https://github.com/superwise-ai/elemeta/commit/cfd9c4990a1ed0d9585f75c6309ea2252aa017ba))
+
 ## [1.2.0](https://github.com/superwise-ai/elemeta/compare/1.1.2...1.2.0) (2023-12-04)
 
 
