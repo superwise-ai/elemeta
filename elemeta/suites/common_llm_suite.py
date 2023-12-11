@@ -4,7 +4,6 @@ from elemeta.nlp.extractors.high_level.detect_langauge_langdetect import DetectL
 from elemeta.nlp.extractors.high_level.hinted_profanity_words_count import (
     HintedProfanityWordsCount,
 )
-from elemeta.nlp.extractors.high_level.injection_similarity import InjectionSimilarity
 from elemeta.nlp.extractors.high_level.refusal_similarity import RefusalSimilarity
 from elemeta.nlp.extractors.high_level.semantic_text_pair_similarity import (
     SemanticTextPairSimilarity,
@@ -37,7 +36,6 @@ class CommonLLMSuite:
         hinted_profanity_words_count = HintedProfanityWordsCount()
         semantic_two_text_similarity = SemanticTextPairSimilarity()
         refusal_similarity = RefusalSimilarity()
-        injection_similarity = InjectionSimilarity()
         toxicity = ToxicityExtractor()
 
         self.runner = PairMetafeatureExtractorsRunner(
@@ -48,7 +46,6 @@ class CommonLLMSuite:
                 text_length,
                 hinted_profanity_words_count,
                 toxicity,
-                injection_similarity,
             ],
             input_2_extractors=[
                 sentiment_polarity,
