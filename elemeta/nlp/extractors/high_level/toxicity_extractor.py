@@ -16,7 +16,7 @@ DEFAULT_TOKENIZER = partial(sent_tokenize, language="english")
 
 
 def _is_toxic(label: str) -> bool:
-    return label == "0-3 stars"
+    return label == "toxic"
 
 
 class ToxicityExtractor(AbstractTextMetafeatureExtractor):
@@ -50,7 +50,7 @@ class ToxicityExtractor(AbstractTextMetafeatureExtractor):
         """
 
         super().__init__(name)
-        self.model_path = "tillschwoerer/roberta-base-finetuned-toxic-comment-detection"
+        self.model_path = "s-nlp/roberta_toxicity_classifier"
         self.tokenizer = tokenizer
         self.aggregate = aggregate
 
