@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -40,12 +41,14 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'elemeta.nlp.extractors.low_level';</script>
     <link rel="icon" href="_static/elemeta_favicon_blue.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="elemeta.nlp.runners package" href="elemeta.nlp.runners.html" />
+    <link rel="next" title="API Docs" href="apidocs.html" />
     <link rel="prev" title="elemeta.nlp.extractors.high_level package" href="elemeta.nlp.extractors.high_level.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,28 +163,26 @@
 <li class="toctree-l2"><a class="reference internal" href="use_cases/modeling.html">Modeling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="supported_languages.html">Supported Languages</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="extractors.html">Extractors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html">elemeta.nlp.extractors.high_level package</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">elemeta.nlp.extractors.low_level package</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metafeatures.html">Metafeatures</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="modules.html">elemeta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="modules.html">elemeta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="elemeta.dataset.html">elemeta.dataset package</a></li>
 <li class="toctree-l4 current active"><a class="reference internal" href="elemeta.nlp.html">elemeta.nlp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.suites.html">elemeta.suites package</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="faq.html">FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="faq.html">FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="roadmap.html">Roadmap</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="roadmap.html">Roadmap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -435,8 +436,8 @@ document.write(`
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.</span></span><span class="sig-name descname"><span class="pre">AbstractTextMetafeatureExtractor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <p>Representation of a MetafeatureExtractor
-This class holds a function to be run to extract the metadata value and the name
-of the metadata</p>
+This class holds a function to be run to extract the metafeature value and the name
+of the metafeature</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -515,6 +516,15 @@ of the metadata</p>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
 <p>Implementation of AbstractTextMetafeatureExtractor
 class that return the average token length</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.avg_token_length</span> <span class="kn">import</span> <span class="n">AvgTokenLength</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">avg_token_length</span> <span class="o">=</span> <span class="n">AvgTokenLength</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">avg_token_length</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 3.5</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -553,6 +563,15 @@ class that return the average token length</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.hinted_profanity_token_count.</span></span><span class="sig-name descname"><span class="pre">HintedProfanityTokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.hinted_profanity_token_count.HintedProfanityTokensCount" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
 <p>Implementation of AbstractTextMetafeatureExtractor class that count the number profanity words</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.hinted_profanity_token_count</span> <span class="kn">import</span> <span class="n">HintedProfanityTokensCount</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">profanity_token_counter</span> <span class="o">=</span> <span class="n">HintedProfanityTokensCount</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">profanity_token_counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 0</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -593,6 +612,15 @@ class that return the average token length</p>
 <p>Implementation of AbstractTextMetafeatureExtractor class that return the ration between
 the number of appearances of tokens from</p>
 <p>given tokens list in the text to all the tokens</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage</span> <span class="kn">import</span> <span class="n">MustAppearTokensPercentage</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">must_appear_tokens_percentage</span> <span class="o">=</span> <span class="n">MustAppearTokensPercentage</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="s2">&quot;yes&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">must_appear_tokens_percentage</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 0.5</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -630,8 +658,17 @@ the number of appearances of tokens from</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.regex_token_matches_count.</span></span><span class="sig-name descname"><span class="pre">TokenRegexMatchesCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.regex_token_matches_count.TokenRegexMatchesCount" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractTextMetafeatureExtractor class that return number of tokens
-that match the given regex</p>
+<p>Return number of tokens that match the given regex.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.regex_token_matches_count</span> <span class="kn">import</span> <span class="n">TokenRegexMatchesCount</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;he hee is&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">regex</span> <span class="o">=</span> <span class="s2">&quot;h.+&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token_regex_matches_counter</span> <span class="o">=</span> <span class="n">TokenRegexMatchesCount</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="n">regex</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">token_regex_matches_counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 2</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -690,6 +727,31 @@ checks if the token abides by the regex</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.</span></span><span class="sig-name descname"><span class="pre">SemanticEmbeddingPairSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity.SemanticEmbeddingPairSimilarity" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractPairMetafeatureExtractor</span></code></p>
+<p>Calculates the semantic embedding pair similarity between two input tensors.</p>
+<section id="parameters">
+<h3>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>input_1 (Tensor): The first input tensor.
+input_2 (Tensor): The second input tensor.</p>
+</div></blockquote>
+</section>
+<section id="returns">
+<h3>Returns:<a class="headerlink" href="#returns" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>Tensor: The semantic embedding pair similarity between the two input tensors.</p>
+</div></blockquote>
+</section>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity</span> <span class="kn">import</span> <span class="n">SemanticEmbeddingPairSimilarity</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">input_1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">input_2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">extractor</span> <span class="o">=</span> <span class="n">SemanticEmbeddingPairSimilarity</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">similarity</span> <span class="o">=</span> <span class="n">extractor</span><span class="p">(</span><span class="n">input_1</span><span class="p">,</span> <span class="n">input_2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">similarity</span><span class="p">)</span> <span class="c1">#Output: tensor([[0.9746]])</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -719,6 +781,7 @@ checks if the token abides by the regex</p>
 </dl>
 </dd></dl>
 
+</section>
 </dd></dl>
 
 </section>
@@ -728,6 +791,30 @@ checks if the token abides by the regex</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.</span></span><span class="sig-name descname"><span class="pre">SemanticTextToGroupSimilarity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embedding_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Module</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_auth_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
+<p>Extracts the similarity between a text and a group of texts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Group of strings to compare to.</p></li>
+<li><p><strong>embedding_model</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The name of the SentenceTransformer model to use, by default “all-MiniLM-L6-v2”.</p></li>
+<li><p><strong>modules</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>nn.Module</em><em>]</em><em>]</em>) – This parameter can be used to create custom SentenceTransformer models from scratch.</p></li>
+<li><p><strong>device</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Device (like ‘cuda’ / ‘cpu’) that should be used for computation.
+If None, checks if a GPU can be used.</p></li>
+<li><p><strong>cache_folder</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Path to store models.</p></li>
+<li><p><strong>use_auth_token</strong> (<em>Union</em><em>[</em><em>bool</em><em>, </em><em>str</em><em>, </em><em>None</em><em>]</em>) – HuggingFace authentication token to download private models.</p></li>
+<li><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Name of the extractor.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity</span> <span class="kn">import</span> <span class="n">SemanticTextToGroupSimilarity</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">group</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">extractor</span> <span class="o">=</span> <span class="n">SemanticTextToGroupSimilarity</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;apple&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">similarity</span> <span class="o">=</span> <span class="n">extractor</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">similarity</span><span class="p">)</span> <span class="c1">#Output: 1.000000238418579</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -735,20 +822,20 @@ checks if the token abides by the regex</p>
 <td><p>run self.extract on the given text</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract" title="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract</span></code></a>(input)</p></td>
-<td><p>Extracts the similarity between a text and a group of texts</p></td>
+<td><p>Extracts the similarity between a text and a group of texts.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract">
 <span class="sig-name descname"><span class="pre">extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity.SemanticTextToGroupSimilarity.extract" title="Permalink to this definition">#</a></dt>
-<dd><p>Extracts the similarity between a text and a group of texts</p>
+<dd><p>Extracts the similarity between a text and a group of texts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – text to compare to the group</p>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) – Text to compare to the group.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>max similarity between the input text to the group</p>
+<dd class="field-even"><p>Maximum similarity between the input text and the group.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -765,8 +852,16 @@ checks if the token abides by the regex</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.tokens_count.TokensCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.tokens_count.</span></span><span class="sig-name descname"><span class="pre">TokensCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.tokens_count.TokensCount" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractTextMetafeatureExtractor class that return the number of sentences
-in the text</p>
+<p>Return the number of tokens in the text.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.tokens_count</span> <span class="kn">import</span> <span class="n">TokensCount</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokens_count</span> <span class="o">=</span> <span class="n">TokensCount</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">tokens_count</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 8</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -804,8 +899,16 @@ in the text</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_count.</span></span><span class="sig-name descname"><span class="pre">UniqueTokenCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tokens_list</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_count.UniqueTokenCount" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractTextMetafeatureExtractor class
-that return the number of unique tokens in the text</p>
+<p>Returns the number of unique tokens in the text.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.unique_token_count</span> <span class="kn">import</span> <span class="n">UniqueTokenCount</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unique_token_count</span> <span class="o">=</span> <span class="n">UniqueTokenCount</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">unique_token_count</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 4</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -843,8 +946,16 @@ that return the number of unique tokens in the text</p>
 <dt class="sig sig-object py" id="elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">elemeta.nlp.extractors.low_level.unique_token_ratio.</span></span><span class="sig-name descname"><span class="pre">UniqueTokensRatio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tokenizer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exceptions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#elemeta.nlp.extractors.low_level.unique_token_ratio.UniqueTokensRatio" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor" title="elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor.AbstractTextMetafeatureExtractor"><code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractTextMetafeatureExtractor</span></code></a></p>
-<p>Implementation of AbstractTextMetafeatureExtractor class that return the ratio between the
-number of unique tokens to all tokens</p>
+<p>Return the ratio between the number of unique tokens to all tokens</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.low_level.unique_token_ratio</span> <span class="kn">import</span> <span class="n">UniqueTokensRatio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nltk</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Once I was afraid, I was petrified&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unique_tokens_ratio</span> <span class="o">=</span> <span class="n">UniqueTokensRatio</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">,</span><span class="n">exceptions</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;was&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">unique_tokens_ratio</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  <span class="c1"># Output: 0.8</span>
+</pre></div>
+</div>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
@@ -904,11 +1015,11 @@ filters on tokens that are defined as relevant</p>
       </div>
     </a>
     <a class="right-next"
-       href="elemeta.nlp.runners.html"
+       href="apidocs.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">elemeta.nlp.runners package</p>
+        <p class="prev-next-title">API Docs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

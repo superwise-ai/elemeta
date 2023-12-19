@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -39,6 +40,8 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="icon" href="_static/elemeta_favicon_blue.png"/>
@@ -157,28 +160,26 @@
 <li class="toctree-l2"><a class="reference internal" href="use_cases/modeling.html">Modeling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="supported_languages.html">Supported Languages</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="extractors.html">Extractors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html">elemeta.nlp.extractors.high_level package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html">elemeta.nlp.extractors.low_level package</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="metafeatures.html">Metafeatures</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="modules.html">elemeta</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="modules.html">elemeta</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="elemeta.dataset.html">elemeta.dataset package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.html">elemeta.nlp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="elemeta.suites.html">elemeta.suites package</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="faq.html">FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="faq.html">FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="roadmap.html">Roadmap</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="roadmap.html">Roadmap</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -335,10 +336,6 @@ document.write(`
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio">CapitalLettersRatio (class in elemeta.nlp.extractors.high_level.capital_letters_ratio)</a>
 </li>
   </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.suites.html#elemeta.suites.common_llm_suite.CommonLLMSuite">CommonLLMSuite (class in elemeta.suites.common_llm_suite)</a>
-</li>
-  </ul></td>
 </tr></table>
 
 <h2 id="D">D</h2>
@@ -348,7 +345,7 @@ document.write(`
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage">DetectLanguage (class in elemeta.nlp.extractors.high_level.detect_langauge_langdetect)</a>
+      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.detect_language_langdetect.DetectLanguage">DetectLanguage (class in elemeta.nlp.extractors.high_level.detect_language_langdetect)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -427,10 +424,10 @@ document.write(`
 </li>
       </ul></li>
       <li>
-    elemeta.nlp.extractors.high_level.detect_langauge_langdetect
+    elemeta.nlp.extractors.high_level.detect_language_langdetect
 
       <ul>
-        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">module</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_language_langdetect">module</a>
 </li>
       </ul></li>
       <li>
@@ -532,13 +529,6 @@ document.write(`
 </li>
       </ul></li>
       <li>
-    elemeta.nlp.extractors.high_level.refusal_similarity
-
-      <ul>
-        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.refusal_similarity">module</a>
-</li>
-      </ul></li>
-      <li>
     elemeta.nlp.extractors.high_level.regex_match_count
 
       <ul>
@@ -622,6 +612,8 @@ document.write(`
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.toxicity_extractor">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     elemeta.nlp.extractors.high_level.unique_word_count
 
@@ -629,8 +621,6 @@ document.write(`
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.unique_word_count">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     elemeta.nlp.extractors.high_level.unique_word_ratio
 
@@ -757,20 +747,6 @@ document.write(`
         <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">module</a>
 </li>
       </ul></li>
-      <li>
-    elemeta.suites
-
-      <ul>
-        <li><a href="elemeta.suites.html#module-elemeta.suites">module</a>
-</li>
-      </ul></li>
-      <li>
-    elemeta.suites.common_llm_suite
-
-      <ul>
-        <li><a href="elemeta.suites.html#module-elemeta.suites.common_llm_suite">module</a>
-</li>
-      </ul></li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.email_count.EmailCount">EmailCount (class in elemeta.nlp.extractors.high_level.email_count)</a>
 </li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.embedding.Embedding">Embedding (class in elemeta.nlp.extractors.high_level.embedding)</a>
@@ -783,20 +759,20 @@ document.write(`
 </li>
       <li><a href="elemeta.nlp.html#elemeta.nlp.extended_punctuations">extended_punctuations (in module elemeta.nlp)</a>
 </li>
-      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract">extract() (elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio method)</a>
+      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.extract">extract() (elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio method)</a>, <a href="elemeta.nlp.extractors.high_level.html#id0">[1]</a>
 
       <ul>
-        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.date_count.DateCount.extract">(elemeta.nlp.extractors.high_level.date_count.DateCount method)</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.date_count.DateCount.extract">(elemeta.nlp.extractors.high_level.date_count.DateCount method)</a>, <a href="elemeta.nlp.extractors.high_level.html#id1">[1]</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage.extract">(elemeta.nlp.extractors.high_level.detect_langauge_langdetect.DetectLanguage method)</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.detect_language_langdetect.DetectLanguage.extract">(elemeta.nlp.extractors.high_level.detect_language_langdetect.DetectLanguage method)</a>, <a href="elemeta.nlp.extractors.high_level.html#id2">[1]</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.email_count.EmailCount.extract">(elemeta.nlp.extractors.high_level.email_count.EmailCount method)</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.embedding.Embedding.extract">(elemeta.nlp.extractors.high_level.embedding.Embedding method)</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract">(elemeta.nlp.extractors.high_level.emoji_count.EmojiCount method)</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.extract">(elemeta.nlp.extractors.high_level.emoji_count.EmojiCount method)</a>, <a href="elemeta.nlp.extractors.high_level.html#id3">[1]</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier.extract">(elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier method)</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier.extract">(elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier method)</a>, <a href="elemeta.nlp.extractors.high_level.html#id4">[1]</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.number_count.NumberCount.extract">(elemeta.nlp.extractors.high_level.number_count.NumberCount method)</a>
 </li>
@@ -917,6 +893,8 @@ document.write(`
 </li>
       <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult.model_fields">model_fields (elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunnerResult attribute)</a>
 </li>
+      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier.model_path">model_path (elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier attribute)</a>
+</li>
       <li>
     module
 
@@ -941,7 +919,7 @@ document.write(`
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.date_count">elemeta.nlp.extractors.high_level.date_count</a>
 </li>
-        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_langauge_langdetect">elemeta.nlp.extractors.high_level.detect_langauge_langdetect</a>
+        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_language_langdetect">elemeta.nlp.extractors.high_level.detect_language_langdetect</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.email_count">elemeta.nlp.extractors.high_level.email_count</a>
 </li>
@@ -970,8 +948,6 @@ document.write(`
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.pii_identify">elemeta.nlp.extractors.high_level.pii_identify</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.punctuation_count">elemeta.nlp.extractors.high_level.punctuation_count</a>
-</li>
-        <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.refusal_similarity">elemeta.nlp.extractors.high_level.refusal_similarity</a>
 </li>
         <li><a href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.regex_match_count">elemeta.nlp.extractors.high_level.regex_match_count</a>
 </li>
@@ -1035,10 +1011,6 @@ document.write(`
 </li>
         <li><a href="elemeta.nlp.runners.html#module-elemeta.nlp.runners.pair_metafeature_extractors_runner">elemeta.nlp.runners.pair_metafeature_extractors_runner</a>
 </li>
-        <li><a href="elemeta.suites.html#module-elemeta.suites">elemeta.suites</a>
-</li>
-        <li><a href="elemeta.suites.html#module-elemeta.suites.common_llm_suite">elemeta.suites.common_llm_suite</a>
-</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -1052,10 +1024,18 @@ document.write(`
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier">NER_Identifier (class in elemeta.nlp.extractors.high_level.ner_identifier)</a>
+      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio.name">name (elemeta.nlp.extractors.high_level.capital_letters_ratio.CapitalLettersRatio attribute)</a>
+
+      <ul>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.date_count.DateCount.name">(elemeta.nlp.extractors.high_level.date_count.DateCount attribute)</a>
 </li>
+        <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.emoji_count.EmojiCount.name">(elemeta.nlp.extractors.high_level.emoji_count.EmojiCount attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.ner_identifier.NER_Identifier">NER_Identifier (class in elemeta.nlp.extractors.high_level.ner_identifier)</a>
+</li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.number_count.NumberCount">NumberCount (class in elemeta.nlp.extractors.high_level.number_count)</a>
 </li>
   </ul></td>
@@ -1088,16 +1068,12 @@ document.write(`
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.refusal_similarity.RefusalSimilarity">RefusalSimilarity (class in elemeta.nlp.extractors.high_level.refusal_similarity)</a>
-</li>
       <li><a href="elemeta.nlp.extractors.high_level.html#elemeta.nlp.extractors.high_level.regex_match_count.RegexMatchCount">RegexMatchCount (class in elemeta.nlp.extractors.high_level.regex_match_count)</a>
 </li>
       <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner.run">run() (elemeta.nlp.runners.metafeature_extractors_runner.MetafeatureExtractorsRunner method)</a>, <a href="elemeta.nlp.runners.html#id0">[1]</a>
 
       <ul>
         <li><a href="elemeta.nlp.runners.html#elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner.run">(elemeta.nlp.runners.pair_metafeature_extractors_runner.PairMetafeatureExtractorsRunner method)</a>
-</li>
-        <li><a href="elemeta.suites.html#elemeta.suites.common_llm_suite.CommonLLMSuite.run">(elemeta.suites.common_llm_suite.CommonLLMSuite method)</a>
 </li>
       </ul></li>
   </ul></td>

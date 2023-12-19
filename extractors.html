@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>elemeta.dataset package &#8212; Elemeta  documentation</title>
+    <title>Extractors &#8212; Elemeta  documentation</title>
   
   
   
@@ -44,12 +44,12 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'elemeta.dataset';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'extractors';</script>
     <link rel="icon" href="_static/elemeta_favicon_blue.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="elemeta.nlp package" href="elemeta.nlp.html" />
-    <link rel="prev" title="elemeta package" href="elemeta.html" />
+    <link rel="next" title="elemeta.nlp.extractors.high_level package" href="elemeta.nlp.extractors.high_level.html" />
+    <link rel="prev" title="Modeling" href="use_cases/modeling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,15 +163,15 @@
 <li class="toctree-l2"><a class="reference internal" href="use_cases/modeling.html">Modeling</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="extractors.html">Extractors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Extractors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html">elemeta.nlp.extractors.high_level package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html">elemeta.nlp.extractors.low_level package</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="modules.html">elemeta</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l4 current active"><a class="current reference internal" href="#">elemeta.dataset package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="apidocs.html">API Docs</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="modules.html">elemeta</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="elemeta.html">elemeta package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="elemeta.dataset.html">elemeta.dataset package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="elemeta.nlp.html">elemeta.nlp package</a></li>
 </ul>
 </li>
@@ -239,7 +239,7 @@
       
       
       
-      <li><a href="_sources/elemeta.dataset.rst" target="_blank"
+      <li><a href="_sources/extractors.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +323,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>elemeta.dataset package</h1>
+    <h1>Extractors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -333,14 +333,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.dataset.dataset">elemeta.dataset.dataset module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_avengers_endgame_tweets"><code class="docutils literal notranslate"><span class="pre">get_avengers_endgame_tweets()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_imdb_reviews"><code class="docutils literal notranslate"><span class="pre">get_imdb_reviews()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_tweets_likes"><code class="docutils literal notranslate"><span class="pre">get_tweets_likes()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.dataset">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-extractors">High Level Extractors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-level-extractors">Low Level Extractors</a></li>
 </ul>
             </nav>
         </div>
@@ -352,31 +346,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="elemeta-dataset-package">
-<h1>elemeta.dataset package<a class="headerlink" href="#elemeta-dataset-package" title="Permalink to this heading">#</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+  <section id="extractors">
+<h1>Extractors<a class="headerlink" href="#extractors" title="Permalink to this heading">#</a></h1>
+<section id="high-level-extractors">
+<h2>High Level Extractors<a class="headerlink" href="#high-level-extractors" title="Permalink to this heading">#</a></h2>
+<p>These extractors dont require to supply a tokenizer, if you require a custom tokenizer, use the low level extractors.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html">elemeta.nlp.extractors.high_level package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.acronym_count">elemeta.nlp.extractors.high_level.acronym_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.avg_word_length">elemeta.nlp.extractors.high_level.avg_word_length module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.capital_letters_ratio">elemeta.nlp.extractors.high_level.capital_letters_ratio module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.date_count">elemeta.nlp.extractors.high_level.date_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.detect_language_langdetect">elemeta.nlp.extractors.high_level.detect_language_langdetect module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.email_count">elemeta.nlp.extractors.high_level.email_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.embedding">elemeta.nlp.extractors.high_level.embedding module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.emoji_count">elemeta.nlp.extractors.high_level.emoji_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hashtag_count">elemeta.nlp.extractors.high_level.hashtag_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count">elemeta.nlp.extractors.high_level.hinted_profanity_sentence_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.hinted_profanity_words_count">elemeta.nlp.extractors.high_level.hinted_profanity_words_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.link_count">elemeta.nlp.extractors.high_level.link_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.mention_count">elemeta.nlp.extractors.high_level.mention_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.must_appear_words_percentage">elemeta.nlp.extractors.high_level.must_appear_words_percentage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.ner_identifier">elemeta.nlp.extractors.high_level.ner_identifier module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.number_count">elemeta.nlp.extractors.high_level.number_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.out_of_vocabulary_count">elemeta.nlp.extractors.high_level.out_of_vocabulary_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.pii_identify">elemeta.nlp.extractors.high_level.pii_identify module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.punctuation_count">elemeta.nlp.extractors.high_level.punctuation_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.regex_match_count">elemeta.nlp.extractors.high_level.regex_match_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.semantic_text_pair_similarity">elemeta.nlp.extractors.high_level.semantic_text_pair_similarity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentence_avg_length">elemeta.nlp.extractors.high_level.sentence_avg_length module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentence_count">elemeta.nlp.extractors.high_level.sentence_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentiment_polarity">elemeta.nlp.extractors.high_level.sentiment_polarity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.sentiment_subjectivity">elemeta.nlp.extractors.high_level.sentiment_subjectivity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.special_chars_count">elemeta.nlp.extractors.high_level.special_chars_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.stop_words_count">elemeta.nlp.extractors.high_level.stop_words_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.syllable_count">elemeta.nlp.extractors.high_level.syllable_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.text_complexity">elemeta.nlp.extractors.high_level.text_complexity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.text_length">elemeta.nlp.extractors.high_level.text_length module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.toxicity_extractor">elemeta.nlp.extractors.high_level.toxicity_extractor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.unique_word_count">elemeta.nlp.extractors.high_level.unique_word_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.unique_word_ratio">elemeta.nlp.extractors.high_level.unique_word_ratio module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.word_count">elemeta.nlp.extractors.high_level.word_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level.word_regex_matches_count">elemeta.nlp.extractors.high_level.word_regex_matches_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.high_level.html#module-elemeta.nlp.extractors.high_level">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
-<section id="module-elemeta.dataset.dataset">
-<span id="elemeta-dataset-dataset-module"></span><h2>elemeta.dataset.dataset module<a class="headerlink" href="#module-elemeta.dataset.dataset" title="Permalink to this heading">#</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="elemeta.dataset.dataset.get_avengers_endgame_tweets">
-<span class="sig-prename descclassname"><span class="pre">elemeta.dataset.dataset.</span></span><span class="sig-name descname"><span class="pre">get_avengers_endgame_tweets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#elemeta.dataset.dataset.get_avengers_endgame_tweets" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="elemeta.dataset.dataset.get_imdb_reviews">
-<span class="sig-prename descclassname"><span class="pre">elemeta.dataset.dataset.</span></span><span class="sig-name descname"><span class="pre">get_imdb_reviews</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#elemeta.dataset.dataset.get_imdb_reviews" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="elemeta.dataset.dataset.get_tweets_likes">
-<span class="sig-prename descclassname"><span class="pre">elemeta.dataset.dataset.</span></span><span class="sig-name descname"><span class="pre">get_tweets_likes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#elemeta.dataset.dataset.get_tweets_likes" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</section>
-<section id="module-elemeta.dataset">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-elemeta.dataset" title="Permalink to this heading">#</a></h2>
+<section id="low-level-extractors">
+<h2>Low Level Extractors<a class="headerlink" href="#low-level-extractors" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html">elemeta.nlp.extractors.low_level package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_metafeature_extractor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor">elemeta.nlp.extractors.low_level.abstract_text_pair_metafeature_extractor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.avg_token_length">elemeta.nlp.extractors.low_level.avg_token_length module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.hinted_profanity_token_count">elemeta.nlp.extractors.low_level.hinted_profanity_token_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.must_appear_tokens_parentage">elemeta.nlp.extractors.low_level.must_appear_tokens_parentage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.regex_token_matches_count">elemeta.nlp.extractors.low_level.regex_token_matches_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity">elemeta.nlp.extractors.low_level.semantic_embedding_pair_similarity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity">elemeta.nlp.extractors.low_level.semantic_text_to_group_similarity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.tokens_count">elemeta.nlp.extractors.low_level.tokens_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.unique_token_count">elemeta.nlp.extractors.low_level.unique_token_count module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level.unique_token_ratio">elemeta.nlp.extractors.low_level.unique_token_ratio module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elemeta.nlp.extractors.low_level.html#module-elemeta.nlp.extractors.low_level">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -392,20 +433,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="elemeta.html"
+       href="use_cases/modeling.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">elemeta package</p>
+        <p class="prev-next-title">Modeling</p>
       </div>
     </a>
     <a class="right-next"
-       href="elemeta.nlp.html"
+       href="elemeta.nlp.extractors.high_level.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">elemeta.nlp package</p>
+        <p class="prev-next-title">elemeta.nlp.extractors.high_level package</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -424,14 +465,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.dataset.dataset">elemeta.dataset.dataset module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_avengers_endgame_tweets"><code class="docutils literal notranslate"><span class="pre">get_avengers_endgame_tweets()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_imdb_reviews"><code class="docutils literal notranslate"><span class="pre">get_imdb_reviews()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemeta.dataset.dataset.get_tweets_likes"><code class="docutils literal notranslate"><span class="pre">get_tweets_likes()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-elemeta.dataset">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-extractors">High Level Extractors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#low-level-extractors">Low Level Extractors</a></li>
 </ul>
   </nav></div>
 
