@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "elemeta"
-version = "1.2.1"
+version = "1.3.0"
 description = "Metafeature Extraction for Unstructured Data"
 license = "MIT"
 authors = ["Lior Durahly <lior.durahly@superwise.ai>", "Elad Shoham <elad.shoham@superwise.ai>"]

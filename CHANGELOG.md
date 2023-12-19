@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/superwise-ai/elemeta/compare/1.2.1...1.3.0) (2023-12-19)
+
+
+### <!-- 1. -->:rocket: New Features
+
+* **code and docs:** some code and docs improvements ([bc0f9b7](https://github.com/superwise-ai/elemeta/commit/bc0f9b7f179653bcc826649376a9e100e18ca704))
+
 ## [1.2.1](https://github.com/superwise-ai/elemeta/compare/1.2.0...1.2.1) (2023-12-11)
 
 
