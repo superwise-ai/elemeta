@@ -26,7 +26,7 @@ datefinder = "^0.7"
 pydantic = "^2.3.0"
 sentence-transformers = "^2.2.2"
 torch = "^2.0.1"
-transformers = "^4.33.1"
+transformers = "^4.36.0"
 presidio-analyzer = "^2.2.33"
 
 [tool.poetry.group.test.dependencies]
