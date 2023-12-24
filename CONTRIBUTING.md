@@ -66,6 +66,7 @@ When a code changes and the following commit types are used, a new version is cr
 | `perf(sentiment_polarity): Use new library to improve performance`                                                                                            | `PATCH`      | A code change that improves performance                                                                                                     |
 | `refactor(dependencies): Remove unused dependencies`                                                                                                          | `PATCH`      | A code change that neither fixes a bug nor adds a feature                                                                                   |
 | `refactor(extractors): replace unique_word_count with unique_words_count`<br><br>`BREAKING CHANGE: unique_word_count was renamed and will not work anymore .` | `MAJOR`      | A breaking release is counted when a `BREAKING CHANGE: <description>` message is in the end of the commit message (separated by a new line) |
+| `deps(deps): Bump version of numpy to 1.21.0`                                                                                                                 | `PATCH`      | A dependency update                                                                                                                         |
 
 #### **When changing other files**
 
