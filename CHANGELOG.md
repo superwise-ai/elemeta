@@ -1,3 +1,15 @@
+## [1.3.1](https://github.com/superwise-ai/elemeta/compare/1.3.0...1.3.1) (2023-12-24)
+
+
+### <!-- 5. -->:package: Dependencies
+
+* **transformers:** update transformers to higher 4.36.0 because of vulnerability ([404e421](https://github.com/superwise-ai/elemeta/commit/404e421681048c60315bfd4e4f6553ee488d2403))
+
+
+### <!-- 7. -->:broom: Chore
+
+* **test:** add tests for ToxicityExtractor ([be23d16](https://github.com/superwise-ai/elemeta/commit/be23d1693f0f89d03c87ca038b5221b0f384a748))
+
 ## [1.3.0](https://github.com/superwise-ai/elemeta/compare/1.2.1...1.3.0) (2023-12-19)
 
 
