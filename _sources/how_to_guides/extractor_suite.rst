@@ -1,7 +1,19 @@
 ========================
-Extractor Suite
+Suite of Extractors
 ========================
-To extract multiple metafeature values at once use MetafeatureExtractorsRunner. Supply a list of metafeature extractors you want to run, apply a runner to the text, and get the list of metafeature values. To run all the extractors on a text, use the runner function ``run(text: str) -> Dict[str, Union[str, float, int]]``
+
+If you want to calculate many metafeature values at once, use the MetafeatureExtractorsRunner.
+You can either give it a list of specific extractors you want to use, or just let it use the
+default ones.
+
+
+-----------------------------
+Personalized Extractor Runner
+-----------------------------
+You can give a list of the metafeature extractors you want to use and then use the
+``run(text:str) -> Dict[str, Union[str, float, int]]`` function.
+This function will return a dictionary where each metafeature's name is matched with its value.
+
 
 ::
 
@@ -9,8 +21,12 @@ To extract multiple metafeature values at once use MetafeatureExtractorsRunner. 
     >>> metafeature_extractors_runner = MetafeatureExtractorsRunner(metafeature_extractors=[sp,ld])
     >>> metafeature_extractors_runner.run("This is a text about how good life is :)")
     {'sentiment_polarity': 0.7096, 'detect_language': 'en'}
+Output: ``{'sentiment_polarity': 0.7096, 'detect_langauge': 'en'}``
 
-If no metafeature extractors are supplied, a default set of extractors will be selected.
+------------------------
+Default Extractor Runner
+------------------------
+If you don't specify any metafeature extractors, the system will use a set of default ones.
 
 ::
 
@@ -44,7 +60,10 @@ If no metafeature extractors are supplied, a default set of extractors will be s
      'acronym_count': 0,
      'date_count': 0}
 
-To add a new MetadataExtractor to an existing MetafeatureExtractorsRunner we can use ``add_metafeature_extractor(metafeature_extractor: AbstractMetadataExtractor) -> None``:
+--------------------------------------------------------------------------
+Adding a new MetadataExtractor to an existing MetafeatureExtractorsRunner
+--------------------------------------------------------------------------
+To use a new MetadataExtractor with an existing MetafeatureExtractorsRunner, use the ``add_metafeature_extractor`` method.
 
 ::
 
@@ -80,7 +99,12 @@ To add a new MetadataExtractor to an existing MetafeatureExtractorsRunner we can
      'date_count': 0,
      'number_of_good_in_text': 1}
 
-To run the extractors on all the dataframe columns, use ``run_on_dataframe(dataframe: DataFrame, text_column: str) -> DataFrame`` this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metafeature values as new columns.
+--------------------------------------------
+Running the extractors on a Pandas Dataframe
+--------------------------------------------
+To run the extractors on a specified text column in a pandas dataframe, use ``run_on_dataframe
+(dataframe: DataFrame,text_column: str)-> DataFrame``
+This function will return a new dataframe with the metafeatures values as new columns.
 
 ::
 

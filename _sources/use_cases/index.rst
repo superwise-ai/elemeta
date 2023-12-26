@@ -9,3 +9,4 @@ Elemeta is currently focused on NLP use cases and can help you explore, monitor,
    ./monitoring.rst
    ./eda.rst
    ./modeling.rst
+   ./LLM.rst

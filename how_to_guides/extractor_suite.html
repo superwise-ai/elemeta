@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Extractor Suite &#8212; Elemeta  documentation</title>
+    <title>Suite of Extractors &#8212; Elemeta  documentation</title>
   
   
   
@@ -146,7 +146,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="single_extractor.html">Single Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Extractor Suite</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Suite of Extractors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="create_low_level_extractor.html">Create Low Level Extractor</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
@@ -161,6 +161,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../use_cases/monitoring.html">Monitoring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use_cases/eda.html">EDA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use_cases/modeling.html">Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/LLM.html">LLM</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../extractors.html">Extractors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -310,7 +311,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -321,11 +324,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Extractor Suite</h1>
+    <h1>Suite of Extractors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-extractor-runner">Personalized Extractor Runner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-extractor-runner">Default Extractor Runner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-metadataextractor-to-an-existing-metafeatureextractorsrunner">Adding a new MetadataExtractor to an existing MetafeatureExtractorsRunner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-extractors-on-a-pandas-dataframe">Running the extractors on a Pandas Dataframe</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -335,16 +349,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="extractor-suite">
-<h1>Extractor Suite<a class="headerlink" href="#extractor-suite" title="Permalink to this heading">#</a></h1>
-<p>To extract multiple metafeature values at once use MetafeatureExtractorsRunner. Supply a list of metafeature extractors you want to run, apply a runner to the text, and get the list of metafeature values. To run all the extractors on a text, use the runner function <code class="docutils literal notranslate"><span class="pre">run(text:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">float,</span> <span class="pre">int]]</span></code></p>
+  <section id="suite-of-extractors">
+<h1>Suite of Extractors<a class="headerlink" href="#suite-of-extractors" title="Permalink to this heading">#</a></h1>
+<p>If you want to calculate many metafeature values at once, use the MetafeatureExtractorsRunner.
+You can either give it a list of specific extractors you want to use, or just let it use the
+default ones.</p>
+<section id="personalized-extractor-runner">
+<h2>Personalized Extractor Runner<a class="headerlink" href="#personalized-extractor-runner" title="Permalink to this heading">#</a></h2>
+<p>You can give a list of the metafeature extractors you want to use and then use the
+<code class="docutils literal notranslate"><span class="pre">run(text:str)</span> <span class="pre">-&gt;</span> <span class="pre">Dict[str,</span> <span class="pre">Union[str,</span> <span class="pre">float,</span> <span class="pre">int]]</span></code> function.
+This function will return a dictionary where each metafeature’s name is matched with its value.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.runners.metafeature_extractors_runner</span> <span class="kn">import</span> <span class="n">MetafeatureExtractorsRunner</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metafeature_extractors_runner</span> <span class="o">=</span> <span class="n">MetafeatureExtractorsRunner</span><span class="p">(</span><span class="n">metafeature_extractors</span><span class="o">=</span><span class="p">[</span><span class="n">sp</span><span class="p">,</span><span class="n">ld</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;This is a text about how good life is :)&quot;</span><span class="p">)</span>
 <span class="go">{&#39;sentiment_polarity&#39;: 0.7096, &#39;detect_language&#39;: &#39;en&#39;}</span>
 </pre></div>
 </div>
-<p>If no metafeature extractors are supplied, a default set of extractors will be selected.</p>
+<p>Output: <code class="docutils literal notranslate"><span class="pre">{'sentiment_polarity':</span> <span class="pre">0.7096,</span> <span class="pre">'detect_langauge':</span> <span class="pre">'en'}</span></code></p>
+</section>
+<section id="default-extractor-runner">
+<h2>Default Extractor Runner<a class="headerlink" href="#default-extractor-runner" title="Permalink to this heading">#</a></h2>
+<p>If you don’t specify any metafeature extractors, the system will use a set of default ones.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.runners.metafeature_extractors_runner</span> <span class="kn">import</span> <span class="n">MetafeatureExtractorsRunner</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metafeature_extractors_runner</span> <span class="o">=</span> <span class="n">MetafeatureExtractorsRunner</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;This is a text about how good life is :)&quot;</span><span class="p">)</span>
@@ -376,7 +401,10 @@ document.write(`
 <span class="go"> &#39;date_count&#39;: 0}</span>
 </pre></div>
 </div>
-<p>To add a new MetadataExtractor to an existing MetafeatureExtractorsRunner we can use <code class="docutils literal notranslate"><span class="pre">add_metafeature_extractor(metafeature_extractor:</span> <span class="pre">AbstractMetadataExtractor)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code>:</p>
+</section>
+<section id="adding-a-new-metadataextractor-to-an-existing-metafeatureextractorsrunner">
+<h2>Adding a new MetadataExtractor to an existing MetafeatureExtractorsRunner<a class="headerlink" href="#adding-a-new-metadataextractor-to-an-existing-metafeatureextractorsrunner" title="Permalink to this heading">#</a></h2>
+<p>To use a new MetadataExtractor with an existing MetafeatureExtractorsRunner, use the <code class="docutils literal notranslate"><span class="pre">add_metafeature_extractor</span></code> method.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.nlp.extractors.high_level.regex_match_count</span> <span class="kn">import</span> <span class="n">RegexMatchCount</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">number_of_good_in_text</span> <span class="o">=</span> <span class="n">RegexMatchCount</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;number_of_good_in_text&quot;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="s2">&quot;good|Good&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">metafeature_extractors_runner</span><span class="o">.</span><span class="n">add_metafeature_extractor</span><span class="p">(</span><span class="n">number_of_good_in_text</span><span class="p">)</span>
@@ -410,7 +438,12 @@ document.write(`
 <span class="go"> &#39;number_of_good_in_text&#39;: 1}</span>
 </pre></div>
 </div>
-<p>To run the extractors on all the dataframe columns, use <code class="docutils literal notranslate"><span class="pre">run_on_dataframe(dataframe:</span> <span class="pre">DataFrame,</span> <span class="pre">text_column:</span> <span class="pre">str)</span> <span class="pre">-&gt;</span> <span class="pre">DataFrame</span></code> this function supplies a dataframe and the name of the text column. The function will return a new dataframe with all the metafeature values as new columns.</p>
+</section>
+<section id="running-the-extractors-on-a-pandas-dataframe">
+<h2>Running the extractors on a Pandas Dataframe<a class="headerlink" href="#running-the-extractors-on-a-pandas-dataframe" title="Permalink to this heading">#</a></h2>
+<p>To run the extractors on a specified text column in a pandas dataframe, use <code class="docutils literal notranslate"><span class="pre">run_on_dataframe</span>
+<span class="pre">(dataframe:</span> <span class="pre">DataFrame,text_column:</span> <span class="pre">str)-&gt;</span> <span class="pre">DataFrame</span></code>
+This function will return a new dataframe with the metafeatures values as new columns.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">elemeta.dataset.dataset</span> <span class="kn">import</span> <span class="n">get_imdb_reviews</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">reviews</span> <span class="o">=</span> <span class="n">get_imdb_reviews</span><span class="p">()[:</span><span class="mi">200</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The original dataset had </span><span class="si">{}</span><span class="s2"> columns&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reviews</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
@@ -424,6 +457,7 @@ document.write(`
 <a class="reference internal image-reference" href="../_images/elemeta_reviews.gif"><img alt="histogram of text_length feature" src="../_images/elemeta_reviews.gif" style="width: 600px;" /></a>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -462,6 +496,23 @@ document.write(`
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personalized-extractor-runner">Personalized Extractor Runner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#default-extractor-runner">Default Extractor Runner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-metadataextractor-to-an-existing-metafeatureextractorsrunner">Adding a new MetadataExtractor to an existing MetafeatureExtractorsRunner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-extractors-on-a-pandas-dataframe">Running the extractors on a Pandas Dataframe</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -471,7 +522,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Lior Durahly
+By Lior Durahly, Omri Haber
 </p>
 
   </div>
