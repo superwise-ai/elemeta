@@ -30,4 +30,4 @@ class AcronymCount(RegexMatchCount):
         name : Optional[str], optional
             Name to use for the metadata. If not given, the name will be extracted from the class name.
         """
-        super().__init__(regex="(([A-Z](.|-)?)+)(\s|$)", name=name)  # noqa: W605
+        super().__init__(regex=r"\b(?:[A-Z]\.?)*[A-Z]\b", name=name)  # noqa: W605
