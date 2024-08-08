@@ -1,3 +1,16 @@
+## [1.3.2](https://github.com/superwise-ai/elemeta/compare/1.3.1...1.3.2) (2024-08-08)
+
+### <!-- 3. -->:chart_with_upwards_trend: Performance Improvements
+
+* **acronym-count:** improve regex ([069f13f](https://github.com/superwise-ai/elemeta/commit/069f13fa0caa8ea80580d12abdf97231bfdde0d8))
+
+### <!-- 6. -->:memo: Documentation
+
+* **author:** added myself ([0a20b59](https://github.com/superwise-ai/elemeta/commit/0a20b59b7d7cea0502587f86b358f1f9ee034be1))
+* **extractor suite:** improve readability ([4ff01ae](https://github.com/superwise-ai/elemeta/commit/4ff01ae93968110b3ca73b38492af9d2c9729c50))
+* **llm:** added llm notebooks to documentation ([6248f5f](https://github.com/superwise-ai/elemeta/commit/6248f5fdb7e46ce70d2f3a522df8613fe4922e06))
+* **llm:** splitted into two spaces ([478c5eb](https://github.com/superwise-ai/elemeta/commit/478c5eb7c6dece2b2f06f96798838a4b4d352617))
+
 ## [1.3.1](https://github.com/superwise-ai/elemeta/compare/1.3.0...1.3.1) (2023-12-24)
 
 
