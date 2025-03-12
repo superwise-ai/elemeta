@@ -29,7 +29,7 @@ jobs:
           node-version: "lts/*"
 
       - name: Install Poetry
-        run: pipx install poetry
+        run: pipx install poetry==1.8.5
 
       - name: Set up Python
         uses: actions/setup-python@v4
