@@ -7,7 +7,7 @@ import nltk  # type: ignore
 from nltk.corpus import stopwords  # type: ignore
 
 # download files for common use
-nltk.download("punkt", quiet=True)
+nltk.download("punkt_tab", quiet=True)
 nltk.download("stopwords", quiet=True)
 nltk.download("words", quiet=True)
 
