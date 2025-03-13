@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/superwise-ai/elemeta/compare/1.3.2...1.3.3) (2025-03-13)
+
+### <!-- 5. -->:package: Dependencies
+
+* **nltk:** Bump version of nltk to be equal or greater than 3.9 ([fbe2733](https://github.com/superwise-ai/elemeta/commit/fbe273390bbeab610f4ff20f95f156b031e0d522))
+
 ## [1.3.2](https://github.com/superwise-ai/elemeta/compare/1.3.1...1.3.2) (2024-08-08)
 
 ### <!-- 3. -->:chart_with_upwards_trend: Performance Improvements
